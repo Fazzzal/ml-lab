@@ -1,0 +1,12 @@
+langgraph>=0.2
+langchain-groq>=0.2
+pydantic>=2
+python-dotenv>=1
+pandas>=2
+scikit-learn>=1.4
+numpy>=1.26
+
+# Optional: only needed if you set ENABLE_CHECKPOINTING=true in
+# your .env. Left out of the hard requirement above so the app
+# still runs without it (see app/graph.py's _get_checkpointer()).
+#langgraph-checkpoint-sqlite>=1.0

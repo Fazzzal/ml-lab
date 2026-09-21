@@ -1,0 +1,1006 @@
+customerID,SeniorCitizen,tenure,PhoneService,MultipleLines,OnlineSecurity,OnlineBackup,DeviceProtection,TechSupport,StreamingTV,StreamingMovies,Contract,PaymentMethod,MonthlyCharges,TotalCharges,Churn
+9477-NNOBW,0,6,Yes,Yes,No,Yes,Yes,No,No,Yes,One year,Electronic check,93.14,572.77,No
+7637-WCUJV,0,56,No,No,No,No,No,Yes,No,No,One year,Mailed check,108.41,6010.38,No
+9943-WXCIH,1,47,Yes,No,Yes,No,Yes,No,Yes,Yes,One year,Bank transfer,111.95,5241.4,No
+5623-ZROUE,1,32,Yes,No,No,No,No,No,Yes,No,Month-to-month,Electronic check,69.37,2187.94,Yes
+6944-NFQVV,0,31,Yes,Yes,No,Yes,No,No,No,No,One year,Credit card,71.07,2153.87,No
+8587-VMBZL,0,62,Yes,Yes,No,Yes,Yes,Yes,No,Yes,One year,Electronic check,99.59,6176.35,No
+6694-AXXYE,0,6,Yes,No,No,No,Yes,No,No,No,One year,Credit card,50.07,172.02,Yes
+8585-QDOMQ,0,50,Yes,No,No,Yes,No,Yes,No,Yes,Month-to-month,Bank transfer,103.41,5154.73,Yes
+1752-ORSTQ,0,14,Yes,No,No,No,No,No,No,No,One year,Credit card,68.4,953.09,Yes
+7311-CUJOO,1,6,Yes,No,Yes,Yes,No,No,No,No,Month-to-month,Credit card,29.82,110.96,Yes
+9783-IJTQI,0,38,Yes,No,No,No,Yes,No,No,Yes,One year,Bank transfer,25.35,1038.96,No
+4098-VVDKU,1,71,Yes,Yes,No,No,No,Yes,No,No,Month-to-month,Credit card,103.88,7345.76,No
+2067-EENLI,0,53,Yes,Yes,No,No,No,Yes,Yes,No,Month-to-month,Mailed check,23.67,1242.64,No
+2223-QUFRU,0,55,Yes,Yes,No,Yes,Yes,No,No,No,Two year,Bank transfer,46.62,2534.49,No
+6013-OEYYS,1,52,Yes,Yes,No,Yes,Yes,Yes,No,Yes,Month-to-month,Credit card,52.08,2704.08,No
+9123-PRVAF,0,57,Yes,No,No,Yes,No,No,No,No,Two year,Electronic check,35.65,2097.46,No
+2830-QGKMT,0,37,Yes,Yes,No,No,Yes,No,No,No,Two year,Mailed check,50.02,1974.39,No
+5656-ARLCQ,0,9,No,Yes,Yes,Yes,Yes,No,No,Yes,Month-to-month,Electronic check,93.75,881.03,Yes
+3431-LZGXM,0,61,Yes,No,No,No,Yes,Yes,Yes,No,Month-to-month,Bank transfer,19.5,1243.9,No
+9392-WVFUJ,0,32,Yes,,No,Yes,No,Yes,Yes,Yes,Month-to-month,Credit card,102.37,3361.66,No
+9190-ZPXNA,0,36,Yes,Yes,No,Yes,No,No,Yes,No,Two year,Electronic check,105.37,3805.76,No
+8864-NBBSY,1,27,Yes,No,No,No,Yes,No,Yes,Yes,One year,Bank transfer,55.97,1589.7,No
+7275-LHKIH,1,13,Yes,Yes,Yes,No,No,Yes,No,No,Month-to-month,Mailed check,33.67,477.33,Yes
+2155-OFDHU,0,67,Yes,No,No,No,No,Yes,Yes,Yes,Month-to-month,Credit card,79.29,5319.63,No
+6156-MPOMV,0,57,Yes,No,No,No,Yes,Yes,Yes,Yes,Month-to-month,Electronic check,30.21,1739.49,No
+7572-EVECK,0,47,Yes,Yes,No,No,No,No,Yes,No,One year,Electronic check,55.22,2504.27,No
+4534-USBMU,0,29,Yes,No,Yes,No,Yes,Yes,No,No,Month-to-month,Electronic check,115.76,3371.65,No
+7597-NQOGO,0,60,Yes,No,Yes,No,Yes,Yes,No,No,Month-to-month,Mailed check,119.54,7095.21,No
+7075-BSGAT,0,39,Yes,No,No,Yes,No,No,Yes,No,Two year,Mailed check,96.75,3691.99,No
+4508-KQOQY,1,32,Yes,,No,No,No,Yes,Yes,Yes,Month-to-month,Credit card,49.72,1600.68,Yes
+6859-BFLMJ,0,32,Yes,No,Yes,No,Yes,Yes,Yes,No,Month-to-month,Mailed check,88.14,2764.78,No
+2659-CDYKY,0,16,Yes,No,Yes,Yes,No,No,Yes,Yes,One year,Electronic check,89.95,1438.84,No
+4013-IMYOA,1,6,Yes,No,No,No,No,No,Yes,Yes,Two year,Bank transfer,57.56,352.28,No
+3443-ZEVYF,0,40,Yes,Yes,Yes,No,Yes,Yes,Yes,No,Month-to-month,Electronic check,83.37,3343.95,No
+6029-PUUBI,1,64,Yes,No,No,No,No,No,Yes,No,Two year,Mailed check,19.09,1176.55,Yes
+9459-JGQFD,1,4,Yes,No,No,Yes,No,Yes,No,Yes,Month-to-month,Bank transfer,39.32,202.21,Yes
+8180-DXGCT,0,62,Yes,No,Yes,No,Yes,Yes,No,Yes,Two year,Mailed check,71.56,4432.26,No
+2588-JJNMF,0,60,Yes,Yes,No,No,No,No,No,No,Month-to-month,Bank transfer,34.7,2104.05,No
+3111-FBQMC,0,20,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,One year,Mailed check,34.92,638.58,No
+3981-RHKTR,1,46,Yes,No,Yes,Yes,Yes,No,Yes,Yes,Month-to-month,Credit card,103.3,4742.88,No
+7305-JMVWB,1,12,Yes,No,No,Yes,No,No,No,Yes,Two year,Mailed check,118.89,1481.54,No
+8541-XYGNB,0,55,Yes,No,No,Yes,No,Yes,Yes,Yes,Two year,Credit card,74.71,4157.56,No
+1987-OFFHL,0,51,Yes,Yes,No,No,No,No,No,Yes,Month-to-month,Bank transfer,103.59,5243.23,Yes
+2376-URUYP,0,25,Yes,Yes,Yes,No,No,No,No,No,Month-to-month,Bank transfer,119.01,2947.97,Yes
+4254-ZOMKB,0,4,Yes,No,Yes,Yes,No,Yes,No,Yes,One year,Electronic check,32.44,80.33,No
+9602-VSFYE,0,70,Yes,Yes,No,Yes,Yes,No,Yes,No,Month-to-month,Electronic check,63.72,4427.58,No
+3174-BHIUI,1,32,Yes,No,No,No,No,Yes,No,No,One year,Bank transfer,58.04,1787.33,No
+9600-HNPVT,0,65,Yes,Yes,No,Yes,No,No,Yes,No,One year,Mailed check,26.17,1694.14,No
+8807-YDCLD,0,49,Yes,Yes,Yes,No,No,No,Yes,No,Month-to-month,Mailed check,95.04,4688.62,Yes
+5441-PHCZJ,0,56,Yes,Yes,No,Yes,No,Yes,Yes,No,Month-to-month,Credit card,62.25,3446.75,No
+8550-QRUGF,0,55,Yes,No,No,Yes,Yes,No,No,No,Two year,Mailed check,65.87,3618.32,No
+9970-RHQKW,0,14,Yes,No,No,No,Yes,Yes,No,No,Month-to-month,Mailed check,33.37,456.16,No
+5573-IRTJT,1,26,Yes,No,Yes,Yes,Yes,No,Yes,No,One year,Bank transfer,36.45,1000.46,No
+3107-GVQAR,0,34,Yes,No,No,No,Yes,Yes,Yes,No,Month-to-month,Credit card,110.52,3727.1,Yes
+3752-HLLXL,0,36,Yes,Yes,Yes,Yes,No,Yes,No,No,Month-to-month,Credit card,22.55,783.04,No
+3669-UOAQN,0,3,Yes,No,No,No,No,No,No,Yes,Month-to-month,Bank transfer,41.75,82.95,Yes
+6170-EMQRR,0,39,No,Yes,No,No,Yes,No,Yes,No,Month-to-month,Electronic check,47.79,1806.93,No
+9977-NLOII,0,11,Yes,Yes,No,No,Yes,Yes,Yes,No,One year,Electronic check,68.0,774.46,No
+7211-ITTYD,1,54,Yes,No,No,Yes,No,No,No,Yes,Month-to-month,Bank transfer,77.82,4195.52,No
+4269-ULRTW,0,49,Yes,Yes,No,No,Yes,Yes,No,No,One year,Bank transfer,68.32,3350.42,No
+3034-GMNXB,0,67,No,No,No,No,No,No,No,Yes,One year,Electronic check,26.58,1844.59,No
+3207-XPRGQ,0,54,Yes,No,No,Yes,Yes,No,Yes,Yes,Month-to-month,Bank transfer,42.85,2380.5,No
+4328-TCHQP,0,26,Yes,No,No,Yes,Yes,Yes,Yes,No,Month-to-month,Credit card,104.05,2622.99,Yes
+8562-UACJY,0,70,No,No,Yes,No,Yes,No,Yes,Yes,One year,Electronic check,83.03,5844.49,Yes
+5294-XBZBV,0,29,Yes,No,No,Yes,No,No,Yes,Yes,One year,Credit card,84.21,2453.37,No
+8891-HHPSD,0,23,Yes,Yes,No,No,Yes,No,No,Yes,One year,Mailed check,86.36,1963.2,Yes
+3132-TUDXW,1,66,Yes,Yes,No,No,No,No,Yes,No,Month-to-month,Mailed check,95.82,6340.5,No
+8810-GREFB,0,27,Yes,Yes,No,Yes,Yes,No,No,No,Two year,Bank transfer,23.93,559.79,No
+5437-SFEHF,0,5,Yes,No,No,No,Yes,No,No,No,Month-to-month,Electronic check,55.39,350.08,Yes
+8495-EHHFY,0,34,Yes,No,Yes,No,No,No,No,No,One year,Electronic check,73.03,2508.77,No
+2886-MOGME,1,58,Yes,Yes,No,Yes,Yes,No,No,No,Month-to-month,Credit card,52.52,3002.9,No
+5344-ALJJC,0,13,Yes,No,Yes,No,Yes,No,No,No,One year,Mailed check,104.14,1324.55,No
+9987-ADCZI,1,33,Yes,No,Yes,Yes,No,No,Yes,No,Month-to-month,Electronic check,67.22,2133.1,No
+4878-TBBER,0,9,Yes,No,No,Yes,No,No,Yes,Yes,One year,Bank transfer,96.4,851.9,No
+9805-QWWHE,1,50,Yes,No,Yes,No,Yes,No,Yes,No,Month-to-month,Electronic check,104.91,5221.36,No
+2441-URWNZ,0,34,Yes,No,No,Yes,Yes,No,No,No,One year,Credit card,69.49,2296.4,No
+9045-VUDTY,0,24,Yes,No,No,No,No,No,No,Yes,Month-to-month,Electronic check,110.77,2697.32,No
+3629-VJFSE,0,16,Yes,No,Yes,Yes,No,No,Yes,Yes,One year,Bank transfer,77.89,1310.08,No
+5330-YEEYU,0,41,No,Yes,No,No,No,No,Yes,No,Month-to-month,Mailed check,104.73,4292.56,No
+5154-KZSXC,0,48,Yes,,Yes,Yes,No,No,Yes,Yes,Month-to-month,Credit card,52.74,2516.24,No
+5773-SANBX,0,68,Yes,Yes,No,No,No,No,Yes,No,One year,Bank transfer,68.88,4705.59,No
+7127-ENCUF,0,31,Yes,No,No,No,Yes,No,No,Yes,Month-to-month,Credit card,72.2,2237.22,No
+6464-CEZKD,0,11,Yes,Yes,No,No,Yes,No,Yes,No,Month-to-month,Electronic check,28.71,261.7,No
+7298-FPVRG,0,60,Yes,Yes,No,No,No,Yes,No,Yes,Two year,Mailed check,58.65,3486.37,No
+3132-FQRNK,0,45,Yes,Yes,No,No,No,No,No,No,Two year,Credit card,111.57,5005.83,No
+1558-VRQCH,1,51,No,No,No,No,No,Yes,Yes,Yes,Two year,Electronic check,82.34,4211.75,No
+3733-PUWNJ,0,7,Yes,Yes,No,No,No,Yes,Yes,Yes,Month-to-month,Credit card,36.11,253.24,No
+4672-TIKUO,0,22,Yes,Yes,No,No,Yes,No,No,Yes,Month-to-month,Credit card,52.56,1166.84,No
+5208-THBUL,1,56,Yes,No,No,No,No,No,No,No,One year,Bank transfer,37.54,2026.0,No
+3928-CYSHP,0,60,Yes,Yes,Yes,No,No,No,Yes,No,Month-to-month,Electronic check,20.53,1265.06,No
+5178-IIBZY,0,31,Yes,No,No,Yes,No,Yes,Yes,No,One year,Credit card,112.6,3490.77,No
+8833-IZHVC,0,58,Yes,No,Yes,No,No,No,No,Yes,Month-to-month,Credit card,63.72,3823.4,No
+3793-PZGLV,0,61,No,No,No,No,No,No,No,No,Two year,Mailed check,49.37,2992.19,No
+5250-RKAHO,0,28,Yes,Yes,Yes,Yes,Yes,No,No,No,One year,Bank transfer,79.04,2229.29,No
+1175-GYAGQ,0,65,Yes,Yes,Yes,Yes,No,No,No,Yes,Month-to-month,Electronic check,18.75,1360.21,No
+6067-FBXOO,0,21,Yes,No,No,No,No,Yes,No,No,Month-to-month,Mailed check,46.36,983.26,No
+1519-FBZUO,0,17,Yes,Yes,No,No,No,Yes,Yes,No,Month-to-month,Electronic check,89.71,1521.69,No
+7127-EZNNY,0,49,Yes,Yes,No,Yes,No,Yes,No,No,Month-to-month,Bank transfer,82.64,4000.01,No
+1863-LCLGL,0,46,Yes,No,No,Yes,No,Yes,Yes,Yes,One year,Bank transfer,118.14,5510.85,No
+7317-HBESP,0,10,Yes,No,No,Yes,No,No,No,Yes,Month-to-month,Bank transfer,81.28,754.84,Yes
+9806-XETCC,1,60,No,Yes,Yes,No,No,Yes,No,No,Month-to-month,Bank transfer,66.71,4023.96,No
+8137-KZANI,0,14,Yes,No,Yes,No,Yes,Yes,No,Yes,Month-to-month,Credit card,95.67,1315.7,Yes
+9867-RUHXV,0,58,Yes,No,No,No,No,Yes,No,Yes,One year,Electronic check,110.14,6378.65,No
+8055-MXRBW,0,0,Yes,No,Yes,No,No,Yes,No,No,Month-to-month,Electronic check,91.51, ,Yes
+1188-RGXSV,1,58,Yes,Yes,No,No,No,No,No,No,Month-to-month,Electronic check,116.25,6809.66,No
+7297-OWHNH,0,57,Yes,Yes,Yes,Yes,No,Yes,No,Yes,Two year,Credit card,97.76,5558.43,No
+2022-WMBVY,0,56,No,No,Yes,No,Yes,No,No,Yes,Month-to-month,Electronic check,106.41,5898.21,No
+6954-IWTHI,0,48,Yes,Yes,Yes,Yes,No,Yes,Yes,No,Month-to-month,Electronic check,29.64,1485.35,No
+9889-YRAFJ,0,34,Yes,No,Yes,Yes,No,Yes,Yes,Yes,Two year,Electronic check,92.71,3126.93,No
+5822-WWHCH,0,51,Yes,Yes,Yes,No,No,Yes,No,Yes,Month-to-month,Credit card,62.89,3224.12,No
+3117-XAVRC,0,20,Yes,No,No,No,Yes,No,No,Yes,Two year,Bank transfer,74.42,1530.47,No
+7164-PAFJF,0,56,Yes,No,Yes,Yes,No,Yes,No,No,One year,Credit card,84.72,4768.02,No
+6208-QEDRM,0,40,Yes,No,No,No,Yes,No,No,No,One year,Electronic check,116.92,4566.97,Yes
+3385-GBWVO,0,33,Yes,No,No,No,No,Yes,Yes,Yes,Month-to-month,Mailed check,118.43,3942.96,No
+4144-FHYCV,0,36,Yes,Yes,No,Yes,No,No,Yes,Yes,Month-to-month,Bank transfer,47.4,1701.37,No
+3740-GVYZG,0,41,Yes,No,No,Yes,Yes,Yes,No,No,Month-to-month,Electronic check,92.84,3789.99,No
+6319-HFKBE,0,2,Yes,Yes,No,Yes,No,No,Yes,No,Month-to-month,Credit card,94.5,183.55,Yes
+6359-RHOTX,0,10,Yes,No,Yes,No,No,No,No,No,Month-to-month,Credit card,53.34,452.9,No
+6115-GSEDJ,0,17,No,,Yes,No,No,Yes,No,Yes,One year,Electronic check,30.63,530.32,No
+3959-DBYRS,0,8,Yes,No,No,No,Yes,Yes,No,No,One year,Credit card,22.18,109.22,No
+1596-UJTMG,1,32,Yes,No,No,Yes,No,No,Yes,No,Month-to-month,Mailed check,97.29,3098.99,No
+3359-DVLUV,0,48,Yes,No,Yes,No,Yes,Yes,No,No,One year,Mailed check,67.95,3269.41,No
+2502-IDAZR,0,47,Yes,Yes,No,No,No,Yes,Yes,Yes,Two year,Credit card,118.53,5624.61,No
+5064-FPOFA,0,34,Yes,No,No,No,No,No,Yes,No,One year,Bank transfer,65.43,2183.64,No
+5220-NUKCW,1,62,Yes,No,No,Yes,Yes,Yes,Yes,Yes,One year,Electronic check,117.75,7373.08,No
+4722-SBAAU,0,41,Yes,No,No,No,No,No,Yes,Yes,One year,Credit card,59.98,2506.52,No
+3166-UYRZY,0,5,Yes,No,No,No,No,No,No,Yes,Month-to-month,Bank transfer,98.96,473.33,Yes
+7503-UPFCJ,0,55,Yes,Yes,No,Yes,No,No,No,No,Month-to-month,Electronic check,26.65,1410.31,Yes
+5275-JCNMY,0,41,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Two year,Bank transfer,74.66,2988.87,No
+9587-QWIZY,0,46,Yes,Yes,Yes,Yes,Yes,No,No,No,One year,Bank transfer,99.81,4604.85,No
+2127-SLGKX,0,41,Yes,Yes,Yes,Yes,No,No,No,No,One year,Mailed check,112.32,4568.26,No
+9317-IMNTM,0,40,Yes,No,No,No,Yes,Yes,No,No,Two year,Mailed check,101.9,4135.97,No
+4562-YJGII,0,6,Yes,No,No,Yes,No,No,No,Yes,Month-to-month,Credit card,21.77,96.64,No
+5995-RDXGC,1,40,Yes,No,No,Yes,Yes,No,No,No,Month-to-month,Electronic check,56.02,2195.77,Yes
+7014-FTYSU,0,58,No,No,No,No,Yes,No,Yes,Yes,One year,Bank transfer,22.97,1343.94,No
+5452-IPJWM,1,22,Yes,No,Yes,Yes,No,Yes,Yes,No,Month-to-month,Credit card,29.15,607.0,No
+5490-REOTU,1,44,Yes,No,No,Yes,Yes,Yes,No,Yes,One year,Credit card,86.88,3823.15,No
+3024-BFVGB,1,2,No,Yes,Yes,No,No,No,No,Yes,Two year,Mailed check,90.75,230.8,No
+6374-WFBDD,0,25,Yes,No,No,Yes,Yes,No,No,No,One year,Mailed check,96.92,2428.86,Yes
+2840-EQFOK,0,31,Yes,Yes,No,Yes,No,No,Yes,Yes,Month-to-month,Credit card,106.28,3300.73,No
+6888-RPXFN,0,71,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,One year,Mailed check,93.42,6643.08,No
+4548-NDIYU,0,15,Yes,No,Yes,Yes,No,No,No,No,Month-to-month,Bank transfer,99.69,1410.7,No
+4834-CQHIC,0,20,Yes,No,No,No,No,Yes,Yes,Yes,Two year,Bank transfer,22.99,479.39,No
+3601-FAPZD,0,29,Yes,No,Yes,Yes,Yes,Yes,No,Yes,Month-to-month,Bank transfer,41.92,1223.68,No
+1471-COVID,0,72,Yes,Yes,Yes,Yes,No,No,No,Yes,Two year,Bank transfer,81.43,5907.6,No
+1863-PJJGX,0,62,Yes,No,No,No,Yes,Yes,Yes,Yes,Month-to-month,Mailed check,105.53,6573.15,Yes
+4373-STBGX,0,2,Yes,No,No,No,No,Yes,Yes,No,Month-to-month,Mailed check,18.46,26.82,No
+8944-KEHYR,0,17,Yes,No,No,Yes,Yes,Yes,Yes,Yes,Month-to-month,Mailed check,70.49,1249.95,Yes
+1678-SDHMJ,0,59,No,No,Yes,Yes,No,No,Yes,No,Month-to-month,Bank transfer,87.08,5123.09,No
+7283-EWPHY,0,4,Yes,No,No,No,Yes,Yes,No,No,Month-to-month,Credit card,21.02,96.44,No
+5305-KAZWE,0,62,Yes,No,Yes,No,No,No,No,Yes,Two year,Bank transfer,58.94,3638.72,No
+9528-UKYOR,0,20,Yes,No,Yes,No,No,No,Yes,No,Two year,Bank transfer,109.35,2210.09,No
+2648-CNIZC,0,66,Yes,No,Yes,Yes,No,No,No,No,Month-to-month,Mailed check,86.5,5690.18,No
+7864-PWZWJ,0,21,Yes,No,Yes,Yes,Yes,No,Yes,Yes,One year,Credit card,42.24,969.42,Yes
+7259-EMGGO,0,31,No,No,Yes,No,Yes,No,Yes,Yes,Two year,Mailed check,104.98,3355.25,No
+2142-OKFOT,0,48,Yes,No,Yes,No,Yes,No,No,Yes,Two year,Mailed check,53.5,2611.7,No
+6489-COQRL,1,9,Yes,Yes,Yes,No,No,No,No,Yes,Month-to-month,Electronic check,105.04,1022.42,Yes
+1853-DIQTR,1,40,Yes,No,No,Yes,No,No,No,No,Month-to-month,Mailed check,48.49,1862.64,No
+3809-LBUJN,0,36,Yes,Yes,No,No,Yes,No,Yes,No,Two year,Bank transfer,78.21,2744.49,No
+5046-HEYDY,0,57,Yes,Yes,Yes,Yes,No,No,No,Yes,Month-to-month,Electronic check,58.49,3317.85,No
+2018-CXYXU,0,72,Yes,No,Yes,No,No,Yes,Yes,Yes,Month-to-month,Electronic check,46.03,3316.22,No
+5433-CPNTA,0,48,Yes,Yes,No,No,Yes,No,No,Yes,One year,Credit card,108.43,5194.73,No
+1695-PWYOJ,0,29,Yes,Yes,No,No,No,Yes,No,No,Month-to-month,Credit card,37.13,994.66,Yes
+5247-NQFKO,1,29,Yes,Yes,No,Yes,Yes,No,No,No,Two year,Mailed check,26.65,830.43,No
+8656-UTFKO,0,30,No,No,Yes,No,Yes,Yes,Yes,Yes,Month-to-month,Mailed check,52.88,1694.11,No
+9708-JXTQS,0,59,Yes,No,No,No,No,No,No,No,One year,Bank transfer,91.2,5444.85,No
+8136-SRJLP,0,23,Yes,No,Yes,No,Yes,No,No,No,Two year,Credit card,100.36,2362.56,No
+8591-QZRKO,1,12,Yes,Yes,Yes,Yes,No,No,Yes,No,Two year,Mailed check,119.87,1449.75,Yes
+6609-WGGFB,0,24,Yes,No,No,No,No,Yes,No,No,Two year,Electronic check,48.23,1115.37,No
+7074-ZPBJX,0,1,Yes,No,No,Yes,No,No,No,No,Two year,Mailed check,59.61,63.24,Yes
+1466-PLXNO,0,7,Yes,No,No,Yes,No,No,No,Yes,Month-to-month,Mailed check,31.96,329.0,No
+7499-VNSUN,0,6,Yes,No,No,Yes,No,Yes,Yes,Yes,Two year,Bank transfer,76.64,442.24,No
+7444-JJARG,0,56,Yes,Yes,Yes,Yes,Yes,No,No,No,Two year,Electronic check,119.75,6683.25,No
+8324-YWHQT,1,52,Yes,No,Yes,Yes,No,No,Yes,Yes,Month-to-month,Bank transfer,89.49,4708.85,No
+5554-NLIOZ,0,50,Yes,No,No,No,No,No,No,Yes,Month-to-month,Electronic check,78.71,3994.18,Yes
+2970-BBPHL,0,33,No,No,No,Yes,No,Yes,No,No,Month-to-month,Credit card,58.02,1872.26,No
+9554-BEFLS,0,52,Yes,No,Yes,Yes,Yes,No,Yes,No,One year,Bank transfer,111.36,5777.65,No
+2649-CCUAQ,0,11,Yes,No,No,Yes,No,No,No,No,One year,Electronic check,68.69,730.49,Yes
+6204-COHND,1,65,Yes,No,Yes,Yes,No,Yes,No,No,Month-to-month,Credit card,31.71,2064.63,No
+7009-UANQA,0,36,Yes,Yes,Yes,No,Yes,No,No,No,Month-to-month,Bank transfer,55.27,2044.9,No
+7515-OHMRQ,0,68,Yes,No,No,No,No,No,No,Yes,One year,Bank transfer,24.85,1649.6,No
+7989-AUAQJ,0,11,Yes,No,Yes,Yes,Yes,No,No,No,Month-to-month,Electronic check,38.6,479.08,Yes
+1573-RORJH,0,36,Yes,Yes,No,No,Yes,No,No,No,Two year,Electronic check,19.8,717.88,No
+6621-FVRZA,1,50,Yes,No,No,No,No,No,No,No,Month-to-month,Credit card,64.23,3327.81,No
+6269-OWLYG,0,36,Yes,Yes,Yes,No,No,Yes,Yes,Yes,Month-to-month,Mailed check,82.72,2993.86,No
+8687-NYFGO,0,32,Yes,,Yes,Yes,Yes,No,No,Yes,Month-to-month,Bank transfer,53.02,1691.79,No
+5965-DQKDN,1,12,Yes,Yes,Yes,Yes,Yes,No,No,No,Two year,Credit card,60.88,759.3,No
+7279-AXPGT,0,27,Yes,No,No,No,Yes,No,No,Yes,Two year,Mailed check,115.84,3110.82,Yes
+8591-YUFEF,0,17,Yes,Yes,No,No,No,No,Yes,Yes,Month-to-month,Mailed check,94.7,1520.14,Yes
+8879-HIXFK,0,22,Yes,No,No,No,No,No,Yes,No,Month-to-month,Credit card,73.17,1597.71,Yes
+3666-HPTGA,0,49,Yes,No,Yes,No,No,No,Yes,No,Month-to-month,Electronic check,47.02,2291.17,No
+6753-ORLUQ,0,46,No,Yes,No,Yes,Yes,Yes,Yes,Yes,Month-to-month,Mailed check,109.49,4956.92,No
+7817-TMIPQ,0,44,Yes,No,Yes,No,No,No,Yes,Yes,One year,Credit card,41.98,1843.47,No
+6143-NIDLW,0,26,Yes,No,No,No,No,No,Yes,Yes,Month-to-month,Electronic check,51.18,1227.32,No
+7449-TTXFS,0,70,Yes,No,No,Yes,No,No,Yes,No,Month-to-month,Mailed check,110.72,7733.02,No
+1625-GALDK,0,6,Yes,Yes,No,No,Yes,Yes,No,No,Month-to-month,Mailed check,72.01,444.24,Yes
+2211-AMKKI,0,25,Yes,No,Yes,No,Yes,Yes,Yes,Yes,Month-to-month,Electronic check,93.72,2347.85,Yes
+4683-AMWDD,0,8,Yes,Yes,Yes,No,No,Yes,No,Yes,Month-to-month,Electronic check,78.26,605.53,Yes
+8019-NGUIP,0,24,No,Yes,Yes,No,No,No,Yes,Yes,Month-to-month,Mailed check,84.65,2027.32,No
+6003-ETQFT,0,70,Yes,No,No,No,Yes,No,No,Yes,Month-to-month,Credit card,48.54,3358.6,No
+6584-WVIYA,0,26,No,No,No,No,No,Yes,Yes,Yes,Month-to-month,Electronic check,42.62,1108.66,No
+4006-PNFFU,0,66,No,No,Yes,No,Yes,No,No,No,Month-to-month,Bank transfer,50.89,3361.64,Yes
+8883-RNUGZ,0,36,Yes,Yes,No,Yes,Yes,No,No,Yes,Two year,Mailed check,33.86,1173.95,No
+2124-PIXGQ,0,51,Yes,No,No,Yes,No,Yes,No,Yes,Month-to-month,Credit card,107.18,5479.56,No
+2406-EKUHS,0,33,Yes,No,Yes,Yes,No,No,Yes,No,Month-to-month,Mailed check,46.89,1560.44,Yes
+6140-ZHGXI,0,19,No,No,Yes,Yes,No,No,No,Yes,Month-to-month,Credit card,75.27,1421.82,No
+2931-VVBWQ,0,55,Yes,No,Yes,Yes,No,Yes,Yes,Yes,One year,Mailed check,98.78,5553.95,No
+3509-NGEDE,0,70,Yes,Yes,No,No,No,No,No,Yes,Two year,Credit card,97.95,6849.46,No
+6244-VMALT,0,19,Yes,Yes,No,Yes,Yes,No,Yes,Yes,One year,Credit card,62.72,1177.72,No
+8516-TJQBK,0,56,Yes,No,No,Yes,No,Yes,No,Yes,One year,Mailed check,66.58,3707.36,No
+5830-AAUFD,0,19,Yes,No,No,No,No,Yes,Yes,No,Two year,Bank transfer,119.46,2221.19,Yes
+6327-HZYVH,0,52,Yes,Yes,No,Yes,No,No,No,Yes,Month-to-month,Electronic check,86.81,4548.41,Yes
+8877-GGZRC,0,57,No,Yes,No,No,No,Yes,Yes,No,Two year,Mailed check,101.09,5727.82,No
+8978-ERLAU,0,32,Yes,Yes,No,No,No,No,Yes,No,One year,Mailed check,110.06,3493.52,No
+7179-WPTXZ,0,53,Yes,No,No,No,Yes,No,Yes,Yes,Month-to-month,Credit card,98.33,5184.58,No
+6045-AIQCD,0,19,Yes,Yes,No,Yes,Yes,No,Yes,Yes,Month-to-month,Credit card,36.89,651.66,No
+4553-XIYUH,1,5,Yes,No,No,Yes,No,No,No,Yes,Month-to-month,Credit card,75.34,289.15,Yes
+3079-VTQZC,0,7,Yes,No,No,No,No,No,No,Yes,Month-to-month,Credit card,28.39,175.58,No
+4471-PBZOI,0,32,Yes,Yes,No,No,Yes,No,No,No,Two year,Credit card,84.6,2750.87,No
+3151-APZAK,0,65,Yes,No,No,Yes,Yes,No,Yes,Yes,Month-to-month,Credit card,115.45,7514.1,No
+6958-LQSZP,0,9,Yes,No,No,No,No,No,Yes,No,One year,Bank transfer,70.3,710.73,No
+7387-HDCCV,0,33,Yes,No,No,No,Yes,No,No,No,Two year,Electronic check,62.16,2088.83,No
+1365-MPRBW,0,51,Yes,Yes,No,Yes,Yes,No,Yes,No,Month-to-month,Credit card,21.66,1130.86,No
+4935-ADWYT,0,14,Yes,Yes,No,No,No,Yes,Yes,No,Month-to-month,Electronic check,115.9,1716.73,No
+3999-YHGTI,0,52,Yes,Yes,No,Yes,No,No,No,No,One year,Electronic check,28.51,1477.66,No
+5679-REYEZ,0,22,Yes,No,No,Yes,No,No,Yes,No,Two year,Credit card,22.19,491.33,No
+3496-KGOAE,0,59,Yes,No,No,No,No,Yes,Yes,No,Month-to-month,Electronic check,43.1,2542.33,No
+5673-SZVXU,0,42,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Month-to-month,Electronic check,24.68,1113.75,No
+7987-IXZND,0,39,Yes,Yes,No,No,No,No,No,Yes,One year,Bank transfer,64.42,2512.51,No
+1383-MQOXN,0,12,Yes,No,No,No,Yes,No,Yes,Yes,Two year,Bank transfer,70.64,815.27,No
+6948-TXPOC,0,33,No,Yes,No,Yes,Yes,No,No,Yes,Month-to-month,Electronic check,49.88,1675.42,No
+6780-EJNCS,1,62,Yes,Yes,No,No,No,No,Yes,No,Month-to-month,Mailed check,23.2,1397.59,No
+3524-NJJKB,0,1,Yes,No,No,Yes,No,No,Yes,Yes,Two year,Electronic check,29.38,56.05,No
+2758-UDMDO,0,55,Yes,Yes,No,Yes,No,No,Yes,No,Month-to-month,Mailed check,57.22,3167.79,No
+6792-MUGOH,0,35,Yes,Yes,Yes,No,Yes,Yes,No,No,Month-to-month,Electronic check,24.17,836.48,No
+5580-BGSUH,0,52,Yes,No,No,No,No,No,Yes,Yes,One year,Bank transfer,89.22,4667.73,No
+3323-HHZQK,0,48,Yes,Yes,Yes,No,No,Yes,No,No,Month-to-month,Mailed check,39.12,1803.37,No
+5157-NOKZH,0,31,Yes,,No,Yes,No,No,Yes,Yes,Month-to-month,Credit card,48.81,1521.26,No
+4845-AMWZM,0,22,Yes,No,No,Yes,No,No,Yes,No,One year,Electronic check,58.2,1257.26,No
+2254-SQYNA,0,45,Yes,No,No,No,Yes,Yes,Yes,No,One year,Credit card,60.49,2865.16,No
+9106-RUDLL,0,10,Yes,Yes,Yes,Yes,No,No,No,Yes,Month-to-month,Credit card,18.17,189.49,No
+3408-WEBGZ,0,42,Yes,No,Yes,Yes,No,No,No,No,Month-to-month,Mailed check,29.43,1206.24,No
+2020-PEKOA,0,6,Yes,Yes,No,No,No,Yes,No,Yes,One year,Bank transfer,106.0,567.08,No
+3170-PAMPF,0,47,No,No,No,Yes,No,Yes,No,No,One year,Mailed check,18.13,917.38,No
+2459-MSAIZ,0,45,Yes,Yes,Yes,Yes,No,Yes,No,No,Two year,Bank transfer,69.83,3124.85,No
+4020-ITMKU,0,6,Yes,No,No,Yes,Yes,Yes,No,Yes,One year,Credit card,67.93,368.01,No
+1276-SJXSY,0,55,Yes,Yes,Yes,No,Yes,No,No,No,One year,Bank transfer,51.98,2875.71,No
+2158-EXKVR,0,30,Yes,Yes,No,No,No,No,No,No,Two year,Bank transfer,62.0,1892.49,No
+5497-BBSCA,0,57,Yes,No,Yes,No,No,No,Yes,No,Two year,Credit card,97.62,5596.04,No
+2975-XQSQO,0,3,Yes,Yes,Yes,Yes,No,No,No,No,Month-to-month,Mailed check,103.8,312.39,Yes
+3307-LOZXT,0,13,Yes,Yes,Yes,Yes,Yes,Yes,No,No,Two year,Electronic check,44.56,587.24,No
+8318-URVBA,0,36,Yes,No,No,No,Yes,Yes,Yes,Yes,Two year,Bank transfer,50.89,1843.64,No
+4998-BIFYR,0,13,Yes,No,No,Yes,No,No,No,No,Month-to-month,Bank transfer,42.73,572.31,No
+1377-QTIWZ,0,24,Yes,Yes,No,No,No,No,No,No,Month-to-month,Electronic check,66.95,1628.04,No
+9825-CLULM,0,48,Yes,,No,No,Yes,No,Yes,Yes,One year,Bank transfer,87.69,4263.84,No
+3954-KSAUS,0,10,Yes,No,Yes,No,No,Yes,No,Yes,Month-to-month,Electronic check,41.28,415.62,No
+2247-UNILN,0,49,Yes,No,Yes,No,Yes,No,Yes,Yes,One year,Mailed check,51.74,2494.42,No
+2894-PQJLQ,0,7,No,No,Yes,No,No,No,Yes,Yes,Month-to-month,Credit card,112.9,783.09,Yes
+5531-LYWJS,0,12,No,No,No,Yes,Yes,No,Yes,Yes,Month-to-month,Bank transfer,22.95,313.09,Yes
+8290-CPUBI,0,42,No,No,Yes,No,Yes,Yes,No,Yes,Month-to-month,Bank transfer,65.0,2640.67,No
+8179-YZPBA,0,57,Yes,No,No,No,Yes,Yes,Yes,No,Two year,Bank transfer,90.58,5074.02,No
+8299-TFDDW,1,12,Yes,No,Yes,No,No,No,No,Yes,Month-to-month,Electronic check,33.35,446.11,No
+7881-YCSYN,0,21,Yes,Yes,Yes,No,No,No,Yes,Yes,One year,Credit card,22.83,555.44,No
+7965-PALGC,0,67,Yes,Yes,Yes,No,No,No,Yes,No,Month-to-month,Mailed check,32.1,2087.44,Yes
+6359-YBIRI,0,72,Yes,Yes,Yes,No,No,Yes,No,Yes,Month-to-month,Credit card,111.72,8048.86,No
+2048-EAZMY,0,42,Yes,No,No,Yes,No,No,Yes,Yes,Month-to-month,Credit card,18.94,775.5,No
+7170-JYGEU,0,32,No,No,No,No,Yes,No,No,No,Month-to-month,Electronic check,37.21,1177.68,No
+5979-KPZHX,0,25,Yes,No,Yes,No,No,No,Yes,No,One year,Bank transfer,21.19,545.03,No
+9196-TECDS,0,44,Yes,No,No,Yes,Yes,No,No,No,One year,Electronic check,29.28,1223.68,No
+4599-ZAJGW,0,43,Yes,No,No,No,No,No,No,Yes,Month-to-month,Bank transfer,81.26,3438.82,No
+2090-KWZXQ,0,21,Yes,Yes,No,No,No,Yes,Yes,Yes,Month-to-month,Mailed check,42.65,880.59,No
+2466-CKMNB,0,1,Yes,No,No,Yes,No,No,Yes,No,One year,Electronic check,76.06,68.79,Yes
+7077-KCXJG,1,11,Yes,No,No,Yes,Yes,No,Yes,No,One year,Bank transfer,78.2,803.9,Yes
+5431-YVCRR,0,69,Yes,Yes,No,No,No,No,No,No,Month-to-month,Credit card,104.64,7259.64,No
+8972-ZTRJX,0,30,Yes,No,No,Yes,Yes,No,No,No,One year,Electronic check,18.48,533.52,No
+9486-ZYQYU,0,35,Yes,Yes,No,Yes,Yes,No,Yes,Yes,Month-to-month,Credit card,105.04,3655.31,Yes
+3161-AZLWH,0,34,Yes,No,No,No,No,No,Yes,Yes,Month-to-month,Credit card,81.15,2773.23,No
+4245-VNRIP,0,57,Yes,No,Yes,Yes,No,No,No,No,One year,Bank transfer,34.6,1965.75,No
+5381-YMCTY,0,4,Yes,Yes,No,Yes,No,No,Yes,No,One year,Credit card,96.84,429.23,Yes
+8944-CZJVQ,0,6,Yes,Yes,No,No,Yes,No,No,Yes,Two year,Mailed check,105.26,584.89,No
+9756-IPREU,0,20,Yes,Yes,Yes,Yes,No,No,No,No,Month-to-month,Bank transfer,43.93,808.73,Yes
+2290-VDEME,0,35,Yes,Yes,No,No,No,No,Yes,Yes,Month-to-month,Bank transfer,111.72,3894.71,Yes
+1690-BHMBD,0,48,Yes,No,No,No,No,No,No,No,One year,Bank transfer,64.35,3091.81,Yes
+6504-ITVAY,0,35,Yes,Yes,Yes,No,No,Yes,Yes,Yes,Month-to-month,Credit card,79.55,2722.21,Yes
+7152-VMAXO,1,32,Yes,Yes,No,No,Yes,No,Yes,No,Month-to-month,Credit card,118.43,3720.37,Yes
+1334-EFJLL,0,68,Yes,No,No,No,No,No,No,Yes,One year,Credit card,54.88,3740.95,No
+8812-YRQWG,1,11,Yes,No,No,Yes,No,No,No,No,Month-to-month,Bank transfer,100.94,1072.45,Yes
+6022-QHYGB,1,41,Yes,No,Yes,No,No,No,No,No,Month-to-month,Credit card,50.48,1997.05,No
+3910-VJFWD,0,39,Yes,No,Yes,Yes,No,No,No,Yes,Month-to-month,Bank transfer,99.52,3929.55,No
+2428-XIALT,0,34,Yes,Yes,No,No,No,No,Yes,No,Two year,Bank transfer,79.27,2663.59,No
+7812-CHQRQ,0,58,Yes,No,Yes,No,No,No,No,No,Month-to-month,Electronic check,40.07,2381.55,No
+4040-WCVYR,0,19,Yes,Yes,Yes,Yes,No,Yes,No,No,Month-to-month,Mailed check,60.23,1145.79,No
+4865-JLEFQ,0,69,Yes,No,Yes,Yes,Yes,No,Yes,Yes,Month-to-month,Credit card,50.4,3492.34,No
+5951-MMCWY,0,24,Yes,No,Yes,No,Yes,No,Yes,No,Month-to-month,Mailed check,25.97,612.71,No
+3207-IQACX,0,39,No,No,No,Yes,No,No,No,No,Month-to-month,Bank transfer,21.04,687.8,Yes
+2552-PWTHD,1,38,Yes,No,No,Yes,No,No,No,No,One year,Credit card,53.34,1970.08,No
+7460-KZQAG,0,62,Yes,No,No,Yes,No,No,Yes,No,Month-to-month,Mailed check,19.94,1229.99,No
+7699-STGGF,1,32,Yes,Yes,No,No,No,Yes,No,No,Month-to-month,Mailed check,34.88,1134.4,No
+7261-AVHMG,0,20,Yes,No,No,No,No,No,Yes,Yes,Month-to-month,Electronic check,91.97,1749.92,Yes
+4826-TFOBE,0,1,Yes,No,Yes,No,Yes,Yes,Yes,Yes,Month-to-month,Electronic check,90.23,87.55,No
+7159-OPFFL,0,26,Yes,No,Yes,No,No,No,Yes,Yes,Month-to-month,Bank transfer,93.34,2370.73,No
+2160-XGSEQ,1,60,Yes,No,Yes,Yes,No,No,No,Yes,One year,Bank transfer,50.35,3032.73,No
+2834-HKDDT,1,0,Yes,Yes,Yes,Yes,No,No,Yes,Yes,One year,Mailed check,108.78, ,No
+4110-OQQQZ,1,65,Yes,No,Yes,No,No,No,No,Yes,One year,Mailed check,78.57,5144.23,No
+6676-JHUKO,0,39,Yes,Yes,Yes,No,No,No,Yes,No,Month-to-month,Electronic check,30.85,1256.49,Yes
+8333-GFBBQ,0,10,Yes,Yes,Yes,No,No,No,No,No,Two year,Credit card,32.66,349.55,No
+5531-HFSCS,0,22,Yes,Yes,No,No,No,No,No,Yes,One year,Bank transfer,88.7,1994.42,Yes
+9142-LMNCQ,1,40,Yes,No,No,No,No,No,Yes,No,Month-to-month,Electronic check,35.64,1408.08,No
+4286-MAWIB,0,23,Yes,Yes,No,No,Yes,No,No,No,Month-to-month,Bank transfer,69.74,1745.18,Yes
+8037-ZNAZF,0,7,Yes,Yes,No,No,No,No,Yes,No,One year,Mailed check,119.16,773.18,Yes
+3163-SICRG,0,48,Yes,Yes,No,No,No,Yes,Yes,No,Month-to-month,Credit card,18.41,857.29,No
+8753-EXSGP,0,49,Yes,No,Yes,No,Yes,Yes,No,No,Month-to-month,Mailed check,19.69,1009.88,No
+9444-BVLYF,0,8,Yes,No,No,No,No,Yes,No,No,One year,Credit card,119.29,991.96,Yes
+7474-ZICKP,0,20,Yes,Yes,Yes,No,No,Yes,Yes,No,Month-to-month,Bank transfer,77.63,1576.97,No
+6670-MYPQY,0,17,Yes,Yes,No,No,No,No,No,No,Two year,Electronic check,30.94,559.75,No
+9452-IHTNL,0,48,Yes,No,No,Yes,No,Yes,Yes,Yes,Month-to-month,Credit card,109.52,5152.78,No
+7284-RXJTF,0,53,Yes,Yes,No,Yes,Yes,No,No,No,Month-to-month,Bank transfer,107.8,5792.86,No
+9432-CTCWY,0,53,Yes,No,Yes,No,Yes,Yes,No,No,Month-to-month,Mailed check,72.69,3842.38,No
+8360-UMGZN,0,68,Yes,No,No,No,Yes,Yes,No,No,Month-to-month,Electronic check,81.42,5598.85,No
+8347-SSJLL,0,56,Yes,No,No,No,No,No,No,No,Two year,Mailed check,45.87,2467.04,No
+6421-SFFBN,0,23,No,Yes,No,No,No,No,No,Yes,Two year,Bank transfer,23.15,545.28,No
+7018-FSAWR,0,7,Yes,No,No,Yes,No,No,No,Yes,Two year,Electronic check,78.65,522.37,Yes
+7148-SJZTE,0,44,Yes,Yes,No,No,No,No,Yes,No,Month-to-month,Mailed check,48.07,2143.69,Yes
+9300-TIYGQ,1,66,Yes,No,Yes,No,Yes,Yes,Yes,No,Month-to-month,Bank transfer,85.69,5671.39,No
+7030-ZOZHU,0,71,Yes,No,No,No,Yes,No,No,No,Month-to-month,Bank transfer,103.3,7352.6,No
+3208-ZTQBM,0,16,Yes,No,No,No,Yes,No,Yes,No,Month-to-month,Credit card,19.85,264.65,No
+2296-XJVXC,0,17,Yes,No,Yes,Yes,No,Yes,No,No,Two year,Electronic check,78.76,1336.07,No
+7832-HCGOW,0,2,Yes,Yes,Yes,No,Yes,No,Yes,No,Month-to-month,Credit card,41.59,74.17,Yes
+7224-GHHTN,0,10,No,No,No,No,No,No,No,Yes,Month-to-month,Mailed check,107.14,1096.17,Yes
+1215-BBYNM,1,40,Yes,No,No,No,No,No,Yes,No,Month-to-month,Electronic check,43.87,1804.26,No
+7848-EAHFU,0,39,Yes,Yes,No,No,No,No,No,Yes,One year,Credit card,80.3,3139.22,No
+8364-QXMGI,1,27,No,No,No,Yes,Yes,No,No,No,Month-to-month,Bank transfer,74.46,1946.61,Yes
+2274-XPUHS,0,22,Yes,No,No,No,Yes,Yes,Yes,Yes,One year,Bank transfer,58.41,1290.4,Yes
+3974-LQZOS,0,60,Yes,No,No,No,No,No,No,No,One year,Mailed check,87.12,5357.75,No
+6351-LYYIX,0,33,Yes,No,Yes,Yes,No,No,No,Yes,Two year,Credit card,92.03,3119.29,No
+5060-TNTWL,0,59,Yes,No,No,No,Yes,Yes,Yes,Yes,Month-to-month,Electronic check,75.83,4325.25,No
+7305-NUESP,0,70,Yes,No,No,Yes,No,Yes,Yes,No,Month-to-month,Electronic check,95.36,6678.37,No
+5062-JSJAY,0,23,Yes,Yes,Yes,Yes,No,No,No,No,Month-to-month,Electronic check,118.31,2767.74,Yes
+5030-EFVIH,0,14,Yes,Yes,No,Yes,No,No,No,Yes,Two year,Bank transfer,60.77,841.66,No
+5385-AOBVL,0,69,Yes,Yes,Yes,Yes,Yes,No,Yes,No,Two year,Electronic check,70.49,4840.81,No
+2963-LEIDR,0,46,Yes,No,No,No,Yes,No,No,Yes,One year,Credit card,19.27,873.07,No
+9784-MCBVJ,0,21,Yes,No,No,No,Yes,No,Yes,Yes,Month-to-month,Electronic check,99.19,2110.6,No
+3664-CRBXF,0,45,Yes,No,No,Yes,Yes,No,Yes,Yes,Month-to-month,Bank transfer,71.06,3140.28,No
+1621-SJSBW,0,37,No,Yes,No,No,No,Yes,No,No,One year,Credit card,59.61,2265.0,No
+3787-TYNII,0,66,Yes,Yes,No,Yes,No,No,Yes,No,Month-to-month,Credit card,27.6,1818.8,No
+7176-ADQAH,0,18,Yes,No,No,Yes,No,Yes,Yes,No,One year,Mailed check,108.74,1910.57,Yes
+6828-GYZAE,0,72,Yes,Yes,No,Yes,No,Yes,No,No,Two year,Electronic check,58.29,4253.1,No
+9165-AMYPH,0,68,Yes,Yes,No,No,Yes,No,Yes,No,Month-to-month,Credit card,87.62,5880.9,No
+1057-KOCNK,0,13,Yes,No,Yes,Yes,Yes,Yes,Yes,No,Month-to-month,Mailed check,33.24,404.36,Yes
+3932-ZXSPM,1,12,Yes,Yes,Yes,No,No,No,No,No,Month-to-month,Credit card,116.08,1364.38,Yes
+1633-HAJMP,0,38,Yes,Yes,No,Yes,No,No,No,Yes,Month-to-month,Electronic check,36.2,1482.8,No
+4194-GSDDS,0,3,No,No,Yes,No,No,No,No,Yes,One year,Bank transfer,38.35,80.8,No
+6272-WTXRV,0,21,Yes,No,No,No,Yes,No,No,Yes,Month-to-month,Electronic check,105.62,2110.27,No
+2522-NYUKY,0,31,Yes,Yes,No,Yes,Yes,No,No,No,Month-to-month,Mailed check,111.08,3414.39,No
+3812-AUKAF,0,70,Yes,No,No,Yes,Yes,Yes,Yes,No,Month-to-month,Electronic check,39.64,2797.58,No
+1647-ZWYEU,0,72,No,No,Yes,No,No,Yes,No,Yes,Month-to-month,Credit card,65.92,4785.44,No
+6073-HRYLA,0,11,Yes,No,No,No,No,Yes,Yes,No,One year,Bank transfer,92.82,1134.85,Yes
+8580-EEQUU,1,65,Yes,No,No,No,No,Yes,Yes,No,One year,Electronic check,107.59,7063.69,No
+8810-WDHSK,0,6,Yes,No,No,Yes,No,Yes,No,Yes,Month-to-month,Mailed check,56.66,349.36,Yes
+7443-LLAPW,0,54,Yes,No,Yes,Yes,Yes,Yes,No,Yes,Month-to-month,Mailed check,70.74,3775.39,Yes
+8367-IRFQK,0,61,Yes,Yes,No,No,No,Yes,No,Yes,Month-to-month,Bank transfer,93.66,5794.46,Yes
+9339-SBWSF,0,65,No,No,Yes,No,Yes,No,Yes,Yes,Month-to-month,Mailed check,92.58,5999.27,No
+3542-EIYXO,1,16,No,Yes,No,Yes,No,Yes,Yes,No,Month-to-month,Mailed check,97.86,1532.85,Yes
+4259-JYFTZ,0,65,Yes,Yes,Yes,No,No,Yes,No,No,Two year,Credit card,76.13,4927.6,No
+8696-SXFZC,0,8,Yes,Yes,No,No,No,No,No,Yes,Month-to-month,Bank transfer,28.67,166.75,No
+1124-FPGQC,1,37,Yes,Yes,Yes,Yes,Yes,No,No,No,Month-to-month,Credit card,110.21,4054.52,No
+7272-FNDZJ,0,34,No,Yes,No,Yes,No,No,Yes,Yes,Month-to-month,Credit card,106.29,3602.2,No
+6441-MPLBV,0,23,Yes,No,Yes,Yes,No,Yes,Yes,Yes,One year,Credit card,99.41,2322.96,No
+6781-GCXIX,0,1,Yes,No,No,No,Yes,No,No,Yes,Month-to-month,Credit card,28.19,8.79,No
+7892-YREAG,0,56,Yes,Yes,No,No,Yes,No,No,No,Two year,Bank transfer,38.85,2112.23,No
+4952-QXDQC,0,24,Yes,No,No,No,No,No,Yes,No,Month-to-month,Bank transfer,93.85,2172.21,Yes
+5332-BJPTU,0,48,Yes,No,Yes,Yes,Yes,No,Yes,No,Two year,Bank transfer,20.36,987.76,No
+5720-GXYZU,0,29,No,Yes,Yes,No,Yes,No,Yes,Yes,One year,Electronic check,117.88,3422.15,Yes
+8000-COKGB,1,27,No,Yes,Yes,No,Yes,No,Yes,No,Month-to-month,Credit card,56.47,1496.97,Yes
+2919-XXTCR,0,64,No,Yes,No,No,Yes,Yes,No,Yes,Month-to-month,Bank transfer,91.37,5824.31,Yes
+2140-RAHDY,0,6,Yes,Yes,No,No,No,No,Yes,Yes,Month-to-month,Credit card,108.53,670.6,Yes
+6118-XATMM,1,53,Yes,Yes,Yes,Yes,No,Yes,No,No,Two year,Bank transfer,58.25,3156.78,No
+8858-BYAJD,0,54,Yes,Yes,No,No,Yes,Yes,No,No,Two year,Mailed check,50.55,2690.69,No
+5707-PQUTY,0,27,Yes,No,Yes,Yes,No,No,No,Yes,Month-to-month,Mailed check,80.09,2166.88,No
+5046-EEHPB,0,19,Yes,Yes,No,Yes,Yes,Yes,No,No,Month-to-month,Credit card,77.26,1515.85,No
+9592-ZEUPM,0,0,Yes,Yes,No,Yes,Yes,Yes,Yes,No,Month-to-month,Bank transfer,59.73, ,No
+7610-OIODG,0,68,Yes,Yes,No,No,Yes,No,Yes,No,Month-to-month,Credit card,79.38,5397.06,No
+9755-EPHMG,0,69,Yes,No,No,No,No,No,Yes,No,One year,Bank transfer,113.41,7823.39,No
+6118-OQIPS,0,17,Yes,Yes,No,Yes,No,No,No,Yes,Month-to-month,Bank transfer,65.7,1051.34,No
+7478-OHNNY,0,2,Yes,No,No,No,No,No,Yes,No,Month-to-month,Electronic check,38.07,84.56,Yes
+4392-ITQLA,0,8,Yes,Yes,Yes,No,Yes,No,Yes,Yes,Two year,Electronic check,56.48,453.42,No
+7343-TYNNF,0,4,Yes,Yes,No,Yes,Yes,No,Yes,Yes,One year,Bank transfer,58.2,260.55,Yes
+5136-ANSUR,0,60,Yes,No,No,No,Yes,Yes,Yes,No,One year,Electronic check,31.37,1822.86,No
+8247-RULPQ,0,65,Yes,Yes,No,Yes,No,No,No,No,Month-to-month,Electronic check,34.61,2250.15,No
+6152-OUGIN,0,11,Yes,Yes,Yes,No,Yes,No,No,Yes,Two year,Credit card,87.83,1035.22,No
+6807-NFVOL,0,54,Yes,Yes,Yes,Yes,No,No,No,No,One year,Bank transfer,52.63,2945.89,No
+8901-LEZJX,0,13,Yes,No,No,Yes,No,Yes,No,No,Month-to-month,Electronic check,115.4,1564.21,Yes
+5651-GJXYD,0,26,Yes,No,No,No,No,Yes,Yes,No,Month-to-month,Mailed check,42.85,1055.25,No
+9883-WQEPL,0,43,Yes,No,No,Yes,No,Yes,Yes,Yes,Two year,Mailed check,28.09,1230.42,No
+2120-ZPCIV,1,52,Yes,No,No,No,Yes,Yes,Yes,Yes,Month-to-month,Electronic check,94.86,4908.56,No
+4979-MDCZY,0,63,Yes,Yes,No,No,No,Yes,No,Yes,Two year,Bank transfer,107.87,6810.01,No
+1857-ORWOW,0,3,Yes,No,Yes,Yes,Yes,No,No,Yes,One year,Mailed check,46.37,100.5,No
+2087-AMGTI,0,14,Yes,Yes,No,No,No,Yes,Yes,Yes,One year,Credit card,38.61,454.87,No
+4662-NYBOK,0,20,Yes,No,Yes,No,No,No,No,Yes,One year,Electronic check,36.95,721.77,No
+1324-VXETS,1,22,Yes,No,Yes,No,Yes,No,Yes,Yes,Two year,Credit card,71.25,1603.63,No
+7347-LIBAE,0,72,Yes,Yes,Yes,No,No,No,Yes,Yes,Month-to-month,Electronic check,65.78,4750.56,No
+5750-DRQIC,0,56,Yes,No,No,Yes,Yes,No,No,No,Month-to-month,Credit card,44.46,2509.91,No
+5656-VKUHC,0,23,Yes,Yes,No,Yes,Yes,No,No,No,One year,Credit card,22.61,530.85,No
+6849-XWYCB,0,70,Yes,No,No,No,No,Yes,No,Yes,Month-to-month,Mailed check,67.11,4717.93,No
+6124-YZHJR,0,36,Yes,Yes,No,No,No,No,No,No,One year,Mailed check,115.85,4197.08,Yes
+9221-EZVBV,0,36,Yes,No,No,No,No,No,Yes,Yes,One year,Electronic check,84.56,3030.43,No
+6774-ZFZBB,0,31,Yes,No,No,No,No,No,No,Yes,Month-to-month,Mailed check,68.54,2128.88,No
+5028-REHKD,0,10,Yes,Yes,No,Yes,No,No,No,No,One year,Bank transfer,29.29,380.06,No
+2583-DYYQR,0,68,Yes,No,No,No,Yes,No,No,Yes,Month-to-month,Bank transfer,43.75,2982.1,No
+2233-BJZMV,0,1,Yes,No,No,Yes,Yes,No,Yes,Yes,Two year,Electronic check,48.07,50.2,No
+4328-IVMTS,0,12,Yes,No,No,Yes,No,No,No,Yes,Month-to-month,Electronic check,96.01,1157.26,No
+7543-RVMHN,0,16,Yes,Yes,No,No,Yes,No,Yes,No,One year,Bank transfer,107.42,1707.82,Yes
+3921-BJNNI,0,20,No,No,No,Yes,No,No,Yes,No,Two year,Bank transfer,109.97,2177.63,No
+7528-HQHZQ,0,9,Yes,No,No,No,Yes,No,No,Yes,Month-to-month,Credit card,118.43,1076.3,Yes
+6010-LTLUE,1,1,Yes,No,No,Yes,Yes,No,No,Yes,Month-to-month,Credit card,118.2,92.91,Yes
+8380-ZGFYK,0,49,Yes,Yes,Yes,No,No,No,No,Yes,Month-to-month,Bank transfer,115.21,5638.01,Yes
+7257-ELSXL,0,70,Yes,Yes,No,No,No,Yes,No,No,One year,Bank transfer,25.33,1733.57,No
+1676-KQWVT,0,8,Yes,No,No,No,No,No,Yes,Yes,Month-to-month,Bank transfer,32.05,261.8,No
+2487-NOMXY,0,21,Yes,Yes,No,No,No,Yes,No,No,Month-to-month,Mailed check,49.06,1059.47,Yes
+2891-YWSJT,1,36,No,No,No,No,Yes,No,Yes,No,Two year,Bank transfer,74.4,2667.8,Yes
+6274-XSZKC,0,67,Yes,No,Yes,Yes,No,No,No,Yes,Month-to-month,Electronic check,27.89,1768.21,No
+5427-ZRSQP,0,50,Yes,Yes,No,Yes,Yes,No,Yes,No,Month-to-month,Credit card,104.27,5243.02,Yes
+1552-KCISU,0,55,Yes,Yes,Yes,Yes,No,No,No,Yes,One year,Credit card,80.91,4456.06,No
+3012-RFFYP,0,42,Yes,No,No,No,Yes,No,No,Yes,Month-to-month,Mailed check,73.32,3029.78,No
+2777-DBMCP,0,30,Yes,Yes,Yes,No,No,Yes,No,Yes,Month-to-month,Mailed check,34.86,1084.46,No
+4903-QFDCC,0,14,Yes,No,No,Yes,Yes,Yes,Yes,No,Two year,Mailed check,43.83,543.7,No
+1650-GUPGY,0,63,Yes,No,No,Yes,No,Yes,Yes,No,One year,Credit card,34.35,2216.32,No
+7848-UXTYI,0,58,Yes,No,No,No,No,No,Yes,No,Month-to-month,Electronic check,104.9,6081.33,No
+8704-CHXDN,0,1,Yes,Yes,Yes,No,No,Yes,Yes,Yes,One year,Mailed check,77.59,0.0,No
+4064-CGNQR,1,52,Yes,No,No,Yes,Yes,No,No,Yes,Month-to-month,Bank transfer,92.98,4843.88,No
+2183-ICAKQ,0,6,Yes,No,No,No,No,Yes,Yes,No,Month-to-month,Bank transfer,48.2,268.89,No
+4336-BFLJV,0,53,Yes,Yes,No,No,Yes,No,No,Yes,One year,Mailed check,55.87,2933.27,No
+6381-ZEJCA,0,60,Yes,No,No,No,Yes,No,Yes,Yes,Month-to-month,Electronic check,59.3,3521.11,No
+9314-MRHBX,1,9,Yes,No,Yes,Yes,Yes,No,Yes,No,Month-to-month,Bank transfer,95.52,853.32,No
+6925-SNKKT,0,31,Yes,No,No,No,Yes,No,No,No,Two year,Bank transfer,96.78,2975.92,No
+3045-IHNZX,0,9,Yes,No,Yes,Yes,No,No,Yes,No,Month-to-month,Credit card,39.09,258.98,No
+5902-FYIJX,0,41,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Month-to-month,Electronic check,114.04,4739.24,Yes
+3369-MXIQA,0,67,Yes,Yes,No,No,Yes,No,Yes,Yes,Month-to-month,Electronic check,30.31,2018.55,No
+9959-KRNLK,0,5,Yes,Yes,No,No,No,Yes,Yes,Yes,One year,Mailed check,109.4,510.4,No
+1159-HJJHQ,1,29,Yes,,Yes,Yes,No,Yes,No,No,One year,Bank transfer,28.24,762.54,No
+8461-XZQKQ,0,71,Yes,No,Yes,No,No,No,Yes,Yes,Two year,Electronic check,44.98,3232.12,No
+2191-VNELH,0,21,Yes,Yes,Yes,Yes,No,No,Yes,Yes,Month-to-month,Electronic check,104.34,2126.22,No
+4145-BAJHZ,0,9,Yes,No,Yes,No,Yes,No,No,Yes,One year,Mailed check,36.31,333.49,No
+3362-IXWBC,0,35,Yes,Yes,No,No,No,No,No,No,One year,Mailed check,60.18,2077.12,No
+1854-LOJAF,0,37,Yes,Yes,Yes,No,Yes,No,No,No,Month-to-month,Bank transfer,63.89,2337.66,No
+6530-JDQPM,0,48,No,Yes,No,No,Yes,No,Yes,No,Month-to-month,Electronic check,43.02,2009.78,No
+9460-VBXBM,0,22,Yes,Yes,Yes,No,Yes,No,No,Yes,Two year,Credit card,90.45,1958.88,No
+9114-ZABGH,0,69,No,No,Yes,No,No,No,Yes,No,Month-to-month,Electronic check,104.84,7234.4,No
+3514-KIPWO,0,38,Yes,No,No,No,Yes,No,Yes,Yes,One year,Mailed check,107.21,4085.75,Yes
+3986-OQXYH,0,20,No,No,Yes,No,No,No,No,Yes,Month-to-month,Credit card,52.61,1012.92,No
+9263-VDODM,0,70,No,Yes,No,Yes,Yes,No,No,Yes,Month-to-month,Bank transfer,72.15,5045.95,No
+1402-HPHAK,1,67,Yes,No,No,No,No,No,No,No,Two year,Credit card,43.34,2948.2,No
+5870-TDMFD,0,36,Yes,Yes,No,Yes,No,Yes,No,Yes,Two year,Electronic check,42.97,1463.79,No
+2097-TXRJY,0,1,No,No,No,No,Yes,No,Yes,No,Month-to-month,Bank transfer,34.45,34.14,No
+5473-NQRMM,0,43,No,No,Yes,Yes,No,No,No,No,One year,Electronic check,113.88,4849.3,No
+3861-RRLSD,0,40,No,Yes,No,Yes,No,No,No,Yes,Month-to-month,Bank transfer,108.57,4290.17,Yes
+4745-ZTSWP,0,10,Yes,Yes,No,No,No,Yes,Yes,No,One year,Mailed check,97.29,985.95,No
+6962-MVSND,0,46,Yes,Yes,No,Yes,Yes,No,Yes,No,Month-to-month,Credit card,70.8,3229.54,No
+8253-IJDFD,1,61,Yes,Yes,Yes,Yes,No,No,Yes,Yes,Month-to-month,Electronic check,68.04,4089.6,No
+1877-AHTWF,0,7,Yes,No,No,No,Yes,No,No,No,Month-to-month,Credit card,72.03,570.42,No
+4814-VSXKE,0,52,Yes,No,Yes,Yes,Yes,No,Yes,Yes,Month-to-month,Mailed check,72.73,3827.96,No
+2288-SALJX,0,10,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Month-to-month,Bank transfer,62.33,526.68,No
+9982-MPJUH,0,54,Yes,Yes,No,No,No,No,No,No,Month-to-month,Bank transfer,31.44,1624.04,No
+7698-XEFJV,0,30,Yes,No,Yes,Yes,Yes,No,No,No,Two year,Electronic check,30.82,954.27,No
+6767-FJQZL,1,0,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,Month-to-month,Mailed check,115.13, ,Yes
+1670-CADKH,0,70,Yes,No,Yes,Yes,Yes,No,No,Yes,Month-to-month,Bank transfer,67.17,4776.93,Yes
+3708-TMSOF,0,12,Yes,Yes,No,Yes,No,No,No,No,Month-to-month,Credit card,115.23,1413.58,Yes
+9533-MVCWS,0,43,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,One year,Credit card,34.68,1506.21,No
+3249-UTXFX,0,13,Yes,No,No,Yes,No,No,Yes,No,Month-to-month,Bank transfer,74.55,918.06,Yes
+7857-IJGMX,0,68,Yes,Yes,Yes,No,No,No,Yes,No,Month-to-month,Mailed check,39.19,2689.49,No
+8538-DDBPI,0,53,Yes,No,No,No,Yes,No,No,No,One year,Mailed check,43.82,2258.67,No
+7846-TFSTZ,0,58,No,No,Yes,Yes,Yes,No,Yes,Yes,Month-to-month,Mailed check,21.07,1287.32,No
+7503-JZHUJ,0,31,Yes,Yes,No,Yes,No,Yes,No,No,Two year,Mailed check,30.13,955.14,No
+9414-UPFEY,0,34,Yes,No,Yes,No,No,No,Yes,Yes,Month-to-month,Mailed check,111.52,3750.44,No
+8214-NWUKV,0,46,Yes,No,Yes,No,No,No,No,Yes,One year,Credit card,50.8,2377.03,No
+8163-MATIJ,0,57,Yes,No,Yes,No,Yes,Yes,No,Yes,Month-to-month,Mailed check,80.03,4673.79,No
+7421-VCVHO,0,61,Yes,No,Yes,No,No,No,No,Yes,One year,Electronic check,65.43,3980.35,No
+8815-FFZJY,1,1,No,No,Yes,Yes,Yes,Yes,No,No,Two year,Bank transfer,58.85,86.37,No
+4214-QNZON,0,48,Yes,No,No,No,Yes,No,No,No,Month-to-month,Bank transfer,72.25,3446.41,No
+5196-JLLTB,1,7,Yes,No,No,No,No,No,Yes,No,Month-to-month,Mailed check,37.1,263.97,Yes
+5508-OTRLC,0,21,Yes,No,Yes,No,No,No,Yes,No,Month-to-month,Bank transfer,118.84,2420.28,No
+4348-GFSMU,0,60,Yes,Yes,No,Yes,No,No,No,No,Month-to-month,Credit card,101.47,6088.17,No
+2245-ZMGJV,0,18,Yes,Yes,No,Yes,No,Yes,No,No,Two year,Credit card,93.64,1687.7,No
+7389-EZDHS,0,58,Yes,No,Yes,Yes,Yes,No,No,No,One year,Credit card,65.81,3906.93,No
+5766-LYUZH,0,33,Yes,Yes,No,Yes,No,Yes,No,No,One year,Bank transfer,33.59,1018.72,No
+8654-FUOPC,0,16,No,Yes,Yes,Yes,Yes,No,Yes,No,Two year,Electronic check,111.91,1776.52,No
+8911-HPEYI,1,24,Yes,Yes,Yes,No,Yes,No,No,Yes,Two year,Bank transfer,52.82,1332.09,No
+7863-TODHP,1,38,Yes,No,No,Yes,Yes,Yes,No,No,Two year,Credit card,23.11,866.09,No
+5822-PGNCM,0,55,No,Yes,No,No,No,Yes,No,Yes,Month-to-month,Credit card,52.93,2902.58,No
+1822-ROWME,0,44,Yes,No,No,Yes,No,Yes,No,Yes,Month-to-month,Credit card,99.03,4315.66,No
+3116-VYBRM,0,68,Yes,No,No,Yes,Yes,Yes,No,No,Month-to-month,Credit card,81.52,5496.73,No
+3320-NYFVC,0,63,Yes,No,No,No,No,Yes,No,Yes,Month-to-month,Bank transfer,94.59,5867.88,No
+7484-BBAUO,0,54,Yes,Yes,Yes,No,No,No,Yes,Yes,Month-to-month,Electronic check,98.95,5311.84,Yes
+7212-EXVMX,0,44,Yes,No,Yes,Yes,No,No,No,Yes,Month-to-month,Mailed check,39.62,1693.81,No
+2287-HBEVK,0,21,Yes,No,Yes,No,No,No,Yes,Yes,Month-to-month,Mailed check,112.23,2362.73,Yes
+6807-WTKJC,0,30,Yes,No,Yes,Yes,Yes,No,Yes,No,Month-to-month,Credit card,62.67,1840.72,Yes
+8466-ZNMWI,0,8,Yes,No,Yes,Yes,No,No,Yes,No,Month-to-month,Credit card,83.18,641.46,Yes
+4658-XJYEM,1,27,Yes,Yes,No,No,No,No,No,No,Month-to-month,Mailed check,18.24,469.87,Yes
+5407-HZMWF,0,67,Yes,No,Yes,Yes,No,No,Yes,No,Month-to-month,Mailed check,119.32,7992.03,No
+4140-MOFIQ,0,31,Yes,Yes,Yes,No,No,No,No,No,Month-to-month,Electronic check,46.65,1419.72,Yes
+3506-TMZGV,0,8,Yes,No,No,Yes,No,No,No,No,One year,Electronic check,24.33,141.55,No
+5411-CSFDN,0,47,Yes,No,No,No,Yes,No,No,Yes,One year,Mailed check,64.74,3047.07,No
+8072-GQAET,0,70,No,Yes,No,No,No,No,Yes,No,Month-to-month,Electronic check,31.16,2234.57,No
+1115-JNBZN,0,63,Yes,No,Yes,Yes,Yes,No,Yes,Yes,Month-to-month,Mailed check,33.54,2119.44,No
+4046-ZORCE,1,20,Yes,Yes,No,Yes,Yes,No,No,Yes,Month-to-month,Credit card,82.49,1619.31,Yes
+1406-NVXOB,0,33,Yes,No,Yes,No,No,No,No,No,Month-to-month,Bank transfer,58.08,1910.48,No
+6634-QPSOS,0,38,Yes,No,No,No,No,No,No,Yes,Month-to-month,Bank transfer,112.03,4154.61,Yes
+5376-DCXLI,0,18,Yes,Yes,Yes,No,No,Yes,No,No,Two year,Electronic check,50.55,902.93,No
+3638-BYCFL,1,19,Yes,Yes,Yes,No,No,Yes,No,No,Month-to-month,Credit card,92.07,1729.31,Yes
+4222-BIUGW,0,17,Yes,No,No,No,No,No,No,Yes,Month-to-month,Bank transfer,65.03,1058.84,No
+4241-ACVKZ,0,72,Yes,Yes,Yes,Yes,No,Yes,No,Yes,One year,Bank transfer,85.32,6105.44,No
+8098-AISBZ,1,54,Yes,No,Yes,No,No,No,No,No,Month-to-month,Mailed check,79.17,4254.67,No
+2496-UVNUX,0,61,Yes,No,No,Yes,Yes,Yes,No,No,Month-to-month,Bank transfer,66.22,4089.04,No
+7608-SKHWF,0,59,Yes,No,Yes,No,No,No,Yes,Yes,Month-to-month,Credit card,114.91,6834.29,No
+4730-NKJPI,0,70,Yes,Yes,No,Yes,Yes,Yes,Yes,No,Two year,Bank transfer,52.96,3660.79,No
+9897-EKVMS,0,7,Yes,No,No,Yes,Yes,No,Yes,No,Month-to-month,Mailed check,36.08,226.66,Yes
+6821-ITGTD,1,64,Yes,No,Yes,No,Yes,No,No,No,One year,Bank transfer,87.17,5554.25,No
+7246-CWQBC,0,4,Yes,Yes,No,No,No,Yes,No,Yes,One year,Credit card,104.29,457.64,No
+2686-YPHHA,0,34,Yes,Yes,Yes,No,No,Yes,Yes,No,Month-to-month,Mailed check,22.11,759.02,No
+2828-WPJAI,0,43,Yes,Yes,No,No,No,No,No,No,One year,Credit card,63.86,2750.62,No
+4445-DPRZJ,0,26,Yes,Yes,Yes,No,No,No,Yes,Yes,Month-to-month,Bank transfer,109.03,2861.59,Yes
+3483-VJQTW,0,10,Yes,No,Yes,No,No,No,Yes,No,Month-to-month,Electronic check,94.46,914.78,Yes
+3867-QDUBS,1,14,Yes,No,Yes,No,Yes,Yes,No,No,Month-to-month,Credit card,119.16,1736.43,Yes
+2880-MBRMR,0,60,Yes,No,No,No,No,No,Yes,No,Two year,Bank transfer,72.2,4331.91,No
+4127-APSRG,1,23,Yes,Yes,No,No,No,Yes,Yes,No,Month-to-month,Mailed check,85.32,1919.56,No
+7448-OFCIA,0,22,Yes,Yes,No,No,No,No,No,No,Month-to-month,Electronic check,48.85,1063.22,Yes
+7444-ABEIA,0,67,Yes,,No,No,Yes,No,Yes,No,Two year,Credit card,114.65,7743.15,No
+6668-DUOCK,0,10,Yes,No,No,Yes,Yes,Yes,No,No,Month-to-month,Credit card,55.37,532.44,Yes
+2262-ZPVJD,0,66,Yes,No,No,No,No,No,No,Yes,Two year,Electronic check,93.33,6207.26,No
+3113-KULYJ,0,67,Yes,Yes,No,Yes,Yes,No,No,Yes,One year,Bank transfer,59.12,3929.77,No
+3098-MCRCQ,0,43,Yes,No,No,Yes,Yes,Yes,No,Yes,One year,Electronic check,75.31,3200.05,No
+4442-JPSYH,0,12,Yes,Yes,No,No,No,Yes,Yes,No,One year,Mailed check,91.42,1130.02,No
+8306-VZZUH,0,11,Yes,Yes,No,Yes,Yes,Yes,No,Yes,One year,Bank transfer,69.91,725.31,No
+7250-UHVSM,0,20,Yes,Yes,No,No,Yes,Yes,Yes,No,Month-to-month,Electronic check,110.52,2251.53,Yes
+8754-CRUBK,0,42,Yes,No,Yes,No,No,Yes,Yes,No,Two year,Bank transfer,60.77,2569.92,No
+5652-FWQHL,0,11,Yes,No,No,Yes,No,No,No,Yes,Two year,Mailed check,84.0,880.32,No
+2008-CTZHG,0,33,No,No,Yes,No,No,Yes,Yes,No,Two year,Bank transfer,52.92,1742.79,No
+7154-NDRFC,0,8,Yes,Yes,No,Yes,Yes,No,No,No,One year,Credit card,59.63,449.6,No
+5177-TNQGM,0,39,Yes,Yes,No,No,Yes,No,Yes,Yes,Month-to-month,Electronic check,62.89,2470.16,No
+7415-NGYBX,0,1,Yes,No,No,No,No,No,No,Yes,Month-to-month,Credit card,30.83,125.22,No
+7520-CGJYN,1,51,Yes,Yes,No,Yes,No,No,Yes,Yes,Month-to-month,Electronic check,27.36,1376.82,No
+3322-XDVVK,0,4,Yes,No,No,Yes,Yes,Yes,Yes,Yes,Month-to-month,Electronic check,86.08,371.01,No
+1388-XZJEH,0,14,Yes,No,Yes,Yes,No,Yes,No,Yes,One year,Mailed check,84.86,1189.26,Yes
+2227-PNJQQ,1,12,No,No,No,Yes,No,Yes,No,No,One year,Mailed check,85.62,1028.64,No
+1101-KWUWY,0,60,No,No,No,Yes,No,No,No,Yes,Month-to-month,Electronic check,20.02,1192.94,No
+1552-HLNUS,0,3,Yes,No,Yes,No,Yes,No,Yes,Yes,Month-to-month,Mailed check,51.31,111.06,Yes
+7355-ERUTP,0,31,Yes,No,Yes,Yes,Yes,No,No,Yes,One year,Credit card,38.18,1200.34,No
+1794-DTWVL,0,43,Yes,No,Yes,No,Yes,Yes,No,Yes,Month-to-month,Bank transfer,97.37,4172.47,No
+6284-EPFUU,0,37,Yes,No,No,Yes,Yes,No,No,No,Two year,Bank transfer,105.78,3868.62,No
+1460-YUJLC,0,49,Yes,Yes,No,No,No,Yes,No,Yes,One year,Electronic check,43.16,2165.55,No
+9426-CXRXJ,0,58,No,No,No,Yes,No,No,Yes,Yes,Month-to-month,Electronic check,86.12,4999.91,No
+9060-LJIYM,1,28,Yes,Yes,No,No,No,Yes,No,No,Month-to-month,Mailed check,31.2,862.2,No
+5306-QOOJE,0,60,Yes,No,No,No,No,No,No,No,One year,Credit card,46.07,2831.2,No
+9950-MZLPO,0,23,Yes,,No,Yes,Yes,No,No,No,Month-to-month,Credit card,32.14,647.42,No
+9690-CNDWN,0,71,Yes,No,No,No,Yes,Yes,No,No,Two year,Electronic check,46.92,3394.96,No
+9306-HEQDJ,0,36,Yes,No,No,Yes,Yes,No,No,No,Month-to-month,Mailed check,86.82,3081.51,No
+3824-FDRTK,0,53,No,No,Yes,No,Yes,No,No,No,Month-to-month,Mailed check,110.85,5885.63,No
+3529-ERVOL,1,63,Yes,Yes,No,No,No,Yes,Yes,No,Month-to-month,Bank transfer,38.66,2406.18,No
+6834-XZFMW,0,57,Yes,Yes,No,No,No,No,No,Yes,One year,Electronic check,73.29,4131.38,No
+6694-VZCPN,0,62,Yes,Yes,No,Yes,No,No,No,No,Two year,Mailed check,89.54,5617.17,No
+3562-QCMKK,1,39,No,No,No,Yes,No,Yes,No,No,Two year,Credit card,115.2,4585.61,No
+6526-YYSIZ,0,3,Yes,No,No,Yes,No,Yes,Yes,No,Month-to-month,Mailed check,80.23,229.63,Yes
+9984-WWVTS,0,35,Yes,Yes,Yes,Yes,Yes,Yes,No,No,Two year,Credit card,44.02,1557.47,No
+6744-QKXQP,0,13,Yes,No,No,Yes,No,Yes,No,No,Month-to-month,Bank transfer,81.8,1066.25,Yes
+7675-BXPYC,0,64,Yes,Yes,Yes,No,Yes,No,No,Yes,One year,Bank transfer,50.69,3330.69,No
+3102-YSQKO,0,17,No,No,No,No,No,No,Yes,No,Two year,Mailed check,117.57,1893.03,No
+5916-FONII,0,16,Yes,Yes,Yes,No,No,No,Yes,Yes,Month-to-month,Credit card,58.77,959.18,Yes
+7910-RMPGM,0,18,No,Yes,No,Yes,Yes,No,Yes,No,Two year,Electronic check,87.91,1546.02,No
+6055-GENYM,0,46,Yes,No,No,Yes,Yes,No,Yes,No,Month-to-month,Credit card,20.37,819.22,No
+9111-WTXKT,0,41,Yes,No,Yes,No,Yes,No,No,Yes,Month-to-month,Credit card,58.81,2393.18,No
+2302-IOATY,0,69,Yes,Yes,No,Yes,No,No,Yes,Yes,Month-to-month,Bank transfer,107.26,7493.34,No
+1947-ZCDTR,1,30,Yes,No,No,Yes,Yes,Yes,No,Yes,Two year,Credit card,80.24,2374.4,No
+9423-LODRZ,0,20,Yes,No,No,No,Yes,Yes,Yes,No,Month-to-month,Bank transfer,63.28,1305.14,No
+6371-YKZND,1,3,Yes,No,Yes,No,Yes,No,Yes,No,Two year,Bank transfer,113.47,400.34,Yes
+4262-MBXGR,0,0,Yes,No,Yes,No,No,No,No,No,Month-to-month,Electronic check,105.11, ,Yes
+9278-LPNTB,0,27,Yes,No,No,Yes,No,No,No,Yes,One year,Electronic check,50.87,1379.51,No
+4236-PCWQA,0,67,No,Yes,No,No,No,Yes,Yes,No,One year,Electronic check,73.54,4841.37,No
+1109-ERNMO,0,38,Yes,No,No,Yes,Yes,No,Yes,No,Month-to-month,Electronic check,67.96,2546.67,No
+5451-IAART,0,65,Yes,No,Yes,Yes,Yes,Yes,No,Yes,One year,Credit card,82.48,5406.55,No
+3158-GKQPO,0,7,Yes,Yes,No,No,No,No,No,Yes,One year,Electronic check,52.08,367.59,Yes
+1330-LTPUS,0,6,Yes,Yes,No,Yes,Yes,No,Yes,No,Month-to-month,Electronic check,42.91,275.83,No
+9096-OOOGL,0,60,Yes,Yes,Yes,No,Yes,No,No,Yes,Month-to-month,Credit card,111.09,6672.06,No
+2518-LDMYL,0,7,Yes,No,No,No,No,No,Yes,Yes,Month-to-month,Mailed check,112.24,895.28,Yes
+7646-LXFVS,0,3,Yes,No,Yes,Yes,Yes,Yes,No,Yes,Two year,Credit card,104.02,290.53,No
+8998-DXXHQ,1,29,Yes,No,No,No,Yes,No,Yes,Yes,One year,Credit card,117.78,3495.89,No
+6279-BNRFJ,1,67,Yes,Yes,No,No,No,No,No,Yes,Two year,Bank transfer,93.99,6304.01,No
+6268-YBYVV,0,50,Yes,Yes,No,No,No,No,No,Yes,One year,Credit card,96.0,4884.71,No
+1428-OJXTQ,0,7,Yes,No,No,No,Yes,Yes,Yes,No,Two year,Credit card,95.78,609.21,No
+1250-WMEWX,0,61,Yes,No,Yes,No,Yes,Yes,No,No,Month-to-month,Electronic check,67.02,4097.45,No
+5468-RPHTZ,0,61,Yes,No,Yes,Yes,No,Yes,Yes,Yes,Month-to-month,Electronic check,64.56,3918.48,No
+9406-RJXYA,0,58,Yes,No,Yes,No,Yes,No,Yes,No,One year,Mailed check,42.5,2471.97,No
+4045-OPSNA,0,65,Yes,No,No,No,Yes,No,Yes,No,Month-to-month,Bank transfer,83.77,5506.17,No
+2491-TSQLH,1,17,Yes,No,No,Yes,No,No,Yes,Yes,Month-to-month,Credit card,47.51,826.61,Yes
+3772-RNDKV,0,71,Yes,No,Yes,Yes,No,No,No,Yes,One year,Electronic check,44.3,3206.32,No
+6390-WNMYN,0,23,No,No,Yes,No,No,No,Yes,Yes,Two year,Electronic check,77.77,1755.2,No
+2216-KQIKW,0,58,Yes,Yes,Yes,No,Yes,Yes,No,No,One year,Mailed check,59.82,3428.42,No
+4915-HCKTH,0,42,Yes,Yes,No,No,Yes,No,Yes,No,Month-to-month,Mailed check,40.32,1694.25,No
+5235-RYVHE,0,56,Yes,Yes,No,No,No,Yes,No,Yes,Two year,Credit card,101.24,5667.51,No
+7036-GKCUE,0,45,Yes,Yes,No,No,No,Yes,No,No,Month-to-month,Mailed check,105.78,4750.81,No
+4425-KBUQO,0,46,Yes,Yes,No,No,Yes,Yes,No,No,Month-to-month,Credit card,35.11,1567.13,No
+2601-BBQTU,1,44,Yes,No,Yes,No,No,Yes,Yes,Yes,Two year,Electronic check,18.77,885.81,No
+8202-KAGUT,0,56,Yes,Yes,No,Yes,Yes,Yes,Yes,No,One year,Electronic check,52.29,2910.1,No
+5567-AUVFU,0,53,Yes,No,No,Yes,No,No,No,No,Two year,Credit card,99.35,5336.85,Yes
+6757-XQCQC,1,9,No,No,Yes,No,No,Yes,No,No,Two year,Electronic check,103.6,933.04,Yes
+3328-WZMHK,0,60,Yes,No,No,No,No,Yes,No,No,One year,Electronic check,32.11,1959.02,No
+3179-OKBPQ,0,39,Yes,No,Yes,No,No,Yes,Yes,No,Month-to-month,Bank transfer,96.98,3810.11,No
+7002-YSRFM,0,23,Yes,Yes,No,Yes,No,No,Yes,Yes,Month-to-month,Electronic check,29.8,644.19,No
+4909-YMROB,0,37,No,No,No,Yes,Yes,No,No,Yes,Two year,Electronic check,57.79,2156.59,No
+9419-RFBYH,0,70,Yes,Yes,No,No,Yes,Yes,No,No,Two year,Mailed check,119.86,8486.62,No
+1154-QAFXA,0,62,Yes,No,No,No,No,Yes,No,Yes,Month-to-month,Bank transfer,37.64,2346.26,No
+7768-QHHMN,0,60,Yes,Yes,Yes,Yes,Yes,No,Yes,No,Month-to-month,Bank transfer,33.7,2067.06,No
+9012-GPRAX,0,33,Yes,Yes,No,No,Yes,No,Yes,Yes,Month-to-month,Bank transfer,61.13,2051.95,No
+9926-CGUVE,0,57,Yes,No,No,No,Yes,No,No,No,Month-to-month,Electronic check,81.21,4644.32,Yes
+9256-IHJRF,0,28,Yes,No,No,No,No,No,No,No,Two year,Mailed check,113.16,3177.8,No
+5885-BDTJU,1,50,Yes,No,No,Yes,No,No,Yes,Yes,Month-to-month,Mailed check,118.04,5929.37,Yes
+7638-ZDYXL,0,46,No,No,Yes,No,No,No,No,No,Month-to-month,Mailed check,25.1,1192.76,No
+2217-DNACN,0,18,Yes,Yes,No,No,Yes,No,No,Yes,Two year,Bank transfer,32.08,509.83,No
+6068-WZGIF,0,19,Yes,No,No,No,Yes,No,Yes,No,Month-to-month,Electronic check,98.66,1886.91,Yes
+3021-LZXXL,0,4,Yes,Yes,Yes,Yes,No,Yes,Yes,No,Month-to-month,Bank transfer,45.6,173.2,No
+6915-SGMOJ,0,10,Yes,Yes,No,No,Yes,No,No,No,Month-to-month,Credit card,108.25,1062.92,Yes
+5257-LBTXT,0,31,Yes,Yes,No,No,Yes,No,Yes,No,Month-to-month,Bank transfer,85.67,2720.57,No
+9402-LBGWD,0,34,Yes,Yes,No,Yes,Yes,Yes,No,No,Month-to-month,Mailed check,29.41,963.28,No
+5923-AICCE,0,12,Yes,Yes,No,No,No,No,No,No,Month-to-month,Mailed check,102.92,1165.3,No
+5843-RHVKT,0,30,Yes,No,No,No,Yes,No,Yes,Yes,Month-to-month,Bank transfer,35.99,1119.49,Yes
+5766-SZZPZ,0,44,Yes,Yes,No,No,Yes,Yes,No,No,Month-to-month,Bank transfer,61.2,2621.78,No
+7311-GYDMD,0,16,Yes,Yes,Yes,Yes,Yes,No,Yes,No,Month-to-month,Mailed check,74.32,1092.72,No
+8058-XVCHI,0,24,Yes,No,No,No,Yes,Yes,Yes,Yes,Month-to-month,Electronic check,69.08,1703.33,Yes
+2040-NAPOP,1,26,Yes,Yes,No,Yes,Yes,No,No,No,Two year,Bank transfer,87.99,2295.68,No
+9214-UGOUW,0,36,Yes,No,No,No,No,No,No,Yes,Month-to-month,Bank transfer,84.57,3068.16,No
+6788-CLWBP,0,26,Yes,No,No,No,Yes,Yes,Yes,No,Month-to-month,Electronic check,119.19,3076.82,No
+5865-FIZPY,0,53,Yes,No,No,Yes,Yes,No,No,Yes,Two year,Bank transfer,119.94,6287.6,No
+5241-VQXIJ,0,23,Yes,No,No,Yes,No,No,No,No,Month-to-month,Electronic check,70.68,1566.35,No
+1363-FDEIW,0,31,No,Yes,No,Yes,No,Yes,No,Yes,Month-to-month,Bank transfer,27.71,845.4,No
+4406-VVZNW,0,27,No,Yes,No,No,Yes,No,No,No,Two year,Bank transfer,92.24,2426.86,No
+4774-QVDBE,0,13,Yes,No,No,No,Yes,Yes,Yes,Yes,One year,Electronic check,117.62,1544.41,No
+7489-MHTAE,0,50,Yes,No,Yes,No,Yes,No,Yes,No,Month-to-month,Bank transfer,50.47,2500.38,No
+5228-XTRSI,0,17,Yes,No,No,Yes,No,Yes,No,No,One year,Electronic check,65.04,1114.93,No
+5030-XSPCT,0,21,Yes,Yes,No,Yes,Yes,Yes,Yes,No,One year,Mailed check,61.33,1295.69,No
+4290-KRKOA,1,57,Yes,No,No,Yes,Yes,No,No,Yes,Month-to-month,Bank transfer,23.24,1344.02,No
+2664-NYTKZ,1,69,Yes,Yes,No,No,No,Yes,Yes,Yes,Month-to-month,Mailed check,86.57,5998.3,Yes
+3478-XKCAZ,0,48,Yes,,No,No,Yes,No,Yes,Yes,Month-to-month,Credit card,54.04,2576.72,No
+6779-DZBIT,0,66,Yes,Yes,No,No,Yes,No,Yes,No,Two year,Credit card,98.32,6498.32,No
+1479-XRYVV,0,62,Yes,No,Yes,Yes,Yes,No,Yes,Yes,Month-to-month,Credit card,102.88,6390.36,No
+3047-FGERB,0,35,Yes,Yes,No,No,No,Yes,Yes,No,Month-to-month,Electronic check,101.77,3440.51,No
+4855-POMFC,0,56,Yes,No,No,Yes,No,No,No,Yes,Month-to-month,Electronic check,60.5,3420.33,No
+9893-MPOJS,0,23,No,No,Yes,No,No,No,No,No,Two year,Electronic check,50.8,1175.9,No
+4385-KUISR,0,33,Yes,No,Yes,No,No,Yes,Yes,Yes,Month-to-month,Bank transfer,94.38,3142.74,No
+1275-RUHXA,0,39,No,No,No,No,Yes,No,Yes,No,Month-to-month,Mailed check,99.74,3825.52,No
+2617-YWTPF,0,70,Yes,No,No,No,No,No,No,Yes,Month-to-month,Bank transfer,68.11,4751.91,No
+5402-OCPCD,0,61,Yes,Yes,No,Yes,No,No,Yes,Yes,One year,Mailed check,109.09,6599.91,No
+2529-ECYUN,0,35,Yes,Yes,Yes,No,No,No,No,Yes,Month-to-month,Electronic check,32.68,1181.03,No
+4317-EYUTM,0,47,Yes,No,No,Yes,No,No,No,Yes,Two year,Bank transfer,107.67,4990.23,Yes
+1247-QMHIB,0,14,Yes,Yes,No,No,Yes,No,No,No,Month-to-month,Bank transfer,27.8,342.77,Yes
+8844-EVZBQ,0,58,Yes,Yes,No,Yes,Yes,No,No,No,Month-to-month,Bank transfer,33.66,1979.0,Yes
+1600-VNAUT,0,40,Yes,Yes,No,Yes,No,No,No,No,Month-to-month,Mailed check,72.45,2866.53,Yes
+9323-MYRNJ,0,38,Yes,Yes,Yes,Yes,Yes,No,No,No,Month-to-month,Bank transfer,24.89,899.4,No
+3636-QTAKB,0,55,Yes,Yes,No,Yes,No,No,No,No,Month-to-month,Credit card,23.39,1331.79,No
+4569-URDSA,0,46,Yes,Yes,Yes,No,Yes,No,Yes,Yes,One year,Bank transfer,18.05,877.69,No
+1111-XAGDP,0,5,Yes,No,No,No,Yes,Yes,Yes,Yes,Month-to-month,Credit card,62.5,348.6,Yes
+5699-VZTMB,1,21,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,One year,Mailed check,97.01,2079.65,No
+9300-OFOKJ,0,12,Yes,No,No,No,No,No,Yes,Yes,Month-to-month,Electronic check,21.55,247.02,No
+5079-TEZBD,0,53,Yes,No,Yes,No,No,No,No,No,One year,Credit card,84.53,4469.86,No
+7085-DUTLL,0,2,Yes,Yes,No,Yes,Yes,No,Yes,No,Month-to-month,Mailed check,101.96,171.52,No
+9998-UQDPB,0,14,Yes,No,No,No,No,No,Yes,No,Month-to-month,Electronic check,35.14,500.35,Yes
+3266-SKZYC,0,43,Yes,No,No,No,No,No,Yes,No,Month-to-month,Electronic check,32.98,1391.75,No
+8950-WCKYA,0,50,Yes,No,Yes,No,No,No,No,Yes,Two year,Mailed check,105.8,5268.35,No
+1527-NYHUS,0,36,Yes,Yes,Yes,Yes,No,No,No,No,Two year,Electronic check,101.96,3700.56,Yes
+2314-HQMGF,1,62,Yes,Yes,No,No,No,Yes,No,Yes,Two year,Bank transfer,72.97,4583.37,No
+6014-VKYRK,0,67,Yes,Yes,No,Yes,Yes,No,Yes,Yes,Two year,Bank transfer,101.56,6824.43,No
+7361-LTZUD,0,9,Yes,No,No,Yes,No,Yes,Yes,Yes,Month-to-month,Mailed check,27.46,336.86,Yes
+1644-VWOGW,0,69,Yes,No,No,No,No,No,No,Yes,Month-to-month,Electronic check,58.24,3983.28,No
+5035-HJHHI,0,44,Yes,No,No,No,No,No,No,No,Month-to-month,Electronic check,93.26,4011.54,No
+7066-AJEQZ,0,46,Yes,No,No,No,Yes,No,No,Yes,Two year,Credit card,44.26,2071.69,No
+8089-GNAKH,0,6,Yes,No,Yes,Yes,No,No,No,Yes,Month-to-month,Mailed check,94.74,529.85,No
+5515-KROYB,0,45,Yes,No,No,Yes,No,No,Yes,No,Month-to-month,Electronic check,69.43,3110.67,No
+9500-USVBF,0,52,Yes,Yes,No,Yes,No,Yes,No,No,One year,Bank transfer,94.53,4827.07,No
+1007-UJJPL,0,42,Yes,No,No,Yes,No,Yes,No,No,Month-to-month,Credit card,65.4,2701.84,No
+6734-YIXNJ,1,6,Yes,Yes,No,Yes,Yes,No,No,No,One year,Electronic check,55.53,258.07,No
+9271-MDHVN,0,38,Yes,Yes,No,No,Yes,No,No,No,Month-to-month,Credit card,40.36,1511.96,No
+6039-RFCLX,0,68,No,No,No,No,No,Yes,Yes,Yes,One year,Bank transfer,39.25,2649.27,No
+2144-SZCDW,0,52,Yes,No,No,No,Yes,Yes,Yes,Yes,Two year,Mailed check,94.65,4926.3,No
+1976-TUIHN,0,10,No,Yes,Yes,Yes,No,No,No,Yes,One year,Credit card,30.13,363.29,No
+5558-WPZGH,1,70,Yes,No,No,Yes,No,No,No,Yes,Month-to-month,Mailed check,26.77,1907.75,No
+3169-QAWUZ,1,69,Yes,Yes,No,No,No,No,Yes,No,Month-to-month,Bank transfer,35.98,2401.51,No
+9625-BTNTW,1,12,Yes,Yes,No,Yes,Yes,Yes,Yes,No,Month-to-month,Electronic check,35.89,461.08,No
+6248-AWLLP,1,58,Yes,Yes,No,No,No,No,No,No,Month-to-month,Electronic check,101.96,5919.27,No
+9203-NFTQB,0,29,Yes,No,Yes,Yes,No,Yes,Yes,No,One year,Credit card,58.65,1695.96,No
+5793-UWHNV,0,43,Yes,No,Yes,No,Yes,Yes,Yes,No,Month-to-month,Credit card,119.02,5116.73,No
+6253-KEBRZ,0,32,Yes,Yes,Yes,No,No,Yes,No,No,Month-to-month,Electronic check,32.0,1034.23,No
+6406-URJNH,0,57,No,Yes,No,No,No,No,No,No,Month-to-month,Electronic check,84.66,4791.03,No
+3008-PQZGH,0,72,Yes,Yes,Yes,No,No,No,No,No,Two year,Bank transfer,63.77,4582.32,No
+2494-YUIZS,0,58,Yes,Yes,No,No,Yes,Yes,No,Yes,Month-to-month,Credit card,58.08,3427.84,No
+5286-JOCEY,0,67,Yes,No,No,Yes,Yes,No,Yes,No,Month-to-month,Bank transfer,107.26,7151.22,No
+2859-EWYVC,0,69,Yes,No,No,No,No,No,No,Yes,Month-to-month,Bank transfer,117.51,8056.7,No
+8549-GAXGR,0,6,Yes,No,Yes,No,Yes,No,No,No,Month-to-month,Mailed check,107.03,639.09,Yes
+1664-EWPZE,1,18,Yes,Yes,No,No,No,No,No,Yes,Two year,Electronic check,37.61,620.45,No
+9015-WYBCN,0,52,Yes,No,Yes,No,No,Yes,No,No,Month-to-month,Credit card,40.52,2020.9,No
+2041-BVSVY,0,43,Yes,Yes,No,Yes,Yes,No,Yes,Yes,One year,Credit card,84.92,3634.34,No
+2283-VBJHG,0,3,Yes,Yes,Yes,No,No,No,Yes,Yes,One year,Mailed check,47.49,214.9,Yes
+7466-DVWRC,0,6,Yes,No,Yes,No,No,No,Yes,No,Two year,Bank transfer,92.94,555.71,Yes
+6369-QJJMZ,0,37,Yes,No,Yes,Yes,No,No,Yes,Yes,One year,Electronic check,75.77,2812.42,No
+1032-NIOAX,0,44,No,No,No,Yes,No,Yes,No,No,One year,Mailed check,74.19,3157.85,No
+5112-ZEPRU,0,12,Yes,No,Yes,Yes,No,Yes,Yes,Yes,Month-to-month,Electronic check,102.51,1252.03,No
+1081-QDLBB,0,12,Yes,No,No,No,Yes,No,No,Yes,Month-to-month,Mailed check,90.47,1090.31,No
+7896-SXSPD,0,9,Yes,No,No,Yes,Yes,No,Yes,Yes,One year,Electronic check,20.71,153.14,No
+7885-FCTPD,0,41,Yes,Yes,No,Yes,No,No,Yes,No,One year,Bank transfer,23.04,953.64,No
+5942-RMSNJ,0,0,Yes,Yes,Yes,Yes,Yes,No,Yes,No,Month-to-month,Electronic check,79.36, ,Yes
+3010-GVJSJ,0,41,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Month-to-month,Bank transfer,67.59,2718.22,No
+5728-PMTYW,0,34,Yes,Yes,No,Yes,Yes,Yes,No,Yes,Month-to-month,Bank transfer,44.54,1530.95,No
+9291-ATSKI,0,34,Yes,Yes,Yes,Yes,No,No,No,No,Month-to-month,Credit card,60.7,2123.66,No
+1478-VVBPO,0,49,No,Yes,No,No,Yes,No,Yes,No,Month-to-month,Electronic check,95.31,4658.79,No
+2551-OVISZ,0,38,Yes,No,No,Yes,No,No,No,Yes,Month-to-month,Mailed check,102.31,3844.4,No
+5092-CHDJQ,0,53,Yes,No,No,No,Yes,No,No,Yes,Month-to-month,Electronic check,75.24,3978.84,No
+2823-NZGWH,0,55,Yes,No,Yes,No,No,No,No,Yes,One year,Bank transfer,57.31,3194.78,No
+6526-EGWPO,1,67,No,Yes,No,No,Yes,No,Yes,Yes,One year,Electronic check,45.61,2994.55,No
+5596-GYKAX,1,58,Yes,No,Yes,No,Yes,Yes,Yes,No,One year,Bank transfer,71.24,4160.85,No
+1418-XGBFR,0,37,Yes,Yes,No,Yes,No,No,No,No,One year,Credit card,50.1,1819.8,No
+5911-DHFQW,0,35,No,Yes,Yes,Yes,No,No,No,No,Month-to-month,Bank transfer,75.54,2656.0,Yes
+3295-XKCIW,0,17,No,Yes,No,Yes,Yes,Yes,Yes,No,Month-to-month,Electronic check,87.02,1451.12,Yes
+8275-SKUSU,1,43,Yes,Yes,No,Yes,No,Yes,No,Yes,One year,Mailed check,24.74,1035.47,No
+6019-NZYNF,0,10,Yes,Yes,Yes,Yes,No,Yes,Yes,No,Two year,Bank transfer,18.11,257.25,No
+4680-NRIBV,0,67,Yes,No,Yes,No,Yes,Yes,No,Yes,One year,Mailed check,39.65,2586.1,No
+9540-CILTU,0,61,Yes,No,Yes,Yes,No,No,Yes,Yes,One year,Mailed check,109.24,6687.91,No
+4089-IKGLG,0,8,Yes,No,Yes,Yes,Yes,Yes,No,No,One year,Credit card,83.92,757.93,Yes
+1542-SUHKK,0,57,Yes,Yes,Yes,No,No,No,Yes,Yes,One year,Credit card,35.54,2060.06,No
+1199-OLYJU,0,8,Yes,No,No,No,Yes,Yes,Yes,No,One year,Mailed check,108.81,803.93,Yes
+4515-EJWGV,0,52,Yes,No,No,Yes,No,Yes,No,No,One year,Mailed check,65.94,3364.8,No
+6988-TTNPB,0,6,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Month-to-month,Electronic check,66.56,361.78,Yes
+7290-SCNNI,0,35,Yes,No,No,Yes,No,Yes,No,No,Month-to-month,Mailed check,113.43,3977.95,No
+1595-AFGFP,0,48,Yes,No,Yes,Yes,No,No,No,Yes,Month-to-month,Bank transfer,24.07,1166.66,No
+4789-CCRYV,1,53,Yes,No,No,No,No,Yes,Yes,Yes,Month-to-month,Bank transfer,39.95,2053.77,No
+7818-ISCED,0,30,Yes,Yes,Yes,No,No,Yes,Yes,No,One year,Mailed check,77.75,2288.86,No
+2653-JBVSQ,1,67,Yes,No,No,No,No,Yes,No,No,Month-to-month,Electronic check,37.94,2501.41,No
+2579-WAZSF,0,56,No,Yes,No,No,Yes,No,No,No,Month-to-month,Electronic check,87.31,4880.32,No
+2770-SVMBM,0,15,Yes,Yes,Yes,No,Yes,No,No,Yes,One year,Electronic check,39.84,696.83,No
+5314-IXIGR,1,48,Yes,Yes,Yes,No,Yes,No,Yes,Yes,Month-to-month,Electronic check,28.11,1302.62,No
+6563-QNIGD,0,53,Yes,No,No,Yes,No,No,No,Yes,Two year,Electronic check,39.11,2023.98,No
+2670-PKTUO,0,24,Yes,Yes,No,Yes,No,No,No,No,Month-to-month,Bank transfer,61.12,1410.22,No
+1941-AFHBU,0,53,Yes,Yes,No,No,No,No,No,No,Month-to-month,Credit card,35.97,1938.19,No
+4303-TFADM,0,65,Yes,Yes,No,No,No,No,Yes,No,Month-to-month,Credit card,31.74,2061.03,No
+5316-LYQTD,0,59,Yes,No,No,Yes,No,No,Yes,Yes,Month-to-month,Bank transfer,105.75,6194.44,No
+5189-QPYMJ,0,55,Yes,No,No,Yes,Yes,Yes,No,No,Month-to-month,Mailed check,50.68,2769.26,No
+9498-IOAEB,1,46,Yes,No,No,Yes,Yes,No,No,Yes,Month-to-month,Credit card,54.8,2481.22,No
+4760-YBZWA,0,19,Yes,Yes,No,Yes,No,No,Yes,Yes,Month-to-month,Electronic check,23.64,463.95,No
+1138-XPEYO,0,58,Yes,Yes,No,No,Yes,No,No,Yes,Month-to-month,Bank transfer,54.45,3292.32,No
+6716-RFJDN,1,26,Yes,No,Yes,No,Yes,No,Yes,No,One year,Credit card,45.01,1197.8,Yes
+9884-QRFOZ,0,38,Yes,Yes,No,No,No,No,Yes,No,Month-to-month,Bank transfer,80.27,3045.61,No
+1792-FSAFY,0,22,Yes,No,Yes,Yes,No,Yes,Yes,Yes,Month-to-month,Mailed check,38.95,823.65,No
+1172-LIKGH,0,22,Yes,No,Yes,Yes,No,No,Yes,No,Month-to-month,Bank transfer,108.61,2322.25,Yes
+7845-ADGVK,0,11,Yes,No,No,No,Yes,No,Yes,No,Two year,Credit card,112.83,1277.81,No
+1313-NQLCW,1,70,Yes,No,Yes,No,No,No,Yes,Yes,One year,Electronic check,28.18,2006.57,No
+8722-XZIKY,0,10,Yes,No,Yes,Yes,Yes,No,Yes,Yes,Two year,Bank transfer,28.96,266.29,No
+5047-WQYAS,0,6,Yes,Yes,Yes,Yes,No,No,No,No,Two year,Electronic check,29.76,239.23,No
+8206-FTFXX,0,68,Yes,No,No,No,Yes,No,No,No,Month-to-month,Electronic check,81.2,5522.66,No
+1033-NJXIS,0,40,No,Yes,No,No,No,No,No,No,One year,Credit card,30.44,1256.34,No
+2050-FZKTZ,0,31,Yes,No,Yes,No,No,Yes,Yes,Yes,Month-to-month,Mailed check,104.94,3267.95,Yes
+9686-AGSYZ,1,53,No,Yes,Yes,No,No,No,No,No,Two year,Electronic check,94.94,5022.96,No
+7481-CTHVO,0,27,Yes,Yes,No,No,Yes,No,Yes,No,Month-to-month,Mailed check,101.62,2696.0,Yes
+2654-VZNVB,0,9,Yes,No,No,No,No,No,No,Yes,Month-to-month,Electronic check,71.66,637.66,No
+3440-DHJLI,0,53,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Two year,Credit card,119.66,6384.08,No
+5902-FJVOA,0,12,Yes,Yes,No,No,No,No,Yes,No,Two year,Credit card,22.51,244.71,No
+3954-VEXHQ,0,40,No,No,No,No,Yes,No,Yes,Yes,Two year,Electronic check,58.93,2379.19,Yes
+5274-QUDJO,0,69,Yes,Yes,Yes,Yes,Yes,No,No,No,Month-to-month,Electronic check,51.04,3467.62,No
+3345-JXFEP,0,68,Yes,No,No,No,No,Yes,No,No,Month-to-month,Credit card,114.76,7842.68,No
+1897-AWHDR,1,26,Yes,Yes,No,Yes,No,No,No,Yes,Month-to-month,Credit card,76.84,2013.49,No
+5327-LLDWA,0,56,Yes,Yes,No,Yes,No,Yes,No,No,Month-to-month,Credit card,100.23,5552.77,No
+5348-HQOKN,0,44,Yes,Yes,No,Yes,Yes,Yes,No,No,Month-to-month,Bank transfer,35.37,1545.08,No
+3042-DXPQZ,0,34,Yes,No,No,No,No,No,Yes,No,Month-to-month,Credit card,117.82,4052.45,Yes
+9136-PUNGQ,0,10,Yes,No,No,No,Yes,No,No,No,One year,Mailed check,68.86,625.65,Yes
+9216-WNYFB,0,27,Yes,Yes,No,No,Yes,No,Yes,No,Month-to-month,Credit card,68.35,1791.9,No
+4628-FYDNU,0,47,Yes,No,No,No,No,No,No,Yes,One year,Credit card,117.03,5496.94,No
+1997-BOXAA,0,72,Yes,No,No,No,Yes,No,Yes,No,Two year,Electronic check,56.83,4198.43,No
+9328-PSHIM,0,0,Yes,No,No,No,No,Yes,No,No,One year,Electronic check,58.55, ,No
+2926-LYTWM,0,52,Yes,No,No,No,Yes,Yes,No,No,Month-to-month,Bank transfer,77.64,4062.04,No
+8086-KQSVY,0,61,Yes,No,Yes,Yes,Yes,No,Yes,No,Month-to-month,Credit card,31.06,1907.67,No
+1949-USTAM,0,69,Yes,No,Yes,No,No,No,Yes,Yes,Month-to-month,Credit card,50.75,3472.27,No
+9646-XGMWY,0,30,Yes,No,No,No,Yes,No,Yes,No,One year,Electronic check,37.71,1139.36,No
+3979-UVDAB,0,8,Yes,No,No,No,No,No,No,Yes,Month-to-month,Mailed check,28.53,205.85,No
+2308-TKRCP,0,19,Yes,Yes,Yes,Yes,No,No,No,Yes,Month-to-month,Credit card,106.35,2002.76,Yes
+7705-ZIOMJ,1,62,Yes,Yes,No,No,Yes,No,Yes,No,Two year,Electronic check,78.11,4759.76,No
+6757-OVAFP,0,64,Yes,No,Yes,No,No,No,No,No,One year,Bank transfer,54.58,3491.9,No
+6163-XRAMV,0,46,Yes,Yes,No,Yes,Yes,Yes,No,No,Two year,Mailed check,59.68,2790.23,No
+8857-UMCFW,0,8,Yes,Yes,No,No,Yes,Yes,Yes,No,Month-to-month,Electronic check,62.01,498.95,No
+4065-TAMYG,0,8,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Two year,Electronic check,82.58,715.17,No
+1274-HBPEG,0,34,Yes,Yes,No,Yes,No,No,Yes,No,Month-to-month,Bank transfer,112.53,3855.04,No
+6288-IQYYS,0,42,Yes,No,Yes,Yes,No,No,Yes,Yes,Month-to-month,Credit card,113.14,4748.9,No
+9717-TBYOA,0,2,Yes,No,No,No,No,No,Yes,No,Two year,Electronic check,57.93,84.46,No
+6584-GNRAL,0,50,Yes,No,Yes,No,No,Yes,No,No,Two year,Mailed check,51.58,2554.69,No
+1499-CFUKB,0,39,Yes,Yes,No,Yes,Yes,No,Yes,Yes,Month-to-month,Electronic check,64.01,2422.86,Yes
+7722-ODOGQ,0,0,Yes,No,No,No,No,Yes,Yes,Yes,Month-to-month,Bank transfer,75.93, ,Yes
+9527-ITAKX,0,6,No,Yes,Yes,Yes,No,No,No,Yes,Month-to-month,Credit card,65.11,397.96,Yes
+1671-YCMEA,0,33,Yes,No,Yes,No,No,Yes,No,No,One year,Credit card,85.19,2897.04,No
+4143-PSIME,0,52,Yes,No,Yes,No,No,No,No,No,Two year,Mailed check,74.55,3903.02,No
+7565-EWERI,0,60,Yes,No,No,No,No,Yes,Yes,Yes,Month-to-month,Mailed check,50.71,2999.36,No
+9967-HYVMM,0,31,Yes,No,No,No,Yes,No,No,Yes,Month-to-month,Mailed check,53.26,1579.09,Yes
+4183-LMDIW,0,21,Yes,No,No,No,No,No,Yes,Yes,One year,Credit card,56.62,1178.69,No
+9809-BTGRQ,0,70,Yes,No,No,No,No,No,No,Yes,One year,Mailed check,27.65,1976.09,No
+8909-SVUQK,0,33,Yes,No,No,Yes,No,Yes,Yes,No,Month-to-month,Electronic check,34.94,1141.99,Yes
+4033-JJHIO,0,23,Yes,No,No,Yes,Yes,No,Yes,No,One year,Credit card,91.76,2137.58,No
+3431-JSICA,0,32,Yes,Yes,No,Yes,No,No,Yes,Yes,Two year,Electronic check,57.69,1837.02,No
+7885-YRBOH,0,0,No,No,No,No,Yes,No,No,No,Month-to-month,Credit card,39.88, ,Yes
+3886-XVTNP,0,22,Yes,Yes,No,No,No,No,Yes,Yes,One year,Electronic check,75.39,1578.72,No
+9242-RPCZV,0,37,Yes,Yes,No,No,No,No,Yes,Yes,One year,Bank transfer,95.07,3597.8,No
+4282-GZYKG,0,67,Yes,No,No,Yes,Yes,No,No,No,Month-to-month,Mailed check,44.26,2909.8,No
+8179-QXOOD,0,53,Yes,No,Yes,Yes,No,No,No,Yes,Two year,Bank transfer,102.33,5463.18,No
+6427-JFUIF,0,57,Yes,Yes,Yes,No,Yes,No,Yes,No,One year,Mailed check,112.61,6405.16,No
+9644-ZMHEQ,0,39,Yes,Yes,No,No,No,Yes,No,No,Month-to-month,Mailed check,78.93,3072.48,No
+6496-QTMRR,0,8,Yes,Yes,Yes,Yes,No,No,No,No,Month-to-month,Mailed check,86.23,677.78,Yes
+8159-TAQZO,0,28,Yes,No,No,Yes,Yes,Yes,Yes,Yes,One year,Credit card,23.36,666.86,No
+5767-POKZB,1,72,Yes,Yes,No,Yes,No,No,No,No,Month-to-month,Electronic check,114.44,8262.56,No
+8327-EFPQY,1,3,No,No,No,No,Yes,No,No,Yes,Month-to-month,Electronic check,58.03,227.01,Yes
+3648-AGOJG,0,64,Yes,No,No,Yes,No,Yes,Yes,No,Month-to-month,Electronic check,112.24,7253.76,Yes
+9226-ORTKT,1,49,Yes,No,Yes,Yes,No,No,Yes,Yes,One year,Bank transfer,77.06,3792.53,No
+9672-SHUGB,1,20,Yes,No,No,No,Yes,No,Yes,No,Two year,Bank transfer,18.47,455.08,No
+4996-NMGHX,0,56,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,One year,Bank transfer,21.93,1232.73,No
+3623-UGCBG,0,61,Yes,Yes,No,Yes,No,Yes,No,No,Two year,Electronic check,87.4,5385.27,Yes
+8570-LSZBC,0,3,Yes,No,No,Yes,No,No,No,No,Month-to-month,Credit card,75.39,247.61,Yes
+9280-OQIVQ,0,7,Yes,Yes,No,No,No,No,No,Yes,Month-to-month,Credit card,20.71,117.51,Yes
+3319-QAGFU,0,48,Yes,Yes,No,No,No,No,Yes,No,Two year,Credit card,93.83,4512.9,No
+7615-CXVLF,0,72,No,Yes,No,Yes,No,Yes,Yes,Yes,Month-to-month,Credit card,104.92,7579.4,No
+4782-PQJCP,0,1,Yes,Yes,No,Yes,Yes,Yes,Yes,No,Two year,Mailed check,68.63,67.02,No
+7345-GQONA,0,48,Yes,No,No,No,Yes,Yes,No,Yes,Month-to-month,Bank transfer,65.51,3165.12,No
+3765-JVVWM,0,9,Yes,No,No,No,No,No,Yes,Yes,Month-to-month,Mailed check,18.56,210.31,No
+3941-MUQPL,0,47,Yes,No,Yes,Yes,Yes,No,No,No,One year,Bank transfer,98.24,4616.11,No
+7267-WRKVY,0,45,Yes,No,Yes,Yes,No,No,No,No,Month-to-month,Mailed check,51.73,2180.66,No
+8168-WGKGJ,0,6,No,No,No,Yes,Yes,Yes,Yes,No,Month-to-month,Bank transfer,107.63,729.69,Yes
+7600-RATEE,0,49,Yes,Yes,Yes,No,No,No,No,No,Month-to-month,Credit card,56.05,2731.57,Yes
+5892-GZDDT,0,65,Yes,No,No,No,No,No,No,Yes,Month-to-month,Bank transfer,75.64,4875.44,No
+3578-SREPN,0,63,Yes,No,No,No,No,Yes,No,Yes,Month-to-month,Credit card,45.57,2814.7,Yes
+1851-TWYCE,0,2,Yes,Yes,No,Yes,Yes,No,No,No,Two year,Credit card,34.38,51.94,No
+8425-HQJFQ,0,17,Yes,No,Yes,No,No,Yes,Yes,No,Month-to-month,Electronic check,97.04,1621.54,Yes
+2849-DNFEU,0,17,Yes,Yes,No,No,No,No,No,Yes,Two year,Credit card,68.65,1130.2,Yes
+5758-ODEKK,0,33,Yes,Yes,Yes,Yes,No,No,Yes,Yes,One year,Credit card,72.72,2365.65,No
+5064-DXJVK,0,10,Yes,Yes,No,Yes,No,No,No,No,Month-to-month,Mailed check,116.47,1191.19,Yes
+5249-CRBTW,0,62,Yes,Yes,No,Yes,No,No,Yes,No,Month-to-month,Bank transfer,116.29,7311.5,No
+4254-XSAFQ,1,56,Yes,Yes,Yes,No,Yes,No,No,No,Two year,Bank transfer,105.28,5936.71,No
+7314-CRVCW,0,59,Yes,,Yes,No,No,No,No,Yes,One year,Credit card,37.14,2247.39,No
+5797-QBPLJ,1,14,Yes,No,Yes,No,Yes,No,Yes,No,Two year,Credit card,78.62,1081.81,No
+8022-GBMTD,0,1,Yes,Yes,No,No,Yes,Yes,Yes,No,Month-to-month,Electronic check,107.57,112.8,No
+9860-RYMDE,0,66,Yes,No,No,Yes,No,No,No,Yes,One year,Electronic check,56.2,3730.52,No
+5505-PTUTP,1,21,Yes,Yes,Yes,Yes,No,No,Yes,Yes,One year,Electronic check,28.31,561.53,No
+1162-NVWVA,1,47,Yes,,Yes,Yes,No,Yes,No,Yes,Two year,Bank transfer,100.72,4712.55,No
+4917-QGKCF,0,66,Yes,Yes,No,No,No,No,No,No,Month-to-month,Credit card,67.14,4473.97,No
+1052-ZWKAI,0,2,Yes,Yes,Yes,No,No,Yes,Yes,Yes,Two year,Bank transfer,75.57,205.65,No
+4906-ERZVW,0,0,Yes,No,No,Yes,Yes,Yes,No,No,Month-to-month,Electronic check,118.18, ,Yes
+8477-BOOCD,0,0,Yes,No,No,Yes,No,No,No,No,Two year,Bank transfer,79.94, ,Yes
+6086-SFMBC,0,11,Yes,No,No,No,No,Yes,No,Yes,Month-to-month,Mailed check,61.35,660.07,Yes
+6221-OTXEI,0,3,Yes,No,No,No,No,No,Yes,No,One year,Mailed check,55.74,95.15,No
+8702-BVYCD,0,59,Yes,No,No,No,No,Yes,Yes,No,Month-to-month,Credit card,60.6,3579.16,No
+7157-MZORG,0,44,Yes,Yes,No,Yes,No,Yes,Yes,Yes,Two year,Mailed check,30.08,1336.29,No
+3920-EDCXB,0,71,Yes,Yes,Yes,No,No,Yes,No,No,Month-to-month,Bank transfer,99.06,7019.72,Yes
+5647-NBVND,0,58,Yes,Yes,Yes,No,No,Yes,No,No,Month-to-month,Electronic check,103.45,6012.19,No
+2158-SQKKA,0,70,Yes,Yes,No,No,No,No,No,Yes,One year,Mailed check,47.01,3311.55,No
+1286-NJGJP,1,17,Yes,Yes,Yes,No,No,No,Yes,No,One year,Bank transfer,48.99,845.67,No
+3638-JHRBX,0,21,Yes,No,No,No,Yes,No,No,No,Month-to-month,Bank transfer,107.18,2190.7,No
+5990-GTYBF,0,62,Yes,Yes,No,No,No,No,No,Yes,One year,Credit card,20.44,1254.62,No
+2295-BTFJV,0,17,Yes,No,No,No,Yes,No,No,No,Month-to-month,Mailed check,71.09,1229.02,Yes
+6505-RCZCS,0,4,Yes,No,Yes,No,No,Yes,Yes,No,One year,Credit card,65.29,340.1,No
+6754-KVXBY,0,48,No,No,No,Yes,No,Yes,No,No,One year,Credit card,88.39,4229.12,No
+3169-UVOWV,0,58,Yes,No,No,No,No,No,Yes,Yes,One year,Mailed check,34.67,2038.4,No
+5703-ELXFZ,1,70,Yes,Yes,Yes,No,Yes,No,Yes,Yes,Two year,Electronic check,86.17,6075.81,No
+2635-RQFMD,1,67,Yes,Yes,No,Yes,No,No,No,Yes,Month-to-month,Mailed check,56.43,3770.98,No
+4282-YBWRT,0,8,Yes,No,No,Yes,No,No,No,No,Month-to-month,Bank transfer,81.11,706.3,Yes
+3538-YGNAX,0,56,Yes,No,No,No,Yes,No,Yes,No,One year,Credit card,22.09,1297.15,No
+7340-ERELN,0,61,Yes,Yes,No,No,No,Yes,No,No,Month-to-month,Bank transfer,65.1,4040.12,No
+9380-IALYU,0,50,Yes,Yes,Yes,No,Yes,Yes,No,Yes,Month-to-month,Bank transfer,71.27,3586.42,No
+1531-BTSOC,0,59,Yes,No,No,No,No,Yes,Yes,No,One year,Electronic check,39.86,2469.75,No
+3520-WDFLT,0,61,Yes,No,No,No,Yes,No,No,No,Month-to-month,Bank transfer,32.24,1935.88,No
+8453-PMKBG,0,32,Yes,,Yes,No,No,No,Yes,No,Month-to-month,Credit card,37.22,1297.24,No
+2932-BTJNF,0,2,Yes,No,No,Yes,No,No,Yes,No,Two year,Mailed check,53.1,144.61,No
+6320-DRTIF,0,33,Yes,No,Yes,Yes,No,Yes,Yes,No,Month-to-month,Credit card,27.87,986.73,No
+8020-FEIZM,0,14,Yes,Yes,Yes,No,Yes,No,No,Yes,Month-to-month,Electronic check,114.63,1588.82,Yes
+3363-NJRLP,0,8,Yes,No,No,Yes,No,No,Yes,No,Month-to-month,Credit card,59.31,516.7,Yes
+4926-MLKZG,0,9,Yes,Yes,Yes,No,No,No,Yes,No,Month-to-month,Credit card,100.51,975.94,No
+8247-SNIMW,0,50,Yes,No,No,No,Yes,No,No,No,One year,Bank transfer,117.39,5815.13,No
+2637-PTQDN,0,36,Yes,No,Yes,No,Yes,Yes,No,Yes,One year,Bank transfer,26.23,936.11,No
+2646-YJKWL,0,39,Yes,Yes,No,Yes,Yes,Yes,No,No,One year,Credit card,84.47,3187.27,No
+2745-XQPBL,0,54,Yes,No,Yes,No,No,No,No,Yes,Month-to-month,Mailed check,106.88,5762.6,No
+5133-GOGMU,0,40,Yes,No,No,Yes,Yes,No,Yes,Yes,Month-to-month,Electronic check,82.69,3266.8,No
+7616-HFAIA,0,45,Yes,No,Yes,No,No,No,Yes,Yes,Month-to-month,Credit card,61.76,2768.31,Yes
+2153-ZWOUM,0,6,Yes,Yes,No,Yes,No,No,No,No,One year,Electronic check,61.97,518.0,No
+6411-XCJDU,0,62,Yes,No,Yes,No,No,No,No,Yes,One year,Bank transfer,21.66,1428.81,No
+8402-SPMAU,0,32,Yes,No,Yes,No,No,No,Yes,No,Month-to-month,Mailed check,72.53,2248.99,No
+9045-ZIFRA,1,11,Yes,No,No,Yes,No,Yes,Yes,No,Two year,Credit card,119.34,1340.53,Yes
+1542-VYKNO,0,59,Yes,Yes,No,Yes,Yes,Yes,Yes,No,One year,Credit card,115.79,6871.56,No
+2246-FHVLS,0,53,Yes,No,No,No,No,No,Yes,No,Month-to-month,Mailed check,22.12,1155.47,Yes
+2749-YWMFZ,1,3,No,No,Yes,Yes,Yes,No,No,No,One year,Bank transfer,89.99,278.89,No
+8272-NGQJR,0,14,Yes,No,Yes,Yes,Yes,Yes,No,No,One year,Mailed check,48.78,696.72,Yes
+8491-MBOWF,0,1,Yes,No,No,No,No,Yes,Yes,Yes,Month-to-month,Mailed check,110.1,42.77,Yes
+9633-JRSEB,0,19,Yes,Yes,No,No,Yes,Yes,No,Yes,Month-to-month,Credit card,22.6,377.83,No
+9537-SQHCH,0,7,Yes,Yes,Yes,No,Yes,Yes,No,No,One year,Mailed check,113.46,802.83,No
+5928-SIFGZ,0,51,Yes,No,No,Yes,No,Yes,Yes,No,Two year,Credit card,103.42,5279.39,No
+6674-ZALLK,0,38,Yes,No,No,No,Yes,Yes,Yes,No,One year,Bank transfer,29.99,1104.19,No
+4523-CAULE,0,71,Yes,Yes,No,No,Yes,No,No,Yes,One year,Credit card,24.1,1671.38,No
+4127-YMZED,0,54,Yes,No,No,No,No,No,Yes,No,One year,Bank transfer,103.14,5565.07,Yes
+6073-RZMFO,0,44,No,No,No,No,No,No,No,No,Month-to-month,Credit card,33.89,1535.47,No
+3762-ECSQE,0,37,Yes,Yes,Yes,Yes,No,No,No,No,Month-to-month,Mailed check,72.56,2680.9,No
+6029-XVLBQ,0,3,Yes,Yes,No,Yes,Yes,Yes,No,No,Month-to-month,Mailed check,111.41,415.37,Yes
+5645-XOTNO,0,5,Yes,No,Yes,No,No,No,No,No,Two year,Mailed check,75.88,344.61,No
+3856-KHMYI,1,44,Yes,No,No,Yes,No,No,No,No,Two year,Electronic check,58.52,2584.54,No
+5168-YDGMK,0,0,Yes,Yes,No,No,Yes,No,No,No,Two year,Electronic check,63.39, ,No
+4069-UMJMX,0,3,Yes,No,No,Yes,Yes,Yes,Yes,No,Month-to-month,Mailed check,24.44,102.72,No
+9854-GBALQ,0,15,Yes,No,Yes,Yes,Yes,Yes,No,No,Month-to-month,Credit card,116.81,1713.07,No
+1461-NKYPL,0,64,Yes,No,Yes,Yes,No,No,No,No,One year,Credit card,49.69,3276.53,No
+6279-DMIEK,0,33,Yes,No,No,No,Yes,No,No,No,Month-to-month,Bank transfer,37.32,1147.03,Yes
+6750-PZHSO,0,51,Yes,No,No,No,No,Yes,No,No,Month-to-month,Mailed check,47.18,2491.95,No
+8863-XSLNQ,0,30,Yes,No,No,Yes,No,No,Yes,No,One year,Bank transfer,116.37,3495.6,No
+8252-FWUCH,0,12,Yes,Yes,No,Yes,Yes,No,No,Yes,One year,Credit card,27.62,359.06,No
+3122-PFHEB,0,27,Yes,No,No,Yes,No,No,No,No,One year,Electronic check,106.46,2941.15,Yes
+5133-INFHX,0,6,No,Yes,Yes,No,Yes,Yes,No,No,Month-to-month,Credit card,90.2,584.08,Yes
+8244-GEZRM,1,56,Yes,No,No,Yes,Yes,No,No,Yes,Month-to-month,Credit card,102.66,5712.46,Yes
+7293-FLKSE,1,13,No,Yes,Yes,No,No,No,No,Yes,Month-to-month,Credit card,117.54,1558.02,No
+5401-VFDVW,1,27,Yes,No,No,Yes,No,Yes,No,Yes,Month-to-month,Electronic check,103.9,2898.67,Yes
+4874-BOHPD,0,71,Yes,Yes,Yes,Yes,No,No,Yes,No,Month-to-month,Credit card,114.22,8065.26,No
+8245-RQNFY,1,43,Yes,Yes,Yes,No,No,No,Yes,No,Month-to-month,Bank transfer,30.95,1436.77,No
+3391-JYBDT,0,33,Yes,Yes,No,No,Yes,No,No,No,Two year,Bank transfer,99.17,3291.9,No
+4311-PPVQL,0,39,Yes,No,No,Yes,No,Yes,No,Yes,Month-to-month,Electronic check,73.66,2851.08,No
+5942-TJEMZ,0,57,Yes,No,Yes,No,Yes,No,No,No,Month-to-month,Mailed check,73.44,4141.42,No
+2009-EZVDF,1,18,Yes,Yes,Yes,Yes,No,No,Yes,No,Month-to-month,Mailed check,109.69,1963.26,Yes
+7216-UTWNW,0,46,No,No,No,Yes,No,Yes,Yes,No,One year,Credit card,117.12,5289.76,No
+6363-MQLPV,0,63,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Month-to-month,Mailed check,89.89,5642.31,No
+9622-PAQGG,0,41,Yes,Yes,Yes,No,No,Yes,No,Yes,Month-to-month,Electronic check,67.26,2744.51,No
+8929-LUJPR,0,32,Yes,No,No,No,No,Yes,No,No,Month-to-month,Credit card,64.55,2011.88,Yes
+9038-FOKMW,0,10,Yes,Yes,Yes,Yes,No,No,No,Yes,Month-to-month,Electronic check,57.41,611.49,No
+2222-OKXFG,0,18,No,Yes,No,No,Yes,No,Yes,No,One year,Credit card,54.88,976.9,No
+1817-LANFK,0,69,Yes,No,No,No,Yes,Yes,No,No,Month-to-month,Credit card,57.93,3965.38,No
+6446-RBDIN,0,39,Yes,Yes,Yes,No,Yes,No,No,Yes,Month-to-month,Mailed check,27.15,1042.58,No
+8950-DBQZV,0,21,Yes,No,Yes,No,Yes,Yes,Yes,Yes,One year,Bank transfer,25.9,561.66,No
+6088-AOLLM,0,30,Yes,No,Yes,No,No,No,No,No,Month-to-month,Credit card,97.55,2930.16,Yes
+6053-SEBBK,0,42,Yes,No,Yes,No,Yes,No,No,No,One year,Bank transfer,63.5,2631.95,No
+5570-ULNZT,0,39,Yes,No,Yes,Yes,No,No,Yes,No,Month-to-month,Bank transfer,112.93,4410.55,No
+7217-JDXOC,0,51,Yes,No,No,No,No,No,Yes,Yes,One year,Electronic check,80.45,4100.42,No
+5340-CZNUM,0,18,Yes,No,No,No,Yes,No,No,No,Month-to-month,Bank transfer,21.59,331.65,No
+1177-QQFSF,0,47,Yes,Yes,No,No,No,Yes,No,No,Month-to-month,Bank transfer,34.07,1586.86,No
+7223-TDHES,1,32,Yes,Yes,No,No,No,Yes,No,No,Month-to-month,Bank transfer,38.99,1276.65,No
+3119-QKCWS,0,68,No,No,No,Yes,Yes,No,No,No,Two year,Credit card,117.53,8020.65,No
+3354-WSVEA,1,11,Yes,Yes,No,No,No,Yes,Yes,Yes,Month-to-month,Credit card,40.31,431.91,No
+1556-OUXYP,1,10,Yes,Yes,Yes,Yes,Yes,No,No,No,Two year,Bank transfer,70.61,739.94,No
+6680-HAFBR,0,33,Yes,Yes,Yes,No,No,Yes,No,No,Two year,Mailed check,113.49,3696.17,No
+5527-UDXSX,0,37,Yes,No,Yes,Yes,No,No,Yes,Yes,Month-to-month,Mailed check,117.67,4306.34,Yes
+6835-IQPEC,0,50,No,Yes,Yes,Yes,No,No,No,No,Month-to-month,Electronic check,42.11,2092.94,No
+6851-CCBQY,0,29,Yes,Yes,Yes,No,No,No,Yes,No,Month-to-month,Bank transfer,23.01,742.17,No
+5472-DNMPL,0,66,Yes,Yes,No,No,No,No,Yes,No,Two year,Mailed check,33.67,2230.38,No
+5788-IXNIA,0,34,Yes,Yes,No,No,No,Yes,Yes,Yes,One year,Credit card,24.46,817.87,No
+7107-JGMMU,0,9,Yes,No,Yes,No,Yes,Yes,No,No,Month-to-month,Credit card,37.9,418.31,No
+5882-SQWAJ,0,8,Yes,Yes,No,Yes,Yes,No,Yes,Yes,Month-to-month,Credit card,75.99,593.57,Yes
+7437-DLKUZ,0,71,Yes,No,No,No,No,No,Yes,No,Two year,Credit card,111.07,7997.71,No
+1956-FUEMY,0,9,Yes,No,No,Yes,No,No,No,No,Month-to-month,Mailed check,72.8,629.64,No
+9776-YDDEU,0,69,Yes,Yes,No,No,No,No,Yes,Yes,Month-to-month,Mailed check,81.85,5597.06,No
+2611-LVMYM,0,20,Yes,No,Yes,No,No,No,No,Yes,Month-to-month,Bank transfer,38.59,763.48,Yes
+4417-ZOEQU,1,6,Yes,No,No,Yes,Yes,Yes,No,No,Month-to-month,Mailed check,99.66,585.51,Yes
+8545-ACQTQ,0,22,Yes,No,No,No,Yes,Yes,Yes,Yes,Two year,Mailed check,81.01,1741.83,No
+4445-TPYJT,0,44,Yes,Yes,No,No,No,No,Yes,No,One year,Bank transfer,106.14,4800.26,No
+2293-TTGBZ,1,31,Yes,Yes,No,Yes,Yes,No,No,No,Month-to-month,Mailed check,114.78,3574.11,Yes
+1688-MAKVN,1,57,Yes,No,No,No,No,No,Yes,No,Month-to-month,Credit card,53.49,3072.14,No
+3157-KCPAJ,0,44,Yes,No,Yes,No,No,No,Yes,Yes,One year,Electronic check,27.24,1175.47,No
+1546-GBYUY,0,29,Yes,No,Yes,Yes,No,No,No,Yes,Month-to-month,Mailed check,41.04,1161.28,No
+7147-MEZXK,0,46,Yes,No,No,No,No,No,No,Yes,Month-to-month,Bank transfer,62.66,2933.64,No
+3030-KKXBQ,0,70,Yes,Yes,Yes,Yes,No,Yes,No,No,Month-to-month,Credit card,114.46,7928.41,No
+7916-TFKIK,0,30,Yes,No,No,Yes,No,No,No,No,One year,Bank transfer,56.59,1640.56,No
+1783-CAZKF,0,11,Yes,No,No,No,Yes,No,No,No,Two year,Electronic check,96.62,1050.45,No
+8178-MJCKQ,0,29,Yes,No,No,Yes,No,No,No,Yes,One year,Mailed check,73.13,2188.32,No
+6610-KPTYN,0,61,Yes,Yes,Yes,Yes,No,Yes,No,Yes,Month-to-month,Credit card,36.65,2216.92,No
+3049-DEAOF,0,15,Yes,Yes,No,No,Yes,No,No,Yes,One year,Mailed check,50.71,781.46,No
+3034-SIVDI,0,69,Yes,No,Yes,Yes,No,No,No,No,Month-to-month,Mailed check,84.63,5840.86,No
+1464-NDGTW,0,42,Yes,No,Yes,No,No,Yes,No,Yes,Two year,Electronic check,86.63,3703.27,No
+5908-ZTTZC,0,43,Yes,No,Yes,No,Yes,Yes,Yes,Yes,Month-to-month,Bank transfer,62.35,2601.81,Yes
+3089-LQZCF,0,23,Yes,Yes,No,Yes,No,Yes,No,No,Month-to-month,Electronic check,41.32,987.16,No
+3683-RYYTU,0,67,Yes,Yes,No,No,No,No,No,No,Month-to-month,Mailed check,91.63,6129.27,No
+4739-PENHY,0,2,Yes,No,Yes,Yes,No,No,Yes,Yes,Month-to-month,Bank transfer,35.23,116.7,No
+4307-KKXYL,0,21,Yes,No,No,No,No,Yes,Yes,No,Month-to-month,Credit card,113.54,2343.38,No
+9960-TWXIO,0,30,Yes,No,Yes,Yes,No,No,No,Yes,One year,Electronic check,37.17,1116.32,No
+3565-IMBFV,1,34,Yes,No,No,No,No,No,Yes,Yes,One year,Mailed check,28.95,979.17,No
+2491-QTGLW,0,34,Yes,Yes,Yes,Yes,No,No,Yes,Yes,Two year,Electronic check,68.76,2287.72,No
+8518-XQXKP,0,10,Yes,No,No,No,Yes,No,Yes,Yes,Month-to-month,Mailed check,70.99,645.88,Yes
+7004-ZJWNC,0,16,Yes,No,No,Yes,Yes,No,Yes,No,Month-to-month,Credit card,69.84,1088.42,Yes
+6899-ZLOYX,0,6,Yes,No,No,Yes,No,No,No,No,Month-to-month,Mailed check,62.54,381.74,No
+4600-TQQSI,0,41,Yes,No,Yes,No,No,Yes,Yes,No,Month-to-month,Mailed check,119.47,4860.42,No
+3743-AWHRR,0,25,Yes,No,No,No,Yes,No,Yes,Yes,Month-to-month,Mailed check,67.6,1673.5,No
+7330-WWAVF,1,41,No,No,No,No,Yes,No,No,No,Two year,Credit card,66.75,2642.46,No
+6807-RBHXD,0,43,Yes,No,No,Yes,No,No,Yes,No,Two year,Bank transfer,61.02,2605.33,No
+3086-CEQVP,0,51,Yes,No,No,Yes,No,No,Yes,Yes,Month-to-month,Bank transfer,24.82,1317.0,No
+3560-WJIND,0,39,Yes,,No,Yes,No,No,No,No,One year,Credit card,78.48,3095.98,No
+4206-UPZUJ,0,47,Yes,No,Yes,Yes,No,No,No,No,One year,Bank transfer,41.25,1934.4,Yes
+7899-WQTNX,0,42,Yes,No,No,No,No,Yes,No,No,Month-to-month,Bank transfer,83.04,3499.86,No
+3138-LGCQD,0,47,Yes,No,Yes,No,No,No,No,Yes,One year,Bank transfer,23.19,1048.52,No
+3035-TGWBL,0,45,Yes,No,No,No,Yes,Yes,No,No,Month-to-month,Bank transfer,118.1,5395.72,Yes
+1604-BUBXP,0,23,Yes,No,Yes,Yes,No,Yes,Yes,No,Month-to-month,Electronic check,65.84,1617.71,No
+5342-XKKKQ,1,17,Yes,Yes,Yes,No,Yes,Yes,No,No,Two year,Mailed check,109.47,1869.23,No
+8624-OHXPV,0,57,Yes,No,No,No,No,Yes,No,No,One year,Credit card,66.51,3920.6,No
+4890-FYRIW,1,25,No,No,No,Yes,Yes,No,Yes,Yes,Month-to-month,Electronic check,24.15,569.74,Yes
+1081-YPPAE,0,40,Yes,Yes,No,No,No,No,No,No,Month-to-month,Credit card,101.87,4012.25,No
+7484-ODRTH,1,14,Yes,No,No,Yes,No,No,Yes,No,Two year,Bank transfer,84.11,1142.06,No
+7203-ZMFZX,0,31,No,No,Yes,Yes,Yes,Yes,No,No,Month-to-month,Mailed check,97.74,3018.97,No
+5111-LVAIO,0,38,Yes,Yes,Yes,No,No,No,No,Yes,Two year,Electronic check,61.67,2459.06,Yes
+6885-QJWQO,0,45,Yes,No,No,Yes,Yes,No,No,Yes,Two year,Credit card,83.07,3724.09,No
+9447-CSYRO,0,38,Yes,No,No,No,No,Yes,Yes,Yes,Month-to-month,Electronic check,105.34,3959.94,No
+4279-HOXMD,0,26,Yes,No,No,Yes,No,No,No,Yes,One year,Bank transfer,82.37,2096.7,No
+5352-CYNFQ,0,70,Yes,Yes,No,Yes,Yes,No,No,No,One year,Electronic check,53.46,3799.2,No
+5839-NPYWG,0,37,Yes,No,No,Yes,No,Yes,Yes,Yes,One year,Credit card,85.58,3216.33,No
+5376-DCXLI,0,18,Yes,Yes,Yes,No,No,Yes,No,No,Two year,Electronic check,50.55,902.93,No
+3319-QAGFU,0,48,Yes,Yes,No,No,No,No,Yes,No,Two year,Credit card,93.83,4512.9,No
+5870-TDMFD,0,36,Yes,Yes,No,Yes,No,Yes,No,Yes,Two year,Electronic check,42.97,1463.79,No
+6781-GCXIX,0,1,Yes,No,No,No,Yes,No,No,Yes,Month-to-month,Credit card,28.19,8.79,No
+2020-PEKOA,0,6,Yes,Yes,No,No,No,Yes,No,Yes,One year,Bank transfer,106.0,567.08,No

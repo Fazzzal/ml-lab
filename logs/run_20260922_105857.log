@@ -1,0 +1,75 @@
+2026-09-22 10:58:59,555 [INFO] __main__: Starting ML Research Lab...
+2026-09-22 10:58:59,557 [INFO] app.agents.data_agent: --- DATA AGENT ---
+2026-09-22 10:58:59,557 [INFO] app.agents.data_agent: Profiling dataset: data/Student-Performance.csv
+2026-09-22 10:58:59,562 [INFO] app.agents.data_agent: Dataset profiling complete.
+2026-09-22 10:58:59,562 [INFO] app.agents.feature_agent: --- FEATURE AGENT ---
+2026-09-22 10:58:59,565 [INFO] app.agents.feature_agent: Identifier columns: []
+2026-09-22 10:58:59,565 [INFO] app.agents.feature_agent: Numeric features: ['study_hours_per_week', 'attendance_percent', 'previous_exam_score', 'age']
+2026-09-22 10:58:59,565 [INFO] app.agents.feature_agent: Categorical features: ['StudentRef', 'parental_education', 'school_type', 'internet_access', 'extracurricular']
+2026-09-22 10:58:59,566 [INFO] app.agents.feature_agent: Missing-value columns: ['attendance_percent']
+2026-09-22 10:58:59,566 [INFO] app.agents.feature_agent: Feature analysis complete. Recommendations: 10
+2026-09-22 10:58:59,566 [INFO] app.agents.research_agent: --- RESEARCH AGENT ---
+2026-09-22 10:58:59,566 [INFO] app.agents.research_agent: Generating research plan...
+2026-09-22 10:59:03,285 [INFO] app.agents.research_agent: Problem type: classification
+2026-09-22 10:59:03,286 [INFO] app.agents.research_agent: Models: ['Logistic Regression', 'Random Forest', 'Gradient Boosting']
+2026-09-22 10:59:03,286 [INFO] app.agents.research_agent: Reasoning: The target column 'grade' is a categorical string, indicating a classification task. To establish diverse baselines, we will use a linear model (Logistic Regression) as a simple baseline, a bagging tree ensemble (Random Forest) to capture non-linear interactions and robustness, and a boosting tree ensemble (Gradient Boosting) for potentially higher predictive performance. The execution layer will handle missing value imputation for 'attendance_percent', scaling of numeric features, and one-hot encoding of categorical features before training each model. Performance will be evaluated using accuracy and weighted F1, which are appropriate metrics for multi-class classification.
+2026-09-22 10:59:03,286 [INFO] app.agents.split_agent: --- SPLIT AGENT ---
+2026-09-22 10:59:03,303 [INFO] app.agents.split_agent: Split sizes -> train: 543, val: 181, test: 182 (test is held out until final_report_agent)
+2026-09-22 10:59:03,304 [INFO] app.agents.experiment_agent: --- EXPERIMENT AGENT ---
+2026-09-22 10:59:03,304 [INFO] app.agents.experiment_agent: Running proposed baseline: Logistic Regression
+2026-09-22 10:59:03,564 [INFO] app.agents.experiment_agent: Experiment result: {'model': 'Logistic Regression', 'problem_type': 'classification', 'train_samples': 543, 'val_samples': 181, 'applied_params': {}, 'rejected_params': [], 'cross_validation': {'folds': 5, 'scoring': 'f1_weighted', 'mean': 0.42684884503580334, 'std': 0.04172324905166177}, 'accuracy': 0.5303867403314917, 'f1': 0.5196978054336117, 'experiment_type': 'baseline_model'}
+2026-09-22 10:59:03,564 [INFO] app.agents.evaluation_agent: --- EVALUATION AGENT ---
+2026-09-22 10:59:03,565 [INFO] app.agents.evaluation_agent: Best model: Logistic Regression
+2026-09-22 10:59:03,565 [INFO] app.agents.evaluation_agent: Best f1 (validation): 0.5196978054336117
+2026-09-22 10:59:03,565 [INFO] app.agents.critic_agent: --- CRITIC AGENT ---
+2026-09-22 10:59:03,565 [INFO] app.agents.critic_agent: Critic reviewing experiments...
+2026-09-22 10:59:07,178 [INFO] app.agents.critic_agent: Decision: continue
+2026-09-22 10:59:07,178 [INFO] app.agents.critic_agent: Experiment type: baseline_model
+2026-09-22 10:59:07,178 [INFO] app.agents.critic_agent: Model: Random Forest
+2026-09-22 10:59:07,178 [INFO] app.agents.critic_agent: Recommendation: Run a baseline Random Forest model with default hyperparameters (no explicit parameters needed).
+2026-09-22 10:59:07,179 [INFO] app.supervisor: --- SUPERVISOR ---
+2026-09-22 10:59:07,179 [INFO] app.supervisor: Critic decision: continue
+2026-09-22 10:59:07,180 [INFO] app.supervisor: Experiment type: baseline_model
+2026-09-22 10:59:07,180 [INFO] app.supervisor: Supervisor iteration: 1/15
+2026-09-22 10:59:07,180 [INFO] app.supervisor: Routing to experiment agent: Random Forest
+2026-09-22 10:59:07,181 [INFO] app.agents.experiment_agent: --- EXPERIMENT AGENT ---
+2026-09-22 10:59:07,181 [INFO] app.agents.experiment_agent: Running proposed baseline: Random Forest
+2026-09-22 10:59:08,313 [INFO] app.agents.experiment_agent: Experiment result: {'model': 'Random Forest', 'problem_type': 'classification', 'train_samples': 543, 'val_samples': 181, 'applied_params': {}, 'rejected_params': [], 'cross_validation': {'folds': 5, 'scoring': 'f1_weighted', 'mean': 0.37702274480394515, 'std': 0.053050766616115325}, 'accuracy': 0.3812154696132597, 'f1': 0.36726519292063164, 'experiment_type': 'baseline_model'}
+2026-09-22 10:59:08,314 [INFO] app.agents.evaluation_agent: --- EVALUATION AGENT ---
+2026-09-22 10:59:08,314 [INFO] app.agents.evaluation_agent: Best model: Logistic Regression
+2026-09-22 10:59:08,314 [INFO] app.agents.evaluation_agent: Best f1 (validation): 0.5196978054336117
+2026-09-22 10:59:08,314 [INFO] app.agents.critic_agent: --- CRITIC AGENT ---
+2026-09-22 10:59:08,314 [INFO] app.agents.critic_agent: Critic reviewing experiments...
+2026-09-22 10:59:09,805 [INFO] app.agents.critic_agent: Decision: continue
+2026-09-22 10:59:09,806 [INFO] app.agents.critic_agent: Experiment type: baseline_model
+2026-09-22 10:59:09,806 [INFO] app.agents.critic_agent: Model: Gradient Boosting
+2026-09-22 10:59:09,806 [INFO] app.agents.critic_agent: Recommendation: Run a baseline Gradient Boosting model using default hyperparameters (no explicit parameters needed).
+2026-09-22 10:59:09,807 [INFO] app.supervisor: --- SUPERVISOR ---
+2026-09-22 10:59:09,807 [INFO] app.supervisor: Critic decision: continue
+2026-09-22 10:59:09,807 [INFO] app.supervisor: Experiment type: baseline_model
+2026-09-22 10:59:09,807 [INFO] app.supervisor: Supervisor iteration: 2/15
+2026-09-22 10:59:09,807 [INFO] app.supervisor: Routing to experiment agent: Gradient Boosting
+2026-09-22 10:59:09,808 [INFO] app.agents.experiment_agent: --- EXPERIMENT AGENT ---
+2026-09-22 10:59:09,808 [INFO] app.agents.experiment_agent: Running proposed baseline: Gradient Boosting
+2026-09-22 10:59:12,281 [INFO] app.agents.experiment_agent: Experiment result: {'model': 'Gradient Boosting', 'problem_type': 'classification', 'train_samples': 543, 'val_samples': 181, 'applied_params': {}, 'rejected_params': [], 'cross_validation': {'folds': 5, 'scoring': 'f1_weighted', 'mean': 0.3899860014445807, 'std': 0.0490604857580898}, 'accuracy': 0.46408839779005523, 'f1': 0.4523387064132921, 'experiment_type': 'baseline_model'}
+2026-09-22 10:59:12,282 [INFO] app.agents.evaluation_agent: --- EVALUATION AGENT ---
+2026-09-22 10:59:12,282 [INFO] app.agents.evaluation_agent: Best model: Logistic Regression
+2026-09-22 10:59:12,282 [INFO] app.agents.evaluation_agent: Best f1 (validation): 0.5196978054336117
+2026-09-22 10:59:12,282 [INFO] app.agents.critic_agent: --- CRITIC AGENT ---
+2026-09-22 10:59:12,282 [INFO] app.agents.critic_agent: Critic reviewing experiments...
+2026-09-22 10:59:14,233 [INFO] app.agents.critic_agent: Decision: feature_engineering
+2026-09-22 10:59:14,233 [INFO] app.agents.critic_agent: Experiment type: feature_engineering
+2026-09-22 10:59:14,233 [INFO] app.agents.critic_agent: Model: None
+2026-09-22 10:59:14,233 [INFO] app.agents.critic_agent: Recommendation: Proceed with a feature engineering experiment. The Feature Engineering Agent should propose new transformed or derived features (e.g., interaction terms, polynomial features, domain-specific aggregations) to be added to the dataset for subsequent modeling.
+2026-09-22 10:59:14,234 [INFO] app.supervisor: --- SUPERVISOR ---
+2026-09-22 10:59:14,234 [INFO] app.supervisor: Critic decision: feature_engineering
+2026-09-22 10:59:14,234 [INFO] app.supervisor: Experiment type: feature_engineering
+2026-09-22 10:59:14,234 [INFO] app.supervisor: Supervisor iteration: 3/15
+2026-09-22 10:59:14,234 [INFO] app.supervisor: Routing to feature engineering agent.
+2026-09-22 10:59:14,235 [INFO] app.agents.feature_engineering_agent: --- FEATURE ENGINEERING AGENT ---
+2026-09-22 10:59:14,236 [INFO] app.agents.feature_engineering_agent: Critic did not request a specific model for feature engineering; defaulting to 'Logistic Regression'.
+2026-09-22 10:59:14,236 [INFO] app.agents.feature_engineering_agent: No feature types are supported for this dataset's columns; skipping feature engineering.
+2026-09-22 10:59:14,236 [INFO] app.agents.final_report_agent: --- FINAL REPORT AGENT ---
+2026-09-22 10:59:14,298 [INFO] app.agents.final_report_agent: Held-out test f1: 0.5329952819966551 (retrained on train+val, evaluated once on a test split the critic loop never saw).
+2026-09-22 10:59:14,298 [INFO] app.agents.final_report_agent: Final report generated.
+2026-09-22 10:59:14,300 [INFO] __main__: Run snapshot saved to: runs\run_20260922_105914_299725.json

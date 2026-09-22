@@ -1,3 +1,14 @@
+import os
+from pathlib import Path
+
+# Pin the working directory to wherever this file actually lives,
+# regardless of what launched it (PyCharm run configs, a
+# different shell cwd, etc. can otherwise leave DATASET_PATH and
+# other relative paths in config.py resolving against the wrong
+# location, producing a confusing FileNotFoundError even when the
+# file and .env are both correct).
+os.chdir(Path(__file__).resolve().parent)
+
 from app.graph import build_graph
 from app.config import settings
 from app.tools.persistence import save_run_snapshot

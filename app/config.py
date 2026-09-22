@@ -44,6 +44,17 @@ class Settings:
         os.getenv("CV_FOLDS", "5")
     )
 
+    # LLM call reliability. Without an explicit timeout, a slow or
+    # stalled Groq response hangs the whole run with no way to
+    # tell it apart from normal work — better to fail fast and
+    # let the calling agent decide what to do.
+    LLM_TIMEOUT_SECONDS: int = int(
+        os.getenv("LLM_TIMEOUT_SECONDS", "45")
+    )
+    LLM_MAX_RETRIES: int = int(
+        os.getenv("LLM_MAX_RETRIES", "2")
+    )
+
     # Default dataset, overridable per-run without editing code.
     DATASET_PATH: str = os.getenv(
         "DATASET_PATH", "data/Telco-Customer-Churn.csv"

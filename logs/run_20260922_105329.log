@@ -1,0 +1,67 @@
+2026-09-22 10:53:31,659 [INFO] __main__: Starting ML Research Lab...
+2026-09-22 10:53:31,661 [INFO] app.agents.data_agent: --- DATA AGENT ---
+2026-09-22 10:53:31,661 [INFO] app.agents.data_agent: Profiling dataset: data/Student-Performance.csv
+2026-09-22 10:53:31,666 [INFO] app.agents.data_agent: Dataset profiling complete.
+2026-09-22 10:53:31,666 [INFO] app.agents.feature_agent: --- FEATURE AGENT ---
+2026-09-22 10:53:31,668 [INFO] app.agents.feature_agent: Identifier columns: []
+2026-09-22 10:53:31,668 [INFO] app.agents.feature_agent: Numeric features: ['study_hours_per_week', 'attendance_percent', 'previous_exam_score', 'age']
+2026-09-22 10:53:31,668 [INFO] app.agents.feature_agent: Categorical features: ['StudentRef', 'parental_education', 'school_type', 'internet_access', 'extracurricular', 'grade']
+2026-09-22 10:53:31,669 [INFO] app.agents.feature_agent: Missing-value columns: ['attendance_percent']
+2026-09-22 10:53:31,669 [INFO] app.agents.feature_agent: Feature analysis complete. Recommendations: 11
+2026-09-22 10:53:31,670 [INFO] app.agents.research_agent: --- RESEARCH AGENT ---
+2026-09-22 10:53:31,670 [INFO] app.agents.research_agent: Generating research plan...
+2026-09-22 10:53:35,151 [INFO] app.agents.research_agent: Problem type: classification
+2026-09-22 10:53:35,151 [INFO] app.agents.research_agent: Models: ['Logistic Regression', 'Random Forest', 'Gradient Boosting']
+2026-09-22 10:53:35,151 [INFO] app.agents.research_agent: Reasoning: The supplied metadata indicates that the target column is 'Churn', which is a categorical variable representing whether a student churned. Therefore the task is a binary (or possibly multi-class) classification problem. To establish a diverse baseline we will evaluate three fundamentally different model families supported by the execution layer: 
+1. Logistic Regression – a linear model that provides a simple, interpretable baseline and benefits from the standard scaling of numeric features. 
+2. Random Forest – a bagging ensemble of decision trees that can capture non‑linear relationships and is robust to feature scaling, while handling mixed numeric and one‑hot encoded categorical inputs. 
+3. Gradient Boosting – a boosting ensemble that often yields higher predictive performance on tabular data by sequentially correcting errors of prior trees.
+The execution layer will automatically perform the required preprocessing steps: deduplication of the 6 duplicate rows, imputation of the 20 missing values in 'attendance_percent', standard scaling of the numeric columns, and one‑hot encoding of all categorical columns (including the identifier 'StudentRef'). A stratified train/validation/test split will be used to preserve the class distribution of 'Churn'. Model performance will be measured using accuracy and weighted F1, which are the metrics available for classification. This plan provides a solid baseline across linear, bagging, and boosting approaches without invoking any unsupported capabilities such as hyperparameter tuning or ROC‑AUC computation.
+2026-09-22 10:53:35,151 [INFO] app.agents.split_agent: --- SPLIT AGENT ---
+2026-09-22 10:53:35,154 [ERROR] __main__: Graph run failed with an unhandled exception. If ENABLE_CHECKPOINTING=true, re-running with the same RUN_ID will resume from the last completed step.
+Traceback (most recent call last):
+  File "C:\Users\fazza\PycharmProjects\ml research lab\.venv\Lib\site-packages\pandas\core\indexes\base.py", line 3641, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas/_libs/index.pyx", line 168, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 197, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7668, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7676, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Churn'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\fazza\PycharmProjects\ml research lab\main.py", line 58, in main
+    result = graph.invoke(initial_state, **invoke_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fazza\PycharmProjects\ml research lab\.venv\Lib\site-packages\langgraph\pregel\main.py", line 3913, in invoke
+    for chunk in self.stream(
+                 ^^^^^^^^^^^^
+  File "C:\Users\fazza\PycharmProjects\ml research lab\.venv\Lib\site-packages\langgraph\pregel\main.py", line 2967, in stream
+    for _ in runner.tick(
+             ^^^^^^^^^^^^
+  File "C:\Users\fazza\PycharmProjects\ml research lab\.venv\Lib\site-packages\langgraph\pregel\_runner.py", line 207, in tick
+    run_with_retry(
+  File "C:\Users\fazza\PycharmProjects\ml research lab\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 617, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fazza\PycharmProjects\ml research lab\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 707, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fazza\PycharmProjects\ml research lab\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 447, in invoke
+    ret = self.func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fazza\PycharmProjects\ml research lab\app\agents\split_agent.py", line 14, in split_agent
+    splits = split_dataset_indices(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fazza\PycharmProjects\ml research lab\app\tools\data_tools.py", line 68, in split_dataset_indices
+    y = df[target_column] if problem_type == "classification" else None
+        ~~^^^^^^^^^^^^^^^
+  File "C:\Users\fazza\PycharmProjects\ml research lab\.venv\Lib\site-packages\pandas\core\frame.py", line 4378, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fazza\PycharmProjects\ml research lab\.venv\Lib\site-packages\pandas\core\indexes\base.py", line 3648, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Churn'
+During task with name 'split_agent' and id 'c1a4c5f9-93c2-6346-1ba8-ef5656a50dbd'

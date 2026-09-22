@@ -1,0 +1,43 @@
+2026-09-22 12:18:02,952 [INFO] __main__: Starting ML Research Lab...
+2026-09-22 12:18:02,954 [INFO] app.agents.data_agent: --- DATA AGENT ---
+2026-09-22 12:18:02,954 [INFO] app.agents.data_agent: Profiling dataset: data/Telco-Customer-Churn.csv
+2026-09-22 12:18:02,962 [INFO] app.agents.data_agent: Dataset profiling complete.
+2026-09-22 12:18:02,963 [INFO] app.agents.feature_agent: --- FEATURE AGENT ---
+2026-09-22 12:18:02,967 [INFO] app.agents.feature_agent: Identifier columns: ['customerID']
+2026-09-22 12:18:02,967 [INFO] app.agents.feature_agent: Numeric features: ['SeniorCitizen', 'tenure', 'MonthlyCharges', 'TotalCharges']
+2026-09-22 12:18:02,967 [INFO] app.agents.feature_agent: Categorical features: ['PhoneService', 'MultipleLines', 'OnlineSecurity', 'OnlineBackup', 'DeviceProtection', 'TechSupport', 'StreamingTV', 'StreamingMovies', 'Contract', 'PaymentMethod']
+2026-09-22 12:18:02,968 [INFO] app.agents.feature_agent: Missing-value columns: ['MultipleLines', 'TotalCharges']
+2026-09-22 12:18:02,968 [INFO] app.agents.feature_agent: Feature analysis complete. Recommendations: 17
+2026-09-22 12:18:02,968 [INFO] app.agents.research_agent: --- RESEARCH AGENT ---
+2026-09-22 12:18:02,968 [INFO] app.agents.research_agent: Generating research plan...
+2026-09-22 12:18:05,705 [INFO] app.agents.research_agent: Problem type: classification
+2026-09-22 12:18:05,705 [INFO] app.agents.research_agent: Models: ['Logistic Regression', 'Random Forest', 'Gradient Boosting']
+2026-09-22 12:18:05,705 [INFO] app.agents.research_agent: Reasoning: The target column 'Churn' is a categorical string indicating whether a customer has churned, so the task is a binary classification problem. To establish diverse baselines we will evaluate: (1) Logistic Regression as a simple linear model that provides a interpretable baseline; (2) Random Forest as a bagging ensemble of decision trees that captures non‑linear interactions and is robust to feature scaling; (3) Gradient Boosting as a boosting ensemble that often yields strong performance on tabular data. The execution layer will handle missing‑value imputation, one‑hot encoding of the listed categorical features, and standard scaling of numeric features before training each model. Accuracy and weighted F1 will be reported for each baseline.
+2026-09-22 12:18:05,705 [INFO] app.agents.split_agent: --- SPLIT AGENT ---
+2026-09-22 12:18:05,706 [ERROR] __main__: Graph run failed with an unhandled exception. If ENABLE_CHECKPOINTING=true, re-running with the same RUN_ID will resume from the last completed step.
+Traceback (most recent call last):
+  File "C:\Users\fazza\PycharmProjects\ml research lab\main.py", line 58, in main
+    result = graph.invoke(initial_state, **invoke_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fazza\PycharmProjects\ml research lab\.venv\Lib\site-packages\langgraph\pregel\main.py", line 3913, in invoke
+    for chunk in self.stream(
+                 ^^^^^^^^^^^^
+  File "C:\Users\fazza\PycharmProjects\ml research lab\.venv\Lib\site-packages\langgraph\pregel\main.py", line 2967, in stream
+    for _ in runner.tick(
+             ^^^^^^^^^^^^
+  File "C:\Users\fazza\PycharmProjects\ml research lab\.venv\Lib\site-packages\langgraph\pregel\_runner.py", line 207, in tick
+    run_with_retry(
+  File "C:\Users\fazza\PycharmProjects\ml research lab\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 617, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fazza\PycharmProjects\ml research lab\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 707, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fazza\PycharmProjects\ml research lab\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 447, in invoke
+    ret = self.func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fazza\PycharmProjects\ml research lab\app\agents\split_agent.py", line 14, in split_agent
+    splits = split_dataset_indices(
+             ^^^^^^^^^^^^^^^^^^^^^^
+TypeError: split_dataset_indices() got an unexpected keyword argument 'problem_type'
+During task with name 'split_agent' and id '9268337f-6d45-e31d-caae-afad7047cbbc'

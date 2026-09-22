@@ -1,215 +1,388 @@
+import numpy as np
 import pandas as pd
 
+from app.tools.data_tools import load_dataset
 
-# Columns each transform needs. Transforms marked with an empty
-# "required" set instead need at least one column from their
-# "any_of" list (a partial signal is still useful, e.g. only some
-# streaming columns present).
-SERVICE_COLUMNS = [
-    "PhoneService",
-    "MultipleLines",
-    "OnlineSecurity",
-    "OnlineBackup",
-    "DeviceProtection",
-    "TechSupport",
-    "StreamingTV",
-    "StreamingMovies",
-]
 
-SUPPORT_SECURITY_COLUMNS = [
-    "OnlineSecurity",
-    "OnlineBackup",
-    "DeviceProtection",
-    "TechSupport",
-]
-
-STREAMING_COLUMNS = [
-    "StreamingTV",
-    "StreamingMovies",
-]
-
-FEATURE_REQUIREMENTS = {
-    "total_charges_per_tenure": {
-        "required": {"TotalCharges", "tenure"},
-        "any_of": [],
+TRANSFORMATIONS = {
+    "numeric_interaction": {
+        "description": "Multiply two numeric features.",
+        "arity": 2,
+        "input_types": ["numeric", "numeric"],
     },
-    "monthly_charge_tenure": {
-        "required": {"MonthlyCharges", "tenure"},
-        "any_of": [],
+    "numeric_ratio": {
+        "description": "Divide one numeric feature by another.",
+        "arity": 2,
+        "input_types": ["numeric", "numeric"],
     },
-    "service_count": {
-        "required": set(),
-        "any_of": SERVICE_COLUMNS,
+    "numeric_difference": {
+        "description": "Subtract the second numeric feature from the first.",
+        "arity": 2,
+        "input_types": ["numeric", "numeric"],
     },
-    "support_security_count": {
-        "required": set(),
-        "any_of": SUPPORT_SECURITY_COLUMNS,
+    "numeric_sum": {
+        "description": "Add two numeric features.",
+        "arity": 2,
+        "input_types": ["numeric", "numeric"],
     },
-    "has_streaming": {
-        "required": set(),
-        "any_of": STREAMING_COLUMNS,
+    "numeric_mean": {
+        "description": "Calculate the mean of two numeric features.",
+        "arity": 2,
+        "input_types": ["numeric", "numeric"],
+    },
+    "numeric_square": {
+        "description": "Square a numeric feature.",
+        "arity": 1,
+        "input_types": ["numeric"],
+    },
+    "numeric_log": {
+        "description": "Apply log1p to the absolute value of a numeric feature.",
+        "arity": 1,
+        "input_types": ["numeric"],
+    },
+    "numeric_sqrt": {
+        "description": "Apply square root to the absolute value of a numeric feature.",
+        "arity": 1,
+        "input_types": ["numeric"],
+    },
+    "numeric_abs": {
+        "description": "Apply absolute value to a numeric feature.",
+        "arity": 1,
+        "input_types": ["numeric"],
+    },
+    "categorical_interaction": {
+        "description": "Combine two categorical features into one categorical feature.",
+        "arity": 2,
+        "input_types": ["categorical", "categorical"],
+    },
+    "categorical_frequency": {
+        "description": "Replace each categorical value with its frequency in the dataset.",
+        "arity": 1,
+        "input_types": ["categorical"],
+    },
+    "numeric_categorical_interaction": {
+        "description": "Multiply a numeric feature by a frequency-encoded categorical feature.",
+        "arity": 2,
+        "input_types": ["numeric", "categorical"],
     },
 }
 
 
-def get_available_feature_types(column_names: list[str]) -> list[str]:
-    """Return only the feature_type values that this dataset can
-    actually support, based on which source columns are present.
-    This is what makes feature engineering dataset-aware instead
-    of silently assuming Telco churn column names."""
+def load_and_prepare_dataset(
+    dataset_path: str,
+    target_column: str,
+) -> pd.DataFrame:
+    return load_dataset(dataset_path)
 
-    columns_set = set(column_names)
+
+def get_column_types(
+    df: pd.DataFrame,
+    target_column: str | None = None,
+) -> dict[str, list[str]]:
+    columns = [
+        column
+        for column in df.columns
+        if column != target_column
+    ]
+
+    numeric_columns = [
+        column
+        for column in columns
+        if pd.api.types.is_numeric_dtype(df[column])
+    ]
+
+    categorical_columns = [
+        column
+        for column in columns
+        if column not in numeric_columns
+    ]
+
+    return {
+        "numeric": numeric_columns,
+        "categorical": categorical_columns,
+    }
+
+
+def get_available_feature_types(
+    column_names: list[str],
+    dataframe: pd.DataFrame | None = None,
+    target_column: str | None = None,
+) -> list[str]:
+    if dataframe is None:
+        return [
+            name
+            for name in TRANSFORMATIONS
+        ]
+
+    column_types = get_column_types(
+        dataframe,
+        target_column=target_column,
+    )
+
     available = []
 
-    for feature_type, requirements in FEATURE_REQUIREMENTS.items():
-        required = requirements["required"]
-        any_of = requirements["any_of"]
+    for feature_type, specification in TRANSFORMATIONS.items():
+        input_types = specification["input_types"]
 
-        has_required = required <= columns_set
-        has_any_of = (
-            not any_of
-            or any(column in columns_set for column in any_of)
-        )
-
-        if has_required and has_any_of:
+        if all(
+            len(column_types[input_type]) > 0
+            for input_type in set(input_types)
+        ):
             available.append(feature_type)
 
     return available
 
 
-def load_and_prepare_dataset(
-    dataset_path,
-    target_column
-):
-    df = pd.read_csv(dataset_path)
+def get_feature_candidates(
+    dataframe: pd.DataFrame,
+    feature_type: str,
+    target_column: str | None = None,
+) -> list[list[str]]:
+    column_types = get_column_types(
+        dataframe,
+        target_column=target_column,
+    )
 
-    if "customerID" in df.columns:
-        df = df.drop(
-            columns=["customerID"]
-        )
+    specification = TRANSFORMATIONS.get(feature_type)
 
-    if "TotalCharges" in df.columns:
-        df["TotalCharges"] = pd.to_numeric(
-            df["TotalCharges"],
-            errors="coerce"
-        )
-
-    return df
-
-
-def create_feature(
-    df,
-    feature_name,
-    feature_type
-):
-    if feature_type not in FEATURE_REQUIREMENTS:
+    if specification is None:
         raise ValueError(
             f"Unsupported feature type: {feature_type}"
         )
 
-    requirements = FEATURE_REQUIREMENTS[feature_type]
-    missing_required = requirements["required"] - set(df.columns)
+    input_types = specification["input_types"]
 
-    if missing_required:
+    if len(input_types) == 1:
+        return [
+            [column]
+            for column in column_types[input_types[0]]
+        ]
+
+    if len(input_types) == 2:
+        first_type = input_types[0]
+        second_type = input_types[1]
+
+        candidates = []
+
+        for first_column in column_types[first_type]:
+            for second_column in column_types[second_type]:
+                if first_type == second_type and first_column == second_column:
+                    continue
+
+                candidates.append([
+                    first_column,
+                    second_column,
+                ])
+
+        return candidates
+
+    raise ValueError(
+        f"Unsupported feature arity for {feature_type}"
+    )
+
+
+def create_feature(
+    df: pd.DataFrame,
+    feature_name: str,
+    feature_type: str,
+    source_columns: list[str],
+) -> pd.DataFrame:
+    if feature_type not in TRANSFORMATIONS:
         raise ValueError(
-            f"Cannot create '{feature_type}': dataset is missing "
-            f"required column(s) {sorted(missing_required)}"
+            f"Unsupported feature type: {feature_type}"
         )
 
-    any_of = requirements["any_of"]
+    result = df.copy()
 
-    if any_of and not any(column in df.columns for column in any_of):
+    if feature_type == "numeric_interaction":
+        first, second = source_columns
+        result[feature_name] = (
+            pd.to_numeric(result[first], errors="coerce")
+            * pd.to_numeric(result[second], errors="coerce")
+        )
+
+    elif feature_type == "numeric_ratio":
+        first, second = source_columns
+
+        denominator = pd.to_numeric(
+            result[second],
+            errors="coerce",
+        ).replace(0, np.nan)
+
+        numerator = pd.to_numeric(
+            result[first],
+            errors="coerce",
+        )
+
+        result[feature_name] = numerator / denominator
+
+    elif feature_type == "numeric_difference":
+        first, second = source_columns
+
+        result[feature_name] = (
+            pd.to_numeric(result[first], errors="coerce")
+            - pd.to_numeric(result[second], errors="coerce")
+        )
+
+    elif feature_type == "numeric_sum":
+        first, second = source_columns
+
+        result[feature_name] = (
+            pd.to_numeric(result[first], errors="coerce")
+            + pd.to_numeric(result[second], errors="coerce")
+        )
+
+    elif feature_type == "numeric_mean":
+        first, second = source_columns
+
+        result[feature_name] = (
+            pd.to_numeric(result[first], errors="coerce")
+            + pd.to_numeric(result[second], errors="coerce")
+        ) / 2.0
+
+    elif feature_type == "numeric_square":
+        source = source_columns[0]
+
+        values = pd.to_numeric(
+            result[source],
+            errors="coerce",
+        )
+
+        result[feature_name] = values ** 2
+
+    elif feature_type == "numeric_log":
+        source = source_columns[0]
+
+        values = pd.to_numeric(
+            result[source],
+            errors="coerce",
+        )
+
+        result[feature_name] = np.log1p(np.abs(values))
+
+    elif feature_type == "numeric_sqrt":
+        source = source_columns[0]
+
+        values = pd.to_numeric(
+            result[source],
+            errors="coerce",
+        )
+
+        result[feature_name] = np.sqrt(np.abs(values))
+
+    elif feature_type == "numeric_abs":
+        source = source_columns[0]
+
+        values = pd.to_numeric(
+            result[source],
+            errors="coerce",
+        )
+
+        result[feature_name] = np.abs(values)
+
+    elif feature_type == "categorical_interaction":
+        first, second = source_columns
+
+        result[feature_name] = (
+            result[first].astype(str)
+            + "__"
+            + result[second].astype(str)
+        )
+
+    elif feature_type == "categorical_frequency":
+        source = source_columns[0]
+
+        frequencies = (
+            result[source]
+            .value_counts(normalize=True)
+        )
+
+        result[feature_name] = (
+            result[source]
+            .map(frequencies)
+        )
+
+    elif feature_type == "numeric_categorical_interaction":
+        numeric_column, categorical_column = source_columns
+
+        frequencies = (
+            result[categorical_column]
+            .value_counts(normalize=True)
+        )
+
+        encoded = result[categorical_column].map(
+            frequencies
+        )
+
+        numeric_values = pd.to_numeric(
+            result[numeric_column],
+            errors="coerce",
+        )
+
+        result[feature_name] = (
+            numeric_values * encoded
+        )
+
+    else:
         raise ValueError(
-            f"Cannot create '{feature_type}': dataset has none of "
-            f"the expected column(s) {any_of}"
+            f"Unsupported feature type: {feature_type}"
         )
 
-    if feature_type == "total_charges_per_tenure":
-        df[feature_name] = (
-            df["TotalCharges"]
-            / df["tenure"].replace(0, 1)
-        )
+    result = result.replace(
+        [np.inf, -np.inf],
+        np.nan,
+    )
 
-    elif feature_type == "monthly_charge_tenure":
-        df[feature_name] = (
-            df["MonthlyCharges"]
-            * df["tenure"]
-        )
-
-    elif feature_type == "service_count":
-        available_columns = [
-            column
-            for column in SERVICE_COLUMNS
-            if column in df.columns
-        ]
-
-        df[feature_name] = (
-            df[available_columns]
-            .apply(
-                lambda row: sum(
-                    value == "Yes"
-                    for value in row
-                ),
-                axis=1
-            )
-        )
-
-    elif feature_type == "support_security_count":
-        available_columns = [
-            column
-            for column in SUPPORT_SECURITY_COLUMNS
-            if column in df.columns
-        ]
-
-        df[feature_name] = (
-            df[available_columns]
-            .apply(
-                lambda row: sum(
-                    value == "Yes"
-                    for value in row
-                ),
-                axis=1
-            )
-        )
-
-    elif feature_type == "has_streaming":
-        available_columns = [
-            column
-            for column in STREAMING_COLUMNS
-            if column in df.columns
-        ]
-
-        df[feature_name] = (
-            df[available_columns]
-            .apply(
-                lambda row: int(
-                    any(
-                        value == "Yes"
-                        for value in row
-                    )
-                ),
-                axis=1
-            )
-        )
-
-    return df
+    return result
 
 
 def apply_feature_engineering(
-    dataset_path,
-    target_column,
-    feature_type,
-    feature_name
-):
+    dataset_path: str,
+    target_column: str,
+    feature_type: str,
+    feature_name: str,
+    source_columns: list[str],
+) -> pd.DataFrame:
     df = load_and_prepare_dataset(
-        dataset_path,
-        target_column
+        dataset_path=dataset_path,
+        target_column=target_column,
     )
 
-    df = create_feature(
+    column_types = get_column_types(
         df,
-        feature_name,
-        feature_type
+        target_column=target_column,
     )
 
-    return df
+    specification = TRANSFORMATIONS.get(feature_type)
+
+    if specification is None:
+        raise ValueError(
+            f"Unsupported feature type: {feature_type}"
+        )
+
+    for column, expected_type in zip(
+        source_columns,
+        specification["input_types"],
+    ):
+        if column not in df.columns:
+            raise ValueError(
+                f"Column '{column}' does not exist."
+            )
+
+        if column == target_column:
+            raise ValueError(
+                "Target column cannot be used as a source feature."
+            )
+
+        if column not in column_types[expected_type]:
+            raise ValueError(
+                f"Column '{column}' is not "
+                f"{expected_type}."
+            )
+
+    return create_feature(
+        df=df,
+        feature_name=feature_name,
+        feature_type=feature_type,
+        source_columns=source_columns,
+    )

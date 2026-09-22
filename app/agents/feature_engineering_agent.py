@@ -1,328 +1,209 @@
 from typing import Literal
 
-from langchain_groq import ChatGroq
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
-from app.state import ResearchState
-from app.config import settings
-from app.tools.feature_tools import get_available_feature_types
 from app.logging_config import get_logger
+from app.config import settings
+from app.tools.feature_tools import (
+    TRANSFORMATIONS,
+    get_feature_candidates,
+    get_column_types,
+    load_and_prepare_dataset,
+)
+
+from langchain_groq import ChatGroq
 
 logger = get_logger(__name__)
 
 
 llm = ChatGroq(
-    model=settings.GROQ_MODEL
+    model=settings.GROQ_MODEL,
+    timeout=settings.LLM_TIMEOUT_SECONDS,
+    max_retries=settings.LLM_MAX_RETRIES,
 )
 
 
 class FeatureProposal(BaseModel):
-    decision: Literal[
-        "propose",
-        "finish"
-    ]
-
-    feature_type: Literal[
-        "total_charges_per_tenure",
-        "monthly_charge_tenure",
-        "service_count",
-        "support_security_count",
-        "has_streaming",
-        "none"
-    ]
-
-    feature_name: str | None
-
-    reasoning: str
-
-
-structured_llm = llm.with_structured_output(
-    FeatureProposal
-)
-
-
-FEATURE_ENGINEERING_PROMPT = """
-You are the Feature Engineering Agent in an
-autonomous machine learning research system.
-
-Your job is to examine the dataset analysis,
-current experiment results, and previous feature
-engineering attempts.
-
-Decide whether a useful new feature should be
-tested.
-
-Based on the columns actually present in THIS dataset, the
-following feature transformations are currently supported by the
-execution layer (transforms that need columns this dataset
-doesn't have have already been excluded from this list):
-
-{available_feature_descriptions}
-
-You may ONLY propose one of the feature types named above. If the
-list above is empty, or every listed feature type has already
-been tried (see below), return decision = "finish".
-
-Do not propose:
-- StandardScaler
-- OneHotEncoder
-- Missing-value imputation
-- Arbitrary Python code
-- Unsupported transformations
-- Hyperparameter tuning
-- A different model
-
-Those operations are handled elsewhere.
-
-Avoid proposing a feature that has already been
-tested.
-
-If there is a reasonable untested feature from the list above,
-return:
-
-decision = "propose"
-
-If no useful untested feature remains,
-return:
-
-decision = "finish"
-
-Dataset analysis:
-{feature_analysis}
-
-Research plan:
-{research_plan}
-
-Completed experiments:
-{experiments}
-
-Previous feature engineering feedback:
-{critic_feedback}
-
-Previous feature engineering attempts:
-{feature_engineering_history}
-
-The Critic Agent has requested this model:
-{requested_model}
-
-If the Critic requested a model, the resulting
-feature engineering experiment MUST use that model.
-
-Choose the feature based on the available
-evidence. Do not simply choose randomly.
-
-Explain why the feature could provide useful
-information for this dataset.
-"""
-
-FEATURE_DESCRIPTIONS = {
-    "total_charges_per_tenure": (
-        "total_charges_per_tenure - Creates TotalCharges / tenure."
-    ),
-    "monthly_charge_tenure": (
-        "monthly_charge_tenure - Creates MonthlyCharges * tenure."
-    ),
-    "service_count": (
-        "service_count - Counts the customer's subscribed services."
-    ),
-    "support_security_count": (
-        "support_security_count - Counts security and technical "
-        "support services."
-    ),
-    "has_streaming": (
-        "has_streaming - Indicates whether the customer has at "
-        "least one streaming service."
-    ),
-}
-
-
-def feature_engineering_agent(
-    state: ResearchState
-) -> dict:
-    logger.info("--- FEATURE ENGINEERING AGENT ---")
-
-    feature_analysis = state.get(
-        "feature_analysis",
-        {}
+    action: Literal["propose", "stop"] = Field(
+        description="Whether to propose a feature transformation or stop."
+    )
+    feature_type: str = Field(
+        description="Feature transformation type."
+    )
+    source_columns: list[str] = Field(
+        default_factory=list,
+        description="Existing columns used to create the feature."
+    )
+    feature_name: str = Field(
+        default="",
+        description="Name of the engineered feature."
+    )
+    reason: str = Field(
+        default="",
+        description="Why this feature may improve validation performance."
     )
 
-    research_plan = state.get(
-        "research_plan",
-        {}
+
+def feature_engineering_agent(state):
+    dataset_path = state["dataset_path"]
+    target_column = state["target_column"]
+
+    df = load_and_prepare_dataset(
+        dataset_path=dataset_path,
+        target_column=target_column,
     )
 
-    experiments = state.get(
-        "experiments",
-        []
+    column_types = get_column_types(
+        df,
+        target_column=target_column,
     )
 
-    critic_feedback = state.get(
-        "critic_feedback",
-        []
-    )
+    available_types = list(TRANSFORMATIONS.keys())
 
-    feature_engineering_history = state.get(
-        "feature_engineering_history",
-        []
-    )
+    candidate_summary = {}
 
-    requested_model = state.get(
-        "proposed_experiment",
-        {}
-    ).get(
-        "model"
-    )
-
-    column_names = state.get(
-        "dataset_info", {}
-    ).get(
-        "column_names", []
-    )
-
-    available_feature_types = get_available_feature_types(
-        column_names
-    )
-
-    if not available_feature_types:
-        logger.info(
-            "No feature types are supported for this dataset's "
-            "columns; skipping feature engineering."
+    for feature_type in available_types:
+        candidates = get_feature_candidates(
+            dataframe=df,
+            feature_type=feature_type,
+            target_column=target_column,
         )
 
-        proposal_dict = {
-            "decision": "finish",
-            "feature_type": "none",
-            "feature_name": None,
-            "reasoning": (
-                "No supported feature transformation has the "
-                "required source columns in this dataset."
-            ),
-        }
+        if candidates:
+            candidate_summary[feature_type] = candidates[:30]
 
+    prompt = f"""
+You are the feature engineering agent in an autonomous ML research system.
+
+Your job is to propose ONE useful feature engineering experiment.
+
+Dataset target:
+{target_column}
+
+Numeric columns:
+{column_types["numeric"]}
+
+Categorical columns:
+{column_types["categorical"]}
+
+Available transformations:
+{available_types}
+
+Valid candidate source columns for each transformation:
+{candidate_summary}
+
+Existing feature engineering history:
+{state.get("feature_engineering_history", [])}
+
+Previous critic feedback:
+{state.get("critic_feedback", [])}
+
+Rules:
+
+1. Only use transformations listed under Available transformations.
+2. Only use source columns from the provided candidate lists.
+3. Never use the target column.
+4. Do not invent columns.
+5. Propose exactly one feature.
+6. Prefer a transformation that addresses the critic feedback.
+7. Avoid repeating an already attempted transformation with the same source columns.
+8. If there is no sensible new feature to test, choose stop.
+"""
+
+    structured_llm = llm.with_structured_output(
+        FeatureProposal
+    )
+
+    proposal = structured_llm.invoke(prompt)
+
+    feature_type = proposal.feature_type
+    source_columns = proposal.source_columns
+
+    if proposal.action == "propose":
+        if feature_type not in TRANSFORMATIONS:
+            proposal.action = "stop"
+
+        else:
+            valid_candidates = get_feature_candidates(
+                dataframe=df,
+                feature_type=feature_type,
+                target_column=target_column,
+            )
+
+            if source_columns not in valid_candidates:
+                proposal.action = "stop"
+
+    if proposal.action == "stop":
         return {
-            "feature_proposal": proposal_dict,
-            "proposed_experiment": {
-                "experiment_type": "none",
-                "feature_type": "none",
-                "feature_name": None,
-                "model": None,
-                "parameters": {},
+            "feature_proposal": {
+                "decision": "stop",
+                "feature_type": "",
+                "feature_name": "",
+                "source_columns": [],
+                "reason": proposal.reason,
             },
             "agent_results": {
                 **state.get("agent_results", {}),
-                "feature_engineering_agent": proposal_dict,
-            },
-            "current_task": (
-                "No feature engineering possible for this dataset"
-            ),
+                "feature_engineering_agent": {
+                    "status": "stopped",
+                    "reason": proposal.reason,
+                },
+            }
         }
 
-    available_feature_descriptions = "\n".join(
-        FEATURE_DESCRIPTIONS[feature_type]
-        for feature_type in available_feature_types
-    )
+    feature_name = proposal.feature_name.strip()
 
-    prompt = FEATURE_ENGINEERING_PROMPT.format(
-        available_feature_descriptions=available_feature_descriptions,
-        feature_analysis=feature_analysis,
-        research_plan=research_plan,
-        experiments=experiments,
-        critic_feedback=critic_feedback,
-        feature_engineering_history=(
-            feature_engineering_history
-        ),
-        requested_model=requested_model,
-    )
-
-    logger.info("Generating feature engineering proposal...")
-
-    proposal = structured_llm.invoke(
-        prompt
-    )
-
-    # Guard against the LLM re-proposing a feature/model
-    # combination that has already been tried, proposing a feature
-    # type this dataset can't support (defense in depth beyond the
-    # prompt-level restriction above), or proposing "propose" with
-    # no usable feature_type/model.
-    if proposal.decision == "propose":
-        candidate_id = (
-            f"feature_engineering::"
-            f"{proposal.feature_type}::{requested_model}"
+    if not feature_name:
+        feature_name = (
+            f"{feature_type}__"
+            + "__".join(source_columns)
         )
 
-        if (
-            proposal.feature_type == "none"
-            or proposal.feature_type not in available_feature_types
-            or not requested_model
-            or candidate_id in feature_engineering_history
-        ):
-            logger.warning(
-                "Feature engineering agent proposed a "
-                "duplicate/unsupported/invalid feature; "
-                "overriding decision to finish."
-            )
+    best_model = state.get("evaluation", {}).get("best_model")
 
-            proposal.decision = "finish"
-            proposal.feature_type = "none"
-            proposal.feature_name = None
+    if not best_model:
+        best_model = "Logistic Regression"
 
-    logger.info(f"Decision: {proposal.decision}")
-    logger.info(f"Feature: {proposal.feature_type}")
-    logger.info(f"Reasoning: {proposal.reasoning}")
-
-    proposal_dict = {
-        "decision": proposal.decision,
-        "feature_type": proposal.feature_type,
-        "feature_name": proposal.feature_name,
-        "reasoning": proposal.reasoning,
+    proposed_experiment = {
+        "experiment_type": "feature_engineering",
+        "feature_type": feature_type,
+        "feature_name": feature_name,
+        "source_columns": source_columns,
+        "model": best_model,
+        "reason": proposal.reason,
     }
 
-    if proposal.decision == "finish":
-        return {
-            "feature_proposal": proposal_dict,
-            "proposed_experiment": {
-                "experiment_type": "none",
-                "feature_type": "none",
-                "feature_name": None,
-                "model": None,
-                "parameters": {},
-            },
-            "agent_results": {
-                **state.get(
-                    "agent_results",
-                    {}
-                ),
-                "feature_engineering_agent": (
-                    proposal_dict
-                ),
-            },
-            "current_task": (
-                "No further feature engineering available"
-            ),
-        }
+    logger.info("--- FEATURE ENGINEERING AGENT ---")
+    logger.info(f"Selected model: {best_model}")
+    logger.info(f"Feature type: {feature_type}")
+    logger.info(f"Source columns: {source_columns}")
+    logger.info(f"Feature name: {feature_name}")
+
+    history_entry = (
+        f"{feature_type}::"
+        f"{'::'.join(source_columns)}"
+    )
+
+
 
     return {
-        "feature_proposal": proposal_dict,
-        "proposed_experiment": {
-            "experiment_type": (
-                "feature_engineering"
-            ),
-            "feature_type": proposal.feature_type,
-            "feature_name": proposal.feature_name,
-            "model": requested_model,
-            "parameters": {},
+        "feature_proposal": {
+            "decision": "propose",
+            "feature_type": feature_type,
+            "feature_name": feature_name,
+            "source_columns": source_columns,
+            "reason": proposal.reason,
         },
+        "proposed_experiment": proposed_experiment,
+
         "agent_results": {
-            **state.get(
-                "agent_results",
-                {}
-            ),
-            "feature_engineering_agent": (
-                proposal_dict
-            ),
+            **state.get("agent_results", {}),
+            "feature_engineering_agent": {
+                "status": "complete",
+                "feature_type": feature_type,
+                "source_columns": source_columns,
+                "feature_name": feature_name,
+                "reason": proposal.reason,
+            },
         },
-        "current_task": (
-            "Feature engineering proposal generated"
-        ),
     }

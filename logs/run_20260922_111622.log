@@ -1,0 +1,103 @@
+2026-09-22 11:16:25,130 [INFO] __main__: Starting ML Research Lab...
+2026-09-22 11:16:25,132 [INFO] app.agents.data_agent: --- DATA AGENT ---
+2026-09-22 11:16:25,132 [INFO] app.agents.data_agent: Profiling dataset: data/student_performance_regression.csv
+2026-09-22 11:16:25,139 [INFO] app.agents.data_agent: Dataset profiling complete.
+2026-09-22 11:16:25,139 [INFO] app.agents.feature_agent: --- FEATURE AGENT ---
+2026-09-22 11:16:25,145 [INFO] app.agents.feature_agent: Identifier columns: []
+2026-09-22 11:16:25,145 [INFO] app.agents.feature_agent: Numeric features: ['study_hours', 'attendance', 'assignment_score', 'midterm_score', 'project_score', 'sleep_hours', 'previous_gpa', 'participation']
+2026-09-22 11:16:25,146 [INFO] app.agents.feature_agent: Categorical features: []
+2026-09-22 11:16:25,146 [INFO] app.agents.feature_agent: Missing-value columns: []
+2026-09-22 11:16:25,146 [INFO] app.agents.feature_agent: Feature analysis complete. Recommendations: 8
+2026-09-22 11:16:25,147 [INFO] app.agents.research_agent: --- RESEARCH AGENT ---
+2026-09-22 11:16:25,147 [INFO] app.agents.research_agent: Generating research plan...
+2026-09-22 11:16:28,075 [INFO] app.agents.research_agent: Problem type: regression
+2026-09-22 11:16:28,075 [INFO] app.agents.research_agent: Models: ['Linear Regression', 'Random Forest Regressor', 'Gradient Boosting Regressor']
+2026-09-22 11:16:28,075 [INFO] app.agents.research_agent: Reasoning: The target column 'final_score' is numeric, indicating a regression problem. To establish diverse baselines, we will use three modeling approaches: (1) Linear Regression as a simple linear baseline; (2) Random Forest Regressor as a bagging tree ensemble that captures non‑linear relationships and interactions; (3) Gradient Boosting Regressor as a boosting tree ensemble that often yields strong predictive performance. All features are numeric, so the execution layer will apply standard scaling where appropriate and train each model using the built‑in train/validation/test split and cross‑validation. This plan provides a clear baseline across linear, bagging, and boosting methods without relying on unsupported capabilities such as hyperparameter tuning or advanced metrics.
+2026-09-22 11:16:28,076 [INFO] app.agents.split_agent: --- SPLIT AGENT ---
+2026-09-22 11:16:28,095 [INFO] app.agents.split_agent: Split sizes -> train: 1200, val: 400, test: 400 (test is held out until final_report_agent)
+2026-09-22 11:16:28,095 [INFO] app.agents.experiment_agent: --- EXPERIMENT AGENT ---
+2026-09-22 11:16:28,095 [INFO] app.agents.experiment_agent: Running proposed baseline: Linear Regression
+2026-09-22 11:16:28,217 [INFO] app.agents.experiment_agent: Experiment result: {'model': 'Linear Regression', 'problem_type': 'regression', 'train_samples': 1200, 'val_samples': 400, 'applied_params': {}, 'rejected_params': [], 'cross_validation': {'folds': 5, 'scoring': 'neg_root_mean_squared_error', 'mean': -2.3110738484873723, 'std': 0.045073746335269504}, 'rmse': 2.1932154701164466, 'r2': 0.7708220916958074, 'experiment_type': 'baseline_model'}
+2026-09-22 11:16:28,217 [INFO] app.agents.evaluation_agent: --- EVALUATION AGENT ---
+2026-09-22 11:16:28,217 [INFO] app.agents.evaluation_agent: Best model: Linear Regression
+2026-09-22 11:16:28,218 [INFO] app.agents.evaluation_agent: Best rmse (validation): 2.1932154701164466
+2026-09-22 11:16:28,218 [INFO] app.agents.critic_agent: --- CRITIC AGENT ---
+2026-09-22 11:16:28,218 [INFO] app.agents.critic_agent: Critic reviewing experiments...
+2026-09-22 11:16:30,726 [INFO] app.agents.critic_agent: Decision: continue
+2026-09-22 11:16:30,726 [INFO] app.agents.critic_agent: Experiment type: baseline_model
+2026-09-22 11:16:30,727 [INFO] app.agents.critic_agent: Model: Random Forest Regressor
+2026-09-22 11:16:30,727 [INFO] app.agents.critic_agent: Recommendation: Proceed with training and evaluating a Random Forest Regressor baseline on the validation split.
+2026-09-22 11:16:30,728 [INFO] app.supervisor: --- SUPERVISOR ---
+2026-09-22 11:16:30,728 [INFO] app.supervisor: Critic decision: continue
+2026-09-22 11:16:30,728 [INFO] app.supervisor: Experiment type: baseline_model
+2026-09-22 11:16:30,728 [INFO] app.supervisor: Supervisor iteration: 1/15
+2026-09-22 11:16:30,728 [INFO] app.supervisor: Routing to experiment agent: Random Forest Regressor
+2026-09-22 11:16:30,729 [INFO] app.agents.experiment_agent: --- EXPERIMENT AGENT ---
+2026-09-22 11:16:30,729 [INFO] app.agents.experiment_agent: Running proposed baseline: Random Forest Regressor
+2026-09-22 11:16:32,387 [INFO] app.agents.experiment_agent: Experiment result: {'model': 'Random Forest Regressor', 'problem_type': 'regression', 'train_samples': 1200, 'val_samples': 400, 'applied_params': {}, 'rejected_params': [], 'cross_validation': {'folds': 5, 'scoring': 'neg_root_mean_squared_error', 'mean': -2.7559554211596633, 'std': 0.15977006288675644}, 'rmse': 2.5785490366961263, 'r2': 0.683217676482015, 'experiment_type': 'baseline_model'}
+2026-09-22 11:16:32,388 [INFO] app.agents.evaluation_agent: --- EVALUATION AGENT ---
+2026-09-22 11:16:32,388 [INFO] app.agents.evaluation_agent: Best model: Linear Regression
+2026-09-22 11:16:32,388 [INFO] app.agents.evaluation_agent: Best rmse (validation): 2.1932154701164466
+2026-09-22 11:16:32,388 [INFO] app.agents.critic_agent: --- CRITIC AGENT ---
+2026-09-22 11:16:32,388 [INFO] app.agents.critic_agent: Critic reviewing experiments...
+2026-09-22 11:16:33,797 [INFO] app.agents.critic_agent: Decision: continue
+2026-09-22 11:16:33,797 [INFO] app.agents.critic_agent: Experiment type: baseline_model
+2026-09-22 11:16:33,797 [INFO] app.agents.critic_agent: Model: Gradient Boosting Regressor
+2026-09-22 11:16:33,797 [INFO] app.agents.critic_agent: Recommendation: Proceed with training a Gradient Boosting Regressor baseline on the validation split using default settings.
+2026-09-22 11:16:33,798 [INFO] app.supervisor: --- SUPERVISOR ---
+2026-09-22 11:16:33,798 [INFO] app.supervisor: Critic decision: continue
+2026-09-22 11:16:33,798 [INFO] app.supervisor: Experiment type: baseline_model
+2026-09-22 11:16:33,798 [INFO] app.supervisor: Supervisor iteration: 2/15
+2026-09-22 11:16:33,799 [INFO] app.supervisor: Routing to experiment agent: Gradient Boosting Regressor
+2026-09-22 11:16:33,800 [INFO] app.agents.experiment_agent: --- EXPERIMENT AGENT ---
+2026-09-22 11:16:33,800 [INFO] app.agents.experiment_agent: Running proposed baseline: Gradient Boosting Regressor
+2026-09-22 11:16:34,721 [INFO] app.agents.experiment_agent: Experiment result: {'model': 'Gradient Boosting Regressor', 'problem_type': 'regression', 'train_samples': 1200, 'val_samples': 400, 'applied_params': {}, 'rejected_params': [], 'cross_validation': {'folds': 5, 'scoring': 'neg_root_mean_squared_error', 'mean': -2.5402998891720165, 'std': 0.152309954925953}, 'rmse': 2.447823018156712, 'r2': 0.7145236213889478, 'experiment_type': 'baseline_model'}
+2026-09-22 11:16:34,722 [INFO] app.agents.evaluation_agent: --- EVALUATION AGENT ---
+2026-09-22 11:16:34,722 [INFO] app.agents.evaluation_agent: Best model: Linear Regression
+2026-09-22 11:16:34,722 [INFO] app.agents.evaluation_agent: Best rmse (validation): 2.1932154701164466
+2026-09-22 11:16:34,722 [INFO] app.agents.critic_agent: --- CRITIC AGENT ---
+2026-09-22 11:16:34,722 [INFO] app.agents.critic_agent: Critic reviewing experiments...
+2026-09-22 11:16:36,460 [INFO] app.agents.critic_agent: Decision: feature_engineering
+2026-09-22 11:16:36,461 [INFO] app.agents.critic_agent: Experiment type: feature_engineering
+2026-09-22 11:16:36,461 [INFO] app.agents.critic_agent: Model: None
+2026-09-22 11:16:36,461 [INFO] app.agents.critic_agent: Recommendation: Proceed to the Feature Engineering Agent to generate and evaluate engineered features.
+2026-09-22 11:16:36,462 [INFO] app.supervisor: --- SUPERVISOR ---
+2026-09-22 11:16:36,462 [INFO] app.supervisor: Critic decision: feature_engineering
+2026-09-22 11:16:36,462 [INFO] app.supervisor: Experiment type: feature_engineering
+2026-09-22 11:16:36,462 [INFO] app.supervisor: Supervisor iteration: 3/15
+2026-09-22 11:16:36,463 [INFO] app.supervisor: Routing to feature engineering agent.
+2026-09-22 11:16:36,464 [INFO] app.agents.feature_engineering_agent: --- FEATURE ENGINEERING AGENT ---
+2026-09-22 11:16:36,470 [INFO] app.agents.feature_engineering_agent: Generating generic feature engineering proposal...
+2026-09-22 11:16:49,181 [INFO] app.agents.feature_engineering_agent: Decision: propose
+2026-09-22 11:16:49,181 [INFO] app.agents.feature_engineering_agent: Feature type: numeric_interaction
+2026-09-22 11:16:49,181 [INFO] app.agents.feature_engineering_agent: Source columns: ['study_hours', 'previous_gpa']
+2026-09-22 11:16:49,181 [INFO] app.agents.feature_engineering_agent: Feature name: study_hours_x_previous_gpa
+2026-09-22 11:16:49,181 [INFO] app.agents.feature_engineering_agent: Reasoning: The final_score likely depends on both the student's prior academic ability (previous_gpa) and the amount of effort they put in this course (study_hours). An interaction term captures whether the impact of study_hours on the final score changes with the student's baseline aptitude. For example, high‑performing students may benefit more from additional study time, while lower‑performing students may see diminishing returns. Adding the product of study_hours and previous_gpa as a feature provides the linear model with a way to model this non‑additive relationship, which can improve predictive performance without violating the constraints of the available transformation list.
+2026-09-22 11:16:49,182 [INFO] app.agents.experiment_agent: --- EXPERIMENT AGENT ---
+2026-09-22 11:16:49,183 [ERROR] __main__: Graph run failed with an unhandled exception. If ENABLE_CHECKPOINTING=true, re-running with the same RUN_ID will resume from the last completed step.
+Traceback (most recent call last):
+  File "C:\Users\fazza\PycharmProjects\ml research lab\main.py", line 58, in main
+    result = graph.invoke(initial_state, **invoke_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fazza\PycharmProjects\ml research lab\.venv\Lib\site-packages\langgraph\pregel\main.py", line 3913, in invoke
+    for chunk in self.stream(
+                 ^^^^^^^^^^^^
+  File "C:\Users\fazza\PycharmProjects\ml research lab\.venv\Lib\site-packages\langgraph\pregel\main.py", line 2967, in stream
+    for _ in runner.tick(
+             ^^^^^^^^^^^^
+  File "C:\Users\fazza\PycharmProjects\ml research lab\.venv\Lib\site-packages\langgraph\pregel\_runner.py", line 207, in tick
+    run_with_retry(
+  File "C:\Users\fazza\PycharmProjects\ml research lab\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 617, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fazza\PycharmProjects\ml research lab\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 707, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fazza\PycharmProjects\ml research lab\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 447, in invoke
+    ret = self.func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fazza\PycharmProjects\ml research lab\app\agents\experiment_agent.py", line 216, in experiment_agent
+    f"{'::'.join(source_columns)}::"
+                 ^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'source_columns' where it is not associated with a value
+During task with name 'experiment_agent' and id '2e88007c-b765-7364-2a8f-221766ca6389'

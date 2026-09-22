@@ -1,94 +1,184 @@
 import numpy as np
 import pandas as pd
+
 from sklearn.model_selection import train_test_split
 
 
-def load_dataset(path: str) -> pd.DataFrame:
-    return pd.read_csv(path)
+IDENTIFIER_NAMES = {
+    "customerid",
+    "userid",
+    "accountid",
+    "recordid",
+}
 
 
-def profile_dataset(path: str) -> dict:
-    df = load_dataset(path)
+def load_dataset(dataset_path: str) -> pd.DataFrame:
+    df = pd.read_csv(dataset_path)
 
-    numeric_columns = df.select_dtypes(include="number").columns.tolist()
+    for column in df.columns:
+        normalized = column.strip().lower()
 
-    categorical_columns = df.select_dtypes(
-        exclude="number"
-    ).columns.tolist()
+        if normalized in {
+            "totalcharges",
+            "total_charge",
+            "total_charge_amount",
+        }:
+            df[column] = pd.to_numeric(
+                df[column],
+                errors="coerce",
+            )
 
-    missing_values = df.isnull().sum()
-    missing_values = missing_values[missing_values > 0].to_dict()
+    return df
+
+
+def identify_identifier_columns(
+    df: pd.DataFrame,
+) -> list[str]:
+    identifiers = []
+
+    for column in df.columns:
+        normalized = column.strip().lower()
+
+        if normalized in IDENTIFIER_NAMES:
+            identifiers.append(column)
+
+    return identifiers
+
+
+def profile_dataset(
+    dataset_path: str,
+    target_column: str | None = None,
+) -> dict:
+    df = load_dataset(dataset_path)
+
+    if target_column is None:
+        target_column = df.columns[-1]
+
+    identifier_columns = identify_identifier_columns(df)
+
+    feature_columns = [
+        column
+        for column in df.columns
+        if column != target_column
+        and column not in identifier_columns
+    ]
+
+    numeric_columns = [
+        column
+        for column in feature_columns
+        if pd.api.types.is_numeric_dtype(df[column])
+    ]
+
+    categorical_columns = [
+        column
+        for column in feature_columns
+        if column not in numeric_columns
+    ]
+
+    missing_columns = [
+        column
+        for column in df.columns
+        if df[column].isna().any()
+    ]
 
     return {
         "rows": len(df),
         "columns": len(df.columns),
         "column_names": df.columns.tolist(),
+
         "numeric_columns": numeric_columns,
         "categorical_columns": categorical_columns,
-        "missing_values": missing_values,
+
+        "missing_values": {
+            column: int(df[column].isna().sum())
+            for column in df.columns
+            if df[column].isna().any()
+        },
+
         "duplicates": int(df.duplicated().sum()),
+        "duplicate_rows": int(df.duplicated().sum()),
+
         "dtypes": {
             column: str(dtype)
             for column, dtype in df.dtypes.items()
-        }
+        },
+
+        "identifier_columns": identifier_columns,
+
+        "target_column": target_column,
+        "target_dtype": str(df[target_column].dtype),
     }
+
+def load_and_profile(
+    dataset_path: str,
+    target_column: str,
+) -> tuple[pd.DataFrame, dict]:
+    df = load_dataset(dataset_path)
+
+    profile = profile_dataset(
+        dataset_path=dataset_path,
+        target_column=target_column,
+    )
+
+    return df, profile
 
 
 def split_dataset_indices(
     dataset_path: str,
     target_column: str,
-    problem_type: str,
-    test_size: float = 0.2,
+    problem_type: str | None = None,
+    train_size: float = 0.6,
     val_size: float = 0.2,
+    test_size: float = 0.2,
     random_state: int = 42,
-) -> dict:
-    """Compute a fixed 3-way split, once, as row-position indices
-    into the original CSV (0-based, matching df.iloc / df.reset_index
-    order). Feature engineering only adds columns and never
-    reorders/drops rows, so these indices stay valid across every
-    experiment run on this dataset, engineered or not.
-
-    Stratified on the target for classification problems.
-    """
-
-    if not (0 < test_size < 1) or not (0 < val_size < 1):
+):
+    if not np.isclose(
+        train_size + val_size + test_size,
+        1.0,
+    ):
         raise ValueError(
-            "test_size and val_size must each be between 0 and 1"
-        )
-
-    if test_size + val_size >= 1:
-        raise ValueError(
-            "test_size + val_size must be less than 1 so a "
-            "training split remains"
+            "train_size + val_size + test_size must equal 1.0"
         )
 
     df = load_dataset(dataset_path)
+
     indices = np.arange(len(df))
 
-    y = df[target_column] if problem_type == "classification" else None
+    stratify = None
 
-    train_val_idx, test_idx = train_test_split(
+    if problem_type == "classification":
+        target = df[target_column]
+
+        if target.nunique() > 1:
+            stratify = target
+
+    train_indices, remaining_indices = train_test_split(
         indices,
-        test_size=test_size,
+        test_size=val_size + test_size,
         random_state=random_state,
-        stratify=y if y is not None else None,
+        stratify=stratify,
     )
 
-    relative_val_size = val_size / (1 - test_size)
-
-    stratify_train_val = (
-        y.iloc[train_val_idx] if y is not None else None
+    relative_test_size = test_size / (
+        val_size + test_size
     )
 
-    train_idx, val_idx = train_test_split(
-        train_val_idx,
-        test_size=relative_val_size,
+    remaining_target = None
+
+    if stratify is not None:
+        remaining_target = df.iloc[
+            remaining_indices
+        ][target_column]
+
+    val_indices, test_indices = train_test_split(
+        remaining_indices,
+        test_size=relative_test_size,
         random_state=random_state,
-        stratify=stratify_train_val,
+        stratify=remaining_target,
     )
 
     return {
-        "train_indices": train_idx.tolist(),
-        "val_indices": val_idx.tolist(),
-        "test_indices": test_idx.tolist(),
+        "train_indices": train_indices.tolist(),
+        "val_indices": val_indices.tolist(),
+        "test_indices": test_indices.tolist(),
     }

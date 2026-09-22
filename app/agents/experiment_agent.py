@@ -173,6 +173,11 @@ def experiment_agent(state: ResearchState) -> dict:
             "model"
         )
 
+        source_columns = proposed_experiment.get(
+            "source_columns",
+            []
+        )
+
         if not feature_type:
             logger.warning(
                 "Feature engineering experiment has no feature type."
@@ -212,7 +217,9 @@ def experiment_agent(state: ResearchState) -> dict:
 
         experiment_id = (
             f"feature_engineering::"
-            f"{feature_type}::{model}"
+            f"{feature_type}::"
+            f"{'::'.join(source_columns)}::"
+            f"{model}"
         )
 
         if experiment_id in experiment_history:
@@ -254,11 +261,17 @@ def experiment_agent(state: ResearchState) -> dict:
         logger.info(f"Applying feature engineering: {feature_type}")
 
         try:
+            source_columns = proposed_experiment.get(
+                "source_columns",
+                []
+            )
+
             engineered_df = apply_feature_engineering(
                 dataset_path=state["dataset_path"],
                 target_column=state["target_column"],
                 feature_type=feature_type,
                 feature_name=feature_name,
+                source_columns=source_columns,
             )
 
             logger.info(f"Running model: {model}")

@@ -1,0 +1,51 @@
+2026-09-22 10:52:07,952 [INFO] __main__: Starting ML Research Lab...
+2026-09-22 10:52:07,954 [INFO] app.agents.data_agent: --- DATA AGENT ---
+2026-09-22 10:52:07,954 [INFO] app.agents.data_agent: Profiling dataset: data/Student-Performance.csv
+2026-09-22 10:52:07,955 [ERROR] __main__: Graph run failed with an unhandled exception. If ENABLE_CHECKPOINTING=true, re-running with the same RUN_ID will resume from the last completed step.
+Traceback (most recent call last):
+  File "C:\Users\fazza\PycharmProjects\ml research lab\main.py", line 58, in main
+    result = graph.invoke(initial_state, **invoke_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fazza\PycharmProjects\ml research lab\.venv\Lib\site-packages\langgraph\pregel\main.py", line 3913, in invoke
+    for chunk in self.stream(
+                 ^^^^^^^^^^^^
+  File "C:\Users\fazza\PycharmProjects\ml research lab\.venv\Lib\site-packages\langgraph\pregel\main.py", line 2967, in stream
+    for _ in runner.tick(
+             ^^^^^^^^^^^^
+  File "C:\Users\fazza\PycharmProjects\ml research lab\.venv\Lib\site-packages\langgraph\pregel\_runner.py", line 207, in tick
+    run_with_retry(
+  File "C:\Users\fazza\PycharmProjects\ml research lab\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 617, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fazza\PycharmProjects\ml research lab\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 707, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fazza\PycharmProjects\ml research lab\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 447, in invoke
+    ret = self.func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fazza\PycharmProjects\ml research lab\app\agents\data_agent.py", line 15, in data_agent
+    profile = profile_dataset(dataset_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fazza\PycharmProjects\ml research lab\app\tools\data_tools.py", line 11, in profile_dataset
+    df = load_dataset(path)
+         ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fazza\PycharmProjects\ml research lab\app\tools\data_tools.py", line 7, in load_dataset
+    return pd.read_csv(path)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\fazza\PycharmProjects\ml research lab\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 872, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fazza\PycharmProjects\ml research lab\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 300, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fazza\PycharmProjects\ml research lab\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1643, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fazza\PycharmProjects\ml research lab\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1907, in _make_engine
+    self.handles = get_handle(
+                   ^^^^^^^^^^^
+  File "C:\Users\fazza\PycharmProjects\ml research lab\.venv\Lib\site-packages\pandas\io\common.py", line 930, in get_handle
+    handle = open(
+             ^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'data/Student-Performance.csv'
+During task with name 'data_agent' and id '71bc4fa1-d5fc-dfd8-1b55-664008af5807'

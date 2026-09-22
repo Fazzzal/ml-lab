@@ -26,7 +26,9 @@ class ResearchPlan(BaseModel):
 
 
 llm = ChatGroq(
-    model=settings.GROQ_MODEL
+    model=settings.GROQ_MODEL,
+    timeout=settings.LLM_TIMEOUT_SECONDS,
+    max_retries=settings.LLM_MAX_RETRIES,
 )
 
 structured_llm = llm.with_structured_output(
@@ -107,6 +109,20 @@ through additional experiments proposed by the critic agent.
 """
 
 
+def _infer_problem_type_fallback(state: ResearchState) -> str:
+    """Last-resort heuristic used only if the LLM call fails
+    entirely: numeric target -> regression, anything else
+    (string/categorical) -> classification."""
+
+    dtypes = state.get("dataset_info", {}).get("dtypes", {})
+    target_dtype = str(dtypes.get(state["target_column"], "")).lower()
+
+    if "float" in target_dtype or "int" in target_dtype:
+        return "regression"
+
+    return "classification"
+
+
 def research_agent(state: ResearchState) -> dict:
     logger.info("--- RESEARCH AGENT ---")
     logger.info("Generating research plan...")
@@ -131,9 +147,43 @@ def research_agent(state: ResearchState) -> dict:
         regression_models=get_supported_models("regression"),
     )
 
-    research_plan = structured_llm.invoke(
-        prompt
-    )
+    try:
+        research_plan = structured_llm.invoke(
+            prompt
+        )
+    except Exception as error:
+        # This one's foundational — nothing downstream can run
+        # without a research plan — so it's worth one retry before
+        # falling back, rather than giving up immediately like the
+        # critic/feature-engineering agents do.
+        logger.error(
+            f"Research agent LLM call failed: {error}. "
+            "Retrying once..."
+        )
+
+        try:
+            research_plan = structured_llm.invoke(prompt)
+        except Exception as error2:
+            logger.error(
+                f"Research agent LLM call failed again: "
+                f"{error2}. Falling back to a heuristic default "
+                "plan so the run can still proceed."
+            )
+
+            fallback_problem_type = _infer_problem_type_fallback(
+                state
+            )
+
+            research_plan = ResearchPlan(
+                problem_type=fallback_problem_type,
+                models=get_supported_models(fallback_problem_type),
+                reasoning=(
+                    f"LLM call failed twice ({error2}); falling "
+                    "back to a heuristic default plan using all "
+                    "supported models for the target column's "
+                    "inferred problem type."
+                ),
+            )
 
     # The LLM's `models` field is still free text under the hood
     # (structured output constrains the shape, not the values), so

@@ -1,0 +1,907 @@
+StudentRef,study_hours_per_week,attendance_percent,previous_exam_score,age,parental_education,school_type,internet_access,extracurricular,grade
+STU-20000,19.5,73.1,96.3,18,High School,Public,Yes,Yes,A
+STU-20001,15.1,74.4,65.3,18,Masters,Public,Yes,No,C
+STU-20002,17.7,58.0,69.8,15,High School,Public,Yes,No,B
+STU-20003,2.2,100.0,62.8,17,Bachelors,Public,Yes,No,C
+STU-20004,15.8,100.0,76.7,17,Bachelors,Public,Yes,No,A
+STU-20005,24.5,92.4,51.1,18,PhD,Public,Yes,No,C
+STU-20006,10.6,96.4,69.5,18,High School,Public,Yes,Yes,B
+STU-20007,2.8,84.9,67.6,16,Masters,Private,Yes,No,C
+STU-20008,24.0,88.8,94.9,17,Masters,Public,Yes,Yes,A
+STU-20009,16.9,61.4,66.0,18,PhD,Public,No,Yes,D
+STU-20010,4.9,80.4,68.2,15,PhD,Public,No,No,F
+STU-20011,16.8,54.6,73.1,15,Bachelors,Public,Yes,Yes,B
+STU-20012,24.8,71.4,86.3,18,Bachelors,Public,Yes,Yes,A
+STU-20013,5.2,77.2,100.0,16,PhD,Private,Yes,No,B
+STU-20014,21.3,76.8,77.7,17,PhD,Public,Yes,No,A
+STU-20015,17.5,65.7,78.8,15,PhD,Private,No,Yes,A
+STU-20016,5.5,100.0,95.3,16,Bachelors,Public,Yes,Yes,D
+STU-20017,4.6,96.2,72.2,16,Masters,Public,Yes,No,C
+STU-20018,23.9,73.7,77.7,17,Bachelors,Public,Yes,No,A
+STU-20019,8.5,63.2,62.5,16,Bachelors,Private,Yes,No,B
+STU-20020,11.0,74.2,69.1,18,Bachelors,Public,Yes,Yes,C
+STU-20021,16.4,95.4,59.8,16,Masters,Private,Yes,No,A
+STU-20022,11.0,53.1,100.0,17,Masters,Public,Yes,Yes,C
+STU-20023,0.0,93.4,83.1,16,Bachelors,Public,Yes,Yes,C
+STU-20024,6.5,79.5,81.7,18,High School,Public,Yes,No,D
+STU-20025,11.8,75.5,56.4,15,Bachelors,Public,Yes,No,C
+STU-20026,19.0,96.6,73.1,18,High School,Private,Yes,No,B
+STU-20027,15.2,81.7,61.0,18,High School,Private,No,No,A
+STU-20028,10.8,76.2,61.0,17,Masters,Public,Yes,No,B
+STU-20029,4.8,99.8,51.0,17,PhD,Public,Yes,Yes,D
+STU-20030,19.6,57.8,61.5,16,Bachelors,Public,Yes,Yes,B
+STU-20031,4.7,100.0,100.0,16,Bachelors,Public,Yes,Yes,B
+STU-20032,18.1,68.9,62.2,18,High School,Private,Yes,Yes,C
+STU-20033,12.4,69.0,81.5,16,High School,Public,Yes,No,A
+STU-20034,13.8,100.0,85.6,18,Masters,Public,Yes,Yes,A
+STU-20035,9.6,100.0,78.3,16,Bachelors,Public,Yes,No,C
+STU-20036,5.1,99.7,82.7,16,Masters,Public,Yes,Yes,C
+STU-20037,4.2,69.0,56.5,17,Bachelors,Public,Yes,Yes,D
+STU-20038,16.0,49.1,94.5,16,High School,Public,Yes,No,B
+STU-20039,6.9,85.1,100.0,17,Masters,Public,Yes,No,B
+STU-20040,0.4,81.5,72.0,18,Bachelors,Public,Yes,No,C
+STU-20041,4.8,72.8,60.8,16,PhD,Private,Yes,No,C
+STU-20042,23.0,79.6,58.9,15,Masters,Public,Yes,No,C
+STU-20043,17.8,71.4,51.4,16,Bachelors,Private,Yes,Yes,C
+STU-20044,14.5,94.0,80.4,17,Masters,Public,Yes,No,A
+STU-20045,10.0,80.2,83.9,17,High School,Private,Yes,No,C
+STU-20046,20.4,78.3,96.7,18,High School,Public,Yes,Yes,C
+STU-20047,6.6,48.8,51.8,16,Bachelors,Private,No,Yes,F
+STU-20048,15.8,85.2,84.0,17,High School,Public,Yes,Yes,C
+STU-20049,0.3,59.8,81.6,17,Bachelors,Public,Yes,No,D
+STU-20050,16.1,92.3,67.3,17,Bachelors,Public,Yes,Yes,A
+STU-20051,24.3,80.9,58.1,16,High School,Public,Yes,Yes,A
+STU-20052,17.7,51.2,75.6,18,Masters,Public,Yes,Yes,B
+STU-20053,1.9,76.4,100.0,18,PhD,Private,Yes,No,C
+STU-20054,14.8,63.6,52.0,15,Bachelors,Public,Yes,No,C
+STU-20055,7.9,89.6,62.2,16,High School,Public,Yes,Yes,C
+STU-20056,23.0,88.0,63.2,17,Bachelors,Public,Yes,No,A
+STU-20057,0.5,97.0,68.9,16,High School,Public,Yes,No,D
+STU-20058,0.3,69.8,87.5,18,High School,Public,No,Yes,D
+STU-20059,2.4,88.6,63.9,17,High School,Private,No,Yes,D
+STU-20060,8.5,60.8,36.9,17,High School,Public,Yes,Yes,F
+STU-20061,22.1,86.1,52.0,18,Bachelors,Public,Yes,Yes,A
+STU-20062,14.1,77.8,51.7,16,High School,Public,Yes,No,B
+STU-20063,16.6,84.7,74.8,16,High School,Private,Yes,Yes,B
+STU-20064,1.1,81.0,73.2,15,High School,Private,Yes,Yes,C
+STU-20065,4.4,96.3,53.7,18,Bachelors,Public,Yes,No,B
+STU-20066,9.5,76.0,81.7,16,High School,Public,Yes,No,C
+STU-20067,15.7,78.5,43.4,15,Masters,Private,Yes,No,C
+STU-20068,18.8,100.0,67.9,15,PhD,Public,Yes,Yes,B
+STU-20069,14.4,80.1,90.3,17,High School,Private,Yes,Yes,B
+STU-20070,7.0,73.3,47.1,16,High School,Public,Yes,No,C
+STU-20071,4.5,67.8,79.7,18,High School,Public,Yes,No,F
+STU-20072,10.5,81.3,86.2,16,High School,Public,Yes,No,D
+STU-20073,6.4,80.6,63.8,15,Bachelors,Public,Yes,Yes,C
+STU-20074,19.0,90.7,73.1,15,High School,Private,Yes,No,B
+STU-20075,22.3,78.6,48.4,16,Bachelors,Private,Yes,Yes,A
+STU-20076,20.1,91.3,75.7,16,PhD,Public,Yes,No,A
+STU-20077,3.0,77.2,52.6,18,Masters,Public,Yes,Yes,C
+STU-20078,19.7,100.0,62.2,15,Bachelors,Public,Yes,Yes,B
+STU-20079,0.4,,76.9,15,Masters,Public,Yes,Yes,D
+STU-20080,3.4,91.2,64.9,18,Bachelors,Public,Yes,No,D
+STU-20081,17.5,86.8,54.0,17,Bachelors,Public,Yes,Yes,A
+STU-20082,8.1,61.6,69.9,15,PhD,Public,Yes,Yes,D
+STU-20083,20.7,96.5,66.4,17,Masters,Public,Yes,Yes,A
+STU-20084,17.2,74.9,58.3,16,Bachelors,Public,Yes,No,C
+STU-20085,16.0,94.8,40.6,16,High School,Private,Yes,No,C
+STU-20086,15.0,51.4,67.3,18,Masters,Private,Yes,Yes,B
+STU-20087,22.8,53.6,83.5,17,High School,Public,No,Yes,B
+STU-20088,20.8,51.4,61.0,16,Bachelors,Public,No,No,B
+STU-20089,0.7,,61.9,16,PhD,Public,Yes,Yes,F
+STU-20090,24.6,75.1,63.0,18,High School,Public,Yes,No,C
+STU-20091,10.8,80.4,76.3,15,High School,Public,Yes,No,B
+STU-20092,7.4,66.3,47.5,16,Bachelors,Private,Yes,No,B
+STU-20093,21.7,75.8,81.5,18,PhD,Private,Yes,Yes,B
+STU-20094,23.0,70.7,100.0,16,PhD,Public,Yes,No,A
+STU-20095,19.3,91.8,77.3,18,Bachelors,Public,Yes,Yes,A
+STU-20096,18.0,91.4,71.1,15,PhD,Private,Yes,No,A
+STU-20097,0.3,,76.8,18,Bachelors,Private,Yes,Yes,C
+STU-20098,6.9,90.4,77.5,18,Masters,Public,Yes,Yes,B
+STU-20099,20.3,100.0,65.2,18,High School,Public,Yes,No,A
+STU-20100,25.0,90.4,68.3,15,Masters,Public,Yes,Yes,A
+STU-20101,7.0,58.2,67.2,17,High School,Private,Yes,Yes,C
+STU-20102,19.0,77.6,78.2,15,High School,Private,Yes,Yes,A
+STU-20103,2.8,76.3,98.4,16,Bachelors,Private,Yes,No,D
+STU-20104,18.7,92.9,72.3,16,Masters,Private,Yes,No,A
+STU-20105,8.9,87.8,100.0,18,High School,Public,Yes,No,B
+STU-20106,1.9,93.6,57.3,18,Masters,Private,Yes,No,C
+STU-20107,4.4,57.8,81.6,15,Masters,Private,Yes,No,B
+STU-20108,14.2,100.0,59.7,15,Masters,Public,Yes,Yes,B
+STU-20109,11.8,78.5,72.3,17,Bachelors,Public,Yes,No,A
+STU-20110,17.2,95.0,69.0,15,Bachelors,Private,No,Yes,A
+STU-20111,8.7,87.8,42.0,15,Bachelors,Private,No,Yes,C
+STU-20112,14.9,67.6,66.7,15,Masters,Private,Yes,No,A
+STU-20113,9.4,68.5,76.4,18,High School,Public,Yes,No,C
+STU-20114,19.2,89.5,74.9,15,Masters,Private,Yes,No,B
+STU-20115,0.2,97.5,48.4,15,PhD,Private,No,No,D
+STU-20116,14.7,67.1,48.9,16,Bachelors,Public,Yes,No,B
+STU-20117,14.7,63.6,79.6,18,Bachelors,Public,Yes,Yes,A
+STU-20118,1.5,50.0,55.2,17,PhD,Private,Yes,No,F
+STU-20119,19.1,66.6,100.0,18,Masters,Public,Yes,Yes,A
+STU-20120,15.9,69.3,75.0,15,High School,Private,Yes,No,C
+STU-20121,23.8,76.0,75.4,15,High School,Private,No,No,B
+STU-20122,4.7,89.3,67.8,15,Bachelors,Public,Yes,No,C
+STU-20123,10.6,73.0,58.7,18,Masters,Public,Yes,Yes,B
+STU-20124,21.6,63.7,74.5,15,PhD,Public,Yes,Yes,B
+STU-20125,23.6,74.5,67.1,17,PhD,Public,Yes,No,A
+STU-20126,17.1,79.0,92.9,17,PhD,Public,Yes,Yes,A
+STU-20127,8.8,82.3,72.9,17,Bachelors,Public,Yes,No,F
+STU-20128,18.6,82.1,74.2,18,Masters,Public,No,Yes,B
+STU-20129,11.4,77.4,86.4,16,Bachelors,Public,No,Yes,B
+STU-20130,13.4,88.2,85.2,18,High School,Public,Yes,No,C
+STU-20131,16.9,75.7,40.1,17,Masters,Private,Yes,Yes,A
+STU-20132,23.3,64.5,100.0,16,Bachelors,Public,Yes,Yes,A
+STU-20133,0.2,77.4,47.6,15,Masters,Public,Yes,No,C
+STU-20134,17.5,100.0,55.3,18,High School,Private,Yes,No,B
+STU-20135,22.9,67.8,66.0,15,High School,Public,Yes,Yes,B
+STU-20136,9.4,100.0,58.6,16,Bachelors,Private,Yes,No,A
+STU-20137,5.9,72.5,97.7,15,High School,Public,Yes,No,C
+STU-20138,14.2,90.6,71.0,18,Bachelors,Private,Yes,Yes,B
+STU-20139,0.8,,53.6,18,Bachelors,Public,Yes,Yes,F
+STU-20140,20.1,78.5,64.9,17,Masters,Public,Yes,Yes,A
+STU-20141,12.2,100.0,58.6,16,High School,Private,Yes,No,B
+STU-20142,16.6,62.6,60.3,17,Masters,Public,Yes,Yes,D
+STU-20143,19.5,69.3,76.4,17,Masters,Private,No,Yes,B
+STU-20144,0.5,84.7,78.6,16,High School,Public,Yes,No,D
+STU-20145,4.7,85.2,68.2,15,High School,Public,Yes,Yes,C
+STU-20146,10.4,58.1,50.8,17,High School,Private,Yes,No,D
+STU-20147,15.2,61.4,61.0,17,Bachelors,Public,Yes,Yes,C
+STU-20148,9.2,84.2,84.4,18,PhD,Public,Yes,No,C
+STU-20149,7.0,84.4,78.5,17,Masters,Private,Yes,Yes,C
+STU-20150,0.6,90.9,65.8,15,Bachelors,Public,Yes,No,C
+STU-20151,10.7,77.6,81.9,15,Masters,Public,Yes,Yes,B
+STU-20152,23.5,89.3,42.6,16,Masters,Private,Yes,No,A
+STU-20153,0.7,97.9,60.2,18,Bachelors,Private,Yes,Yes,C
+STU-20154,15.0,62.0,71.1,15,High School,Public,Yes,Yes,B
+STU-20155,5.1,95.0,75.2,15,High School,Public,Yes,Yes,B
+STU-20156,24.3,91.2,86.4,17,High School,Private,Yes,No,A
+STU-20157,20.2,99.0,71.8,15,Bachelors,Public,Yes,Yes,A
+STU-20158,5.4,74.3,75.1,17,Bachelors,Public,Yes,Yes,C
+STU-20159,24.3,79.6,72.9,15,Masters,Private,Yes,Yes,A
+STU-20160,7.8,81.2,54.7,18,Masters,Public,Yes,Yes,B
+STU-20161,17.3,73.0,67.8,17,Masters,Private,Yes,Yes,A
+STU-20162,6.5,95.0,92.0,16,PhD,Private,No,No,B
+STU-20163,7.3,83.4,81.4,16,High School,Public,Yes,No,C
+STU-20164,1.6,65.4,66.0,16,High School,Public,Yes,Yes,C
+STU-20165,7.3,83.9,70.8,18,Bachelors,Public,Yes,No,D
+STU-20166,10.3,64.4,96.5,17,Masters,Public,Yes,Yes,B
+STU-20167,0.7,,94.4,17,Masters,Public,Yes,Yes,C
+STU-20168,0.3,64.8,98.8,15,High School,Private,Yes,Yes,B
+STU-20169,0.3,80.4,90.1,15,Masters,Private,Yes,Yes,C
+STU-20170,22.0,81.8,68.7,17,Bachelors,Public,Yes,No,A
+STU-20171,10.4,78.5,67.9,16,Masters,Public,Yes,No,C
+STU-20172,22.9,88.0,46.6,18,High School,Public,Yes,Yes,A
+STU-20173,12.0,100.0,90.0,15,Bachelors,Public,Yes,No,A
+STU-20174,14.0,63.5,89.2,18,High School,Private,Yes,Yes,B
+STU-20175,9.3,86.4,100.0,18,High School,Public,Yes,No,A
+STU-20176,19.5,84.1,59.3,17,High School,Public,Yes,Yes,B
+STU-20177,8.6,62.6,96.8,17,Bachelors,Private,Yes,Yes,B
+STU-20178,20.2,72.7,79.3,15,Bachelors,Public,Yes,No,C
+STU-20179,9.8,83.1,73.2,17,High School,Private,Yes,No,C
+STU-20180,3.2,80.5,75.2,17,Bachelors,Private,Yes,No,D
+STU-20181,10.4,67.8,54.0,17,Masters,Public,Yes,No,B
+STU-20182,0.7,91.3,70.2,17,Bachelors,Public,Yes,Yes,D
+STU-20183,9.7,83.6,56.4,18,Bachelors,Private,Yes,No,C
+STU-20184,9.7,89.4,64.0,16,Bachelors,Public,Yes,Yes,C
+STU-20185,17.7,100.0,74.5,16,Bachelors,Public,Yes,Yes,A
+STU-20186,25.0,61.5,64.2,15,Masters,Public,Yes,No,A
+STU-20187,3.9,94.5,82.0,15,Bachelors,Public,Yes,No,B
+STU-20188,15.2,87.0,60.9,17,Bachelors,Public,No,Yes,D
+STU-20189,20.9,67.3,63.1,18,Bachelors,Private,Yes,No,A
+STU-20190,17.0,79.2,62.8,17,Bachelors,Public,Yes,Yes,B
+STU-20191,5.8,74.0,74.5,15,Bachelors,Public,No,Yes,A
+STU-20192,10.5,62.9,75.3,15,PhD,Public,Yes,Yes,B
+STU-20193,23.3,91.8,86.4,16,High School,Public,Yes,Yes,B
+STU-20194,13.0,68.7,66.9,15,PhD,Public,Yes,No,C
+STU-20195,16.9,50.3,61.6,17,Bachelors,Public,Yes,Yes,D
+STU-20196,7.7,92.1,75.9,15,High School,Private,Yes,No,B
+STU-20197,19.8,72.9,98.5,16,High School,Private,Yes,Yes,A
+STU-20198,14.1,85.4,84.9,16,Bachelors,Public,Yes,No,A
+STU-20199,19.7,83.0,43.7,15,Bachelors,Public,Yes,No,A
+STU-20200,7.0,75.5,73.4,17,Masters,Public,Yes,No,D
+STU-20201,5.8,74.4,65.8,18,High School,Private,Yes,No,D
+STU-20202,4.5,43.0,68.9,15,High School,Private,Yes,Yes,D
+STU-20203,14.9,74.0,84.2,15,Bachelors,Private,Yes,No,B
+STU-20204,2.0,63.4,72.7,15,Masters,Public,Yes,Yes,D
+STU-20205,8.6,87.4,70.4,15,Masters,Private,Yes,No,A
+STU-20206,16.6,68.6,48.0,17,High School,Public,Yes,No,D
+STU-20207,6.9,70.4,70.3,15,Masters,Public,No,No,D
+STU-20208,6.5,81.4,60.8,16,High School,Public,Yes,Yes,D
+STU-20209,5.9,63.2,75.6,15,High School,Private,Yes,Yes,D
+STU-20210,11.8,69.6,88.0,18,PhD,Public,Yes,Yes,C
+STU-20211,18.9,72.9,58.8,17,Bachelors,Private,Yes,No,B
+STU-20212,6.6,85.8,68.5,17,Bachelors,Public,Yes,No,D
+STU-20213,13.3,58.8,81.0,15,PhD,Private,Yes,Yes,A
+STU-20214,24.8,91.1,47.5,17,High School,Private,Yes,Yes,B
+STU-20215,12.5,77.9,61.3,15,Bachelors,Public,Yes,No,C
+STU-20216,6.7,72.6,50.2,16,PhD,Public,Yes,Yes,F
+STU-20217,21.0,85.0,62.6,16,Bachelors,Public,Yes,No,A
+STU-20218,22.6,,70.3,17,Bachelors,Public,Yes,Yes,B
+STU-20219,18.7,96.8,66.6,17,Bachelors,Private,Yes,Yes,A
+STU-20220,8.1,64.7,93.1,15,High School,Public,Yes,No,D
+STU-20221,12.5,99.6,83.5,17,Bachelors,Private,Yes,No,A
+STU-20222,8.0,80.5,74.6,15,Bachelors,Public,Yes,Yes,F
+STU-20223,23.1,99.0,88.6,15,Masters,Private,Yes,No,A
+STU-20224,0.3,64.5,100.0,17,Bachelors,Private,Yes,Yes,D
+STU-20225,21.9,77.5,66.3,16,High School,Public,Yes,No,B
+STU-20226,6.5,78.3,69.3,15,Bachelors,Public,Yes,No,D
+STU-20227,3.7,61.4,77.0,17,High School,Public,Yes,No,D
+STU-20228,21.0,73.3,87.8,18,Bachelors,Public,Yes,Yes,B
+STU-20229,19.8,93.1,41.8,18,High School,Public,Yes,Yes,B
+STU-20230,1.0,96.2,71.0,16,Bachelors,Private,Yes,Yes,C
+STU-20231,7.4,,100.0,18,High School,Public,Yes,No,B
+STU-20232,2.4,84.0,72.5,15,High School,Private,Yes,Yes,C
+STU-20233,18.7,73.4,100.0,16,High School,Public,Yes,Yes,B
+STU-20234,22.6,100.0,100.0,18,Masters,Public,Yes,No,A
+STU-20235,7.3,60.3,83.8,18,Bachelors,Public,Yes,No,C
+STU-20236,8.9,62.3,100.0,18,Bachelors,Private,Yes,Yes,B
+STU-20237,0.8,68.6,73.0,18,Bachelors,Public,Yes,Yes,D
+STU-20238,2.5,82.4,46.1,18,Masters,Public,Yes,Yes,D
+STU-20239,1.6,73.1,65.2,16,Masters,Public,No,Yes,D
+STU-20240,18.1,91.1,94.5,15,Bachelors,Public,No,Yes,A
+STU-20241,5.2,56.9,100.0,16,Masters,Public,Yes,No,B
+STU-20242,11.7,91.9,81.4,15,Masters,Public,Yes,Yes,B
+STU-20243,6.8,100.0,48.1,15,Bachelors,Private,Yes,No,C
+STU-20244,13.0,92.6,72.6,16,High School,Private,Yes,No,B
+STU-20245,13.9,75.5,42.4,15,PhD,Public,No,Yes,C
+STU-20246,8.7,71.0,73.8,17,Masters,Public,Yes,Yes,D
+STU-20247,6.6,95.7,97.0,15,High School,Private,Yes,No,B
+STU-20248,22.7,55.0,58.6,16,Masters,Private,No,No,A
+STU-20249,23.4,68.2,59.2,17,Bachelors,Public,Yes,Yes,A
+STU-20250,11.7,55.3,65.4,17,Masters,Public,Yes,No,D
+STU-20251,9.9,77.7,67.2,15,Bachelors,Public,Yes,No,C
+STU-20252,13.0,100.0,81.4,16,Bachelors,Private,Yes,No,A
+STU-20253,13.5,73.5,77.8,18,Bachelors,Public,Yes,Yes,A
+STU-20254,23.9,95.4,83.9,17,High School,Public,Yes,No,A
+STU-20255,10.8,64.0,57.3,17,Bachelors,Public,Yes,Yes,C
+STU-20256,8.6,71.7,90.7,15,High School,Public,Yes,No,C
+STU-20257,23.7,71.4,82.4,17,Masters,Public,Yes,No,B
+STU-20258,16.2,95.1,59.2,17,Bachelors,Private,No,No,B
+STU-20259,3.4,67.0,64.5,15,PhD,Public,Yes,Yes,C
+STU-20260,13.7,,62.7,18,PhD,Public,Yes,Yes,B
+STU-20261,20.5,79.8,46.4,17,High School,Public,Yes,No,B
+STU-20262,14.1,100.0,100.0,16,PhD,Private,Yes,No,A
+STU-20263,6.6,80.6,82.0,18,High School,Public,Yes,No,C
+STU-20264,9.1,100.0,73.5,15,Bachelors,Private,Yes,Yes,A
+STU-20265,18.2,85.5,89.9,16,Masters,Private,Yes,No,A
+STU-20266,13.9,76.1,70.1,17,Masters,Public,Yes,Yes,B
+STU-20267,0.4,96.5,70.1,16,Masters,Private,Yes,No,B
+STU-20268,8.0,71.3,92.4,17,PhD,Private,Yes,Yes,A
+STU-20269,18.5,66.5,56.9,17,Bachelors,Private,Yes,Yes,B
+STU-20270,1.5,81.3,59.2,16,Bachelors,Public,Yes,No,C
+STU-20271,10.1,,46.8,15,Bachelors,Public,Yes,Yes,C
+STU-20272,14.0,62.4,61.9,17,PhD,Public,Yes,Yes,B
+STU-20273,7.6,68.0,88.1,16,High School,Public,Yes,No,C
+STU-20274,17.2,80.3,64.4,16,High School,Public,Yes,No,D
+STU-20275,1.6,94.9,95.5,18,Bachelors,Private,Yes,No,C
+STU-20276,23.4,96.5,64.2,18,Masters,Private,No,Yes,A
+STU-20277,18.9,76.9,75.5,15,High School,Private,Yes,No,B
+STU-20278,21.9,83.2,55.9,17,Masters,Public,No,No,A
+STU-20279,13.1,75.3,83.1,17,High School,Public,Yes,No,D
+STU-20280,11.6,59.1,100.0,15,Masters,Public,No,Yes,B
+STU-20281,7.7,85.7,67.6,15,Bachelors,Public,Yes,No,D
+STU-20282,2.5,69.1,47.8,17,Bachelors,Public,Yes,No,F
+STU-20283,12.9,90.7,70.6,17,Bachelors,Private,Yes,No,C
+STU-20284,7.7,71.8,83.0,18,Bachelors,Public,Yes,Yes,C
+STU-20285,21.6,65.1,59.4,16,Bachelors,Public,No,Yes,B
+STU-20286,4.1,84.6,100.0,17,Masters,Private,Yes,Yes,B
+STU-20287,1.0,71.8,52.4,15,Bachelors,Public,Yes,Yes,F
+STU-20288,19.7,60.6,80.8,16,High School,Public,No,No,B
+STU-20289,24.5,94.8,93.8,15,Bachelors,Public,No,No,A
+STU-20290,10.8,84.4,76.5,18,High School,Public,Yes,No,C
+STU-20291,21.8,84.3,91.5,17,Bachelors,Public,Yes,Yes,B
+STU-20292,18.0,80.9,79.4,18,Bachelors,Public,Yes,Yes,A
+STU-20293,19.7,71.6,65.6,15,Bachelors,Public,Yes,No,B
+STU-20294,14.7,,64.7,16,High School,Public,Yes,No,C
+STU-20295,12.7,71.5,99.9,17,PhD,Public,Yes,Yes,A
+STU-20296,15.7,73.3,44.9,16,PhD,Public,Yes,Yes,A
+STU-20297,19.9,85.9,75.5,15,High School,Public,Yes,Yes,C
+STU-20298,23.8,60.7,59.5,17,High School,Public,Yes,No,C
+STU-20299,22.3,86.7,64.9,18,PhD,Public,No,Yes,B
+STU-20300,18.3,80.2,84.6,16,Masters,Public,Yes,No,B
+STU-20301,23.3,100.0,58.3,17,Masters,Public,Yes,Yes,A
+STU-20302,0.7,69.2,47.7,16,Bachelors,Public,Yes,No,F
+STU-20303,0.3,80.0,89.9,16,Masters,Private,Yes,Yes,B
+STU-20304,6.4,83.4,90.8,16,High School,Public,No,No,B
+STU-20305,0.2,88.4,72.0,18,PhD,Public,Yes,No,D
+STU-20306,14.0,98.6,57.6,15,Masters,Public,Yes,No,B
+STU-20307,4.9,86.8,56.0,16,High School,Private,Yes,No,C
+STU-20308,21.9,59.4,76.2,18,Bachelors,Public,Yes,No,A
+STU-20309,2.4,100.0,77.8,18,PhD,Public,Yes,No,D
+STU-20310,19.3,50.9,78.6,17,High School,Public,Yes,Yes,B
+STU-20311,1.5,89.2,81.2,17,Masters,Public,No,No,C
+STU-20312,23.5,99.1,70.9,18,High School,Private,Yes,No,A
+STU-20313,9.1,69.9,80.3,18,High School,Public,Yes,Yes,C
+STU-20314,7.0,79.2,70.4,16,High School,Public,Yes,No,C
+STU-20315,8.0,78.9,76.6,16,High School,Public,No,Yes,D
+STU-20316,17.6,63.7,67.4,18,Masters,Public,Yes,No,C
+STU-20317,21.6,85.4,75.4,15,Bachelors,Public,Yes,Yes,A
+STU-20318,16.7,66.0,56.6,15,High School,Public,Yes,Yes,C
+STU-20319,3.5,84.7,67.5,16,High School,Public,Yes,Yes,C
+STU-20320,9.3,88.8,53.2,18,Bachelors,Public,Yes,No,B
+STU-20321,12.2,95.9,79.4,17,Bachelors,Public,Yes,No,B
+STU-20322,6.8,99.8,61.6,16,Masters,Public,Yes,No,A
+STU-20323,23.4,86.2,60.3,18,High School,Public,No,No,C
+STU-20324,17.7,87.2,60.8,17,Bachelors,Public,Yes,Yes,B
+STU-20325,17.5,76.8,57.6,17,Bachelors,Public,Yes,Yes,C
+STU-20326,6.2,79.1,55.9,18,High School,Public,Yes,Yes,D
+STU-20327,13.3,92.9,79.4,17,High School,Private,Yes,Yes,B
+STU-20328,5.8,91.4,78.2,16,Bachelors,Public,Yes,Yes,A
+STU-20329,8.1,87.0,84.3,16,Bachelors,Public,Yes,Yes,B
+STU-20330,19.4,79.9,61.3,18,High School,Public,No,Yes,C
+STU-20331,6.2,95.1,74.4,17,Masters,Public,Yes,Yes,C
+STU-20332,17.1,63.6,40.6,16,High School,Private,Yes,No,C
+STU-20333,6.0,72.3,84.0,15,PhD,Public,Yes,Yes,C
+STU-20334,19.8,83.3,55.0,15,PhD,Private,Yes,Yes,A
+STU-20335,4.0,96.5,89.8,15,Masters,Private,Yes,No,C
+STU-20336,22.1,62.0,81.2,16,High School,Public,Yes,Yes,C
+STU-20337,1.3,64.5,100.0,18,High School,Private,Yes,Yes,C
+STU-20338,5.3,62.4,78.3,17,High School,Public,Yes,No,B
+STU-20339,16.4,90.7,60.6,15,Bachelors,Private,Yes,Yes,B
+STU-20340,9.0,91.7,100.0,18,High School,Public,Yes,Yes,B
+STU-20341,4.1,100.0,90.5,16,Bachelors,Private,Yes,No,B
+STU-20342,3.8,100.0,88.4,15,Bachelors,Public,No,Yes,C
+STU-20343,13.1,62.6,98.1,16,Bachelors,Private,Yes,No,B
+STU-20344,7.7,77.3,70.5,17,Masters,Public,Yes,Yes,B
+STU-20345,22.6,72.0,35.5,15,Bachelors,Public,No,No,B
+STU-20346,18.7,64.1,67.9,15,High School,Private,Yes,No,C
+STU-20347,12.2,80.6,62.3,17,Masters,Public,Yes,Yes,C
+STU-20348,16.3,72.0,80.9,16,High School,Public,Yes,Yes,A
+STU-20349,5.6,82.2,65.2,15,High School,Private,No,No,F
+STU-20350,10.8,74.9,79.9,17,High School,Private,No,Yes,C
+STU-20351,20.2,58.9,58.2,18,High School,Public,Yes,Yes,B
+STU-20352,22.6,88.7,88.5,18,High School,Private,Yes,Yes,A
+STU-20353,3.7,88.3,80.8,16,High School,Public,Yes,No,B
+STU-20354,8.0,73.7,60.4,15,Masters,Public,Yes,Yes,C
+STU-20355,19.3,48.4,92.2,15,Bachelors,Public,Yes,Yes,A
+STU-20356,7.2,46.2,94.7,17,High School,Private,No,No,C
+STU-20357,8.5,59.9,80.6,15,Bachelors,Public,Yes,No,D
+STU-20358,2.4,85.4,62.4,15,High School,Public,Yes,No,C
+STU-20359,20.9,89.7,76.8,15,Masters,Public,Yes,No,A
+STU-20360,2.8,81.0,73.0,16,Bachelors,Private,Yes,Yes,B
+STU-20361,16.9,81.0,64.6,17,PhD,Public,No,Yes,A
+STU-20362,2.3,42.9,70.2,16,Bachelors,Private,Yes,No,D
+STU-20363,6.6,85.2,69.0,16,High School,Public,No,No,C
+STU-20364,23.1,69.9,49.8,16,Bachelors,Public,Yes,No,B
+STU-20365,3.0,75.9,70.4,17,High School,Public,Yes,Yes,C
+STU-20366,19.6,65.8,54.8,16,High School,Public,Yes,No,C
+STU-20367,5.4,50.7,70.6,18,High School,Public,Yes,No,D
+STU-20368,20.6,90.9,68.0,16,High School,Public,Yes,Yes,B
+STU-20369,8.3,85.3,83.9,15,Bachelors,Private,Yes,Yes,B
+STU-20370,13.5,64.3,63.6,16,High School,Public,Yes,Yes,B
+STU-20371,20.3,57.2,73.2,15,Bachelors,Public,Yes,No,A
+STU-20372,2.2,70.6,48.8,16,Bachelors,Public,No,Yes,D
+STU-20373,9.5,92.5,88.8,16,PhD,Public,Yes,Yes,B
+STU-20374,22.6,87.7,100.0,17,High School,Public,Yes,No,A
+STU-20375,6.6,80.5,69.3,15,High School,Public,No,No,F
+STU-20376,14.2,93.1,79.0,18,PhD,Public,Yes,No,B
+STU-20377,22.8,84.7,81.7,15,Bachelors,Public,Yes,No,A
+STU-20378,17.6,65.9,68.6,16,High School,Private,Yes,No,C
+STU-20379,22.9,89.2,84.9,16,Bachelors,Public,No,No,A
+STU-20380,13.9,78.8,63.1,18,Bachelors,Public,No,Yes,B
+STU-20381,16.8,67.6,69.5,15,Masters,Private,Yes,Yes,B
+STU-20382,1.6,96.3,70.1,17,High School,Private,Yes,No,D
+STU-20383,23.6,86.0,61.9,16,High School,Public,Yes,No,A
+STU-20384,10.5,58.7,49.8,15,Masters,Public,Yes,No,C
+STU-20385,13.4,90.9,86.5,17,High School,Public,Yes,No,D
+STU-20386,13.3,82.6,72.9,17,High School,Public,Yes,No,C
+STU-20387,7.9,74.4,59.6,17,Bachelors,Public,Yes,Yes,B
+STU-20388,24.0,73.0,53.5,17,Bachelors,Public,Yes,Yes,B
+STU-20389,16.4,64.8,68.9,16,High School,Public,Yes,No,D
+STU-20390,13.3,58.4,56.0,17,PhD,Private,No,Yes,D
+STU-20391,3.8,83.8,79.0,15,Bachelors,Private,Yes,No,D
+STU-20392,18.3,86.6,71.6,15,Bachelors,Public,Yes,Yes,A
+STU-20393,16.0,74.8,77.3,17,High School,Public,Yes,Yes,B
+STU-20394,23.7,83.5,86.9,16,High School,Public,Yes,Yes,A
+STU-20395,14.2,74.2,73.9,16,High School,Private,Yes,Yes,C
+STU-20396,8.2,74.6,80.3,17,Bachelors,Public,No,Yes,D
+STU-20397,15.6,87.2,88.8,17,High School,Public,Yes,Yes,A
+STU-20398,3.7,86.9,78.7,17,PhD,Public,Yes,No,B
+STU-20399,5.7,100.0,36.5,18,Masters,Public,Yes,No,F
+STU-20400,14.3,73.0,89.0,15,Bachelors,Public,Yes,Yes,A
+STU-20401,16.1,84.8,74.9,15,PhD,Private,Yes,No,A
+STU-20402,24.1,77.3,79.7,15,Bachelors,Public,Yes,No,A
+STU-20403,0.9,82.9,94.9,17,PhD,Public,Yes,No,F
+STU-20404,21.9,98.0,68.0,18,High School,Public,Yes,Yes,A
+STU-20405,10.1,,78.4,16,High School,Private,Yes,Yes,B
+STU-20406,0.8,68.5,39.0,17,Bachelors,Private,Yes,Yes,D
+STU-20407,9.9,73.1,93.9,16,PhD,Public,No,No,C
+STU-20408,15.0,71.2,70.1,15,High School,Public,Yes,Yes,D
+STU-20409,9.2,76.0,67.2,17,High School,Public,Yes,No,D
+STU-20410,8.8,70.1,67.1,15,Masters,Private,Yes,Yes,A
+STU-20411,20.4,72.6,79.9,16,Masters,Public,Yes,Yes,A
+STU-20412,10.6,77.3,42.9,16,Bachelors,Public,No,Yes,C
+STU-20413,23.9,84.5,99.5,16,Bachelors,Public,No,Yes,A
+STU-20414,6.5,67.4,72.8,16,Bachelors,Public,No,Yes,C
+STU-20415,2.5,80.7,69.5,15,High School,Private,No,Yes,B
+STU-20416,12.1,80.4,92.3,15,Bachelors,Private,Yes,Yes,B
+STU-20417,18.2,92.0,84.4,16,Bachelors,Public,No,Yes,B
+STU-20418,8.8,83.4,78.9,16,PhD,Private,Yes,No,C
+STU-20419,6.1,87.3,57.2,18,PhD,Private,Yes,Yes,B
+STU-20420,14.0,83.7,87.8,16,High School,Private,Yes,No,B
+STU-20421,20.5,96.2,75.0,15,PhD,Public,Yes,No,B
+STU-20422,14.4,77.9,58.5,16,Bachelors,Public,Yes,Yes,B
+STU-20423,15.0,58.2,68.3,18,High School,Public,Yes,No,D
+STU-20424,9.9,84.7,75.3,16,High School,Public,Yes,No,B
+STU-20425,16.4,65.5,59.7,18,PhD,Private,No,No,B
+STU-20426,19.0,47.6,83.9,15,Bachelors,Private,Yes,Yes,B
+STU-20427,2.0,86.5,62.5,16,High School,Public,Yes,No,F
+STU-20428,24.4,79.0,84.4,15,High School,Public,Yes,No,A
+STU-20429,10.8,82.3,75.4,15,Masters,Private,Yes,No,C
+STU-20430,11.5,86.1,78.1,16,Bachelors,Private,Yes,Yes,A
+STU-20431,12.4,76.9,55.8,15,High School,Public,Yes,Yes,B
+STU-20432,18.3,94.9,72.3,16,Masters,Private,Yes,Yes,A
+STU-20433,11.8,80.4,80.2,16,Bachelors,Public,Yes,No,C
+STU-20434,15.2,75.0,76.1,18,High School,Private,No,Yes,B
+STU-20435,7.4,79.8,65.3,16,PhD,Public,Yes,Yes,C
+STU-20436,6.3,50.2,76.2,17,High School,Public,Yes,No,B
+STU-20437,12.8,86.7,65.7,15,High School,Public,Yes,No,B
+STU-20438,3.0,58.3,70.2,15,PhD,Public,No,Yes,F
+STU-20439,1.2,85.0,89.1,17,Bachelors,Private,Yes,No,D
+STU-20440,17.8,77.4,96.2,18,High School,Public,No,Yes,A
+STU-20441,3.6,80.4,97.8,15,Bachelors,Public,Yes,Yes,C
+STU-20442,15.6,67.7,79.9,17,Bachelors,Public,No,Yes,B
+STU-20443,23.0,100.0,62.4,15,PhD,Private,Yes,Yes,B
+STU-20444,20.8,50.2,66.9,18,High School,Public,Yes,No,B
+STU-20445,2.7,77.4,87.8,18,Bachelors,Public,Yes,Yes,D
+STU-20446,11.7,66.5,73.0,17,Masters,Public,Yes,Yes,B
+STU-20447,13.8,56.6,94.4,18,Bachelors,Private,Yes,Yes,A
+STU-20448,8.6,99.8,65.8,18,High School,Private,Yes,Yes,B
+STU-20449,9.2,82.0,84.6,18,Bachelors,Public,Yes,Yes,B
+STU-20450,23.9,100.0,51.3,15,Masters,Public,Yes,Yes,A
+STU-20451,3.9,90.4,66.3,16,PhD,Public,Yes,Yes,F
+STU-20452,21.2,86.5,78.8,17,High School,Public,Yes,Yes,A
+STU-20453,19.5,87.4,77.2,15,Bachelors,Public,Yes,No,A
+STU-20454,4.6,61.1,73.5,16,Masters,Public,Yes,No,C
+STU-20455,9.2,60.7,54.1,16,PhD,Private,No,Yes,B
+STU-20456,13.1,99.8,72.7,15,High School,Public,Yes,No,B
+STU-20457,22.6,91.0,66.4,18,Masters,Private,Yes,No,A
+STU-20458,0.0,69.0,61.0,16,PhD,Public,Yes,Yes,D
+STU-20459,22.4,81.1,74.3,15,Masters,Private,Yes,No,B
+STU-20460,1.4,81.9,58.4,18,Masters,Public,Yes,Yes,C
+STU-20461,7.5,96.9,61.1,18,High School,Public,Yes,No,D
+STU-20462,0.1,84.5,100.0,18,Bachelors,Public,Yes,Yes,B
+STU-20463,24.2,69.8,76.4,16,Bachelors,Public,Yes,No,B
+STU-20464,24.0,91.2,89.6,17,Bachelors,Public,Yes,No,A
+STU-20465,10.8,,63.1,18,High School,Private,No,Yes,C
+STU-20466,17.7,87.9,63.9,16,High School,Public,Yes,No,C
+STU-20467,1.3,71.5,50.9,15,Masters,Public,Yes,Yes,D
+STU-20468,13.9,35.0,50.7,18,PhD,Private,Yes,No,C
+STU-20469,8.7,100.0,51.5,15,PhD,Public,No,No,C
+STU-20470,13.8,66.6,77.9,15,PhD,Private,Yes,Yes,B
+STU-20471,7.7,94.1,56.5,16,Bachelors,Public,Yes,No,F
+STU-20472,16.6,88.9,57.5,17,PhD,Private,Yes,No,A
+STU-20473,12.0,72.4,61.4,17,Bachelors,Public,Yes,No,A
+STU-20474,12.3,63.4,81.3,18,High School,Public,Yes,No,B
+STU-20475,12.3,100.0,64.5,18,Masters,Public,Yes,No,B
+STU-20476,8.7,83.4,79.6,18,Bachelors,Public,Yes,No,C
+STU-20477,12.7,98.4,54.8,16,High School,Public,No,No,B
+STU-20478,18.0,84.9,79.4,16,Masters,Public,No,No,B
+STU-20479,15.8,93.6,70.1,16,High School,Private,Yes,Yes,A
+STU-20480,3.4,83.4,79.4,15,Bachelors,Public,Yes,Yes,B
+STU-20481,16.5,61.8,53.2,18,High School,Public,Yes,Yes,C
+STU-20482,5.0,69.2,68.0,15,Bachelors,Private,Yes,Yes,C
+STU-20483,16.2,85.7,70.1,18,Bachelors,Public,Yes,Yes,A
+STU-20484,18.5,63.2,59.8,18,Bachelors,Public,Yes,Yes,C
+STU-20485,16.1,75.3,79.0,16,High School,Public,Yes,Yes,B
+STU-20486,19.8,78.8,71.1,16,High School,Public,Yes,No,C
+STU-20487,10.2,96.0,78.2,17,Masters,Private,Yes,No,A
+STU-20488,24.8,100.0,61.4,17,PhD,Public,Yes,No,A
+STU-20489,22.2,50.9,73.4,18,Masters,Public,Yes,Yes,B
+STU-20490,13.3,86.2,49.1,16,Masters,Public,Yes,No,B
+STU-20491,7.6,100.0,80.6,18,Masters,Private,Yes,Yes,B
+STU-20492,23.4,60.9,49.9,16,High School,Private,Yes,Yes,B
+STU-20493,14.4,64.8,59.9,17,Masters,Public,Yes,No,B
+STU-20494,3.6,97.0,71.5,15,Masters,Public,No,No,B
+STU-20495,10.3,82.7,78.3,16,PhD,Private,Yes,No,B
+STU-20496,3.0,72.4,72.0,18,High School,Public,Yes,Yes,D
+STU-20497,12.2,83.2,39.7,18,High School,Public,Yes,Yes,C
+STU-20498,6.6,90.7,51.1,18,High School,Public,Yes,Yes,B
+STU-20499,3.9,81.7,57.4,16,PhD,Public,Yes,Yes,D
+STU-20500,19.0,85.9,68.0,17,Masters,Public,Yes,Yes,B
+STU-20501,7.8,83.5,49.2,17,High School,Private,Yes,No,D
+STU-20502,23.9,86.3,56.9,17,High School,Public,No,Yes,B
+STU-20503,17.2,83.7,75.1,17,High School,Private,Yes,No,C
+STU-20504,9.6,86.8,70.8,17,High School,Public,Yes,Yes,C
+STU-20505,7.3,78.6,77.0,17,High School,Private,Yes,Yes,D
+STU-20506,3.5,96.8,74.9,16,Bachelors,Public,Yes,No,C
+STU-20507,8.8,76.7,47.3,17,Masters,Public,Yes,Yes,F
+STU-20508,13.9,73.9,53.7,17,Bachelors,Public,Yes,Yes,C
+STU-20509,0.4,60.6,70.0,15,Masters,Public,Yes,Yes,F
+STU-20510,14.3,70.6,74.0,18,Bachelors,Public,Yes,Yes,C
+STU-20511,5.3,83.4,60.2,16,High School,Public,Yes,No,F
+STU-20512,4.1,78.6,83.0,16,High School,Public,Yes,Yes,C
+STU-20513,3.8,89.7,58.2,17,Bachelors,Public,Yes,No,B
+STU-20514,7.2,64.6,60.7,18,High School,Private,Yes,No,B
+STU-20515,15.2,72.1,68.6,17,Masters,Public,No,Yes,B
+STU-20516,6.5,53.0,72.6,15,High School,Public,Yes,Yes,D
+STU-20517,16.8,77.3,59.4,18,Masters,Private,Yes,Yes,B
+STU-20518,12.4,94.8,67.3,15,Bachelors,Public,Yes,Yes,A
+STU-20519,8.9,87.8,54.0,17,High School,Public,No,No,D
+STU-20520,24.0,75.4,57.5,16,Bachelors,Public,Yes,No,A
+STU-20521,23.4,87.9,91.5,17,High School,Public,Yes,No,A
+STU-20522,5.1,84.9,51.4,18,High School,Private,Yes,No,C
+STU-20523,11.7,68.3,91.5,18,Masters,Private,Yes,Yes,A
+STU-20524,14.0,66.5,59.8,17,Masters,Public,Yes,No,B
+STU-20525,8.7,67.8,87.4,17,PhD,Public,Yes,No,F
+STU-20526,9.2,87.3,61.7,16,Bachelors,Public,Yes,No,C
+STU-20527,24.0,89.1,52.7,15,High School,Public,Yes,Yes,A
+STU-20528,14.8,86.5,67.4,15,High School,Public,Yes,Yes,B
+STU-20529,23.4,,68.4,18,Masters,Private,Yes,Yes,A
+STU-20530,8.7,100.0,72.4,15,Bachelors,Public,Yes,Yes,C
+STU-20531,16.2,78.0,53.6,18,PhD,Public,Yes,No,B
+STU-20532,13.7,87.8,46.4,16,Bachelors,Public,Yes,Yes,B
+STU-20533,19.8,83.5,65.3,18,Bachelors,Private,Yes,Yes,B
+STU-20534,5.5,95.7,61.6,18,High School,Private,Yes,Yes,D
+STU-20535,0.9,57.0,56.9,16,Bachelors,Private,No,No,F
+STU-20536,20.3,88.3,67.3,16,High School,Public,Yes,No,B
+STU-20537,22.3,78.2,89.2,18,Bachelors,Public,Yes,No,A
+STU-20538,1.1,79.6,87.4,15,Bachelors,Public,No,No,D
+STU-20539,22.0,66.0,73.7,18,Masters,Public,Yes,No,A
+STU-20540,12.0,70.5,89.4,18,PhD,Public,Yes,Yes,A
+STU-20541,1.9,98.1,98.7,17,High School,Private,Yes,No,A
+STU-20542,6.3,93.2,91.6,17,High School,Private,Yes,Yes,B
+STU-20543,4.2,60.5,43.6,17,PhD,Private,Yes,No,D
+STU-20544,13.1,84.4,58.3,18,Masters,Private,Yes,No,B
+STU-20545,24.9,73.9,74.2,17,Bachelors,Public,Yes,Yes,A
+STU-20546,9.9,96.1,84.2,15,Masters,Public,Yes,No,A
+STU-20547,17.2,87.3,50.9,15,Masters,Public,Yes,Yes,B
+STU-20548,7.5,91.7,100.0,16,Bachelors,Public,Yes,No,C
+STU-20549,3.3,80.0,59.8,18,High School,Public,Yes,Yes,C
+STU-20550,24.5,81.5,55.1,15,Bachelors,Public,Yes,Yes,B
+STU-20551,22.1,71.6,38.3,15,High School,Private,No,No,C
+STU-20552,2.5,59.5,83.7,18,High School,Public,No,No,D
+STU-20553,6.3,72.8,85.2,15,Bachelors,Public,Yes,No,C
+STU-20554,13.6,98.3,83.9,16,Masters,Public,Yes,Yes,A
+STU-20555,18.6,99.9,73.6,17,Bachelors,Private,No,Yes,A
+STU-20556,7.7,68.3,75.6,18,Masters,Public,Yes,No,B
+STU-20557,1.3,68.6,71.8,15,PhD,Public,Yes,Yes,C
+STU-20558,6.7,70.1,97.6,18,High School,Public,Yes,Yes,C
+STU-20559,14.1,69.5,81.3,15,High School,Public,Yes,No,B
+STU-20560,21.5,63.9,86.4,18,High School,Public,Yes,No,A
+STU-20561,0.5,70.7,45.0,15,PhD,Public,Yes,No,D
+STU-20562,17.8,89.7,45.3,16,Bachelors,Public,No,No,D
+STU-20563,15.2,90.8,87.7,15,Bachelors,Public,Yes,No,C
+STU-20564,8.3,100.0,79.6,15,High School,Public,No,No,D
+STU-20565,11.6,78.0,78.2,17,PhD,Private,No,Yes,A
+STU-20566,1.0,49.7,68.9,18,Bachelors,Private,Yes,Yes,D
+STU-20567,12.2,72.2,74.8,18,Masters,Private,No,No,C
+STU-20568,19.2,65.0,63.4,17,Bachelors,Private,Yes,No,A
+STU-20569,7.8,75.2,80.0,18,Bachelors,Private,Yes,Yes,A
+STU-20570,14.0,69.6,44.9,15,Bachelors,Public,Yes,Yes,C
+STU-20571,16.8,93.8,71.7,18,Bachelors,Public,No,No,B
+STU-20572,2.9,68.1,60.6,16,Bachelors,Public,No,Yes,C
+STU-20573,10.5,80.1,57.0,17,Bachelors,Public,Yes,Yes,D
+STU-20574,7.3,100.0,66.7,18,Masters,Private,Yes,Yes,B
+STU-20575,5.8,79.8,67.1,16,Bachelors,Private,Yes,Yes,B
+STU-20576,14.9,56.4,68.3,16,Masters,Private,Yes,No,B
+STU-20577,1.1,92.7,95.4,16,Bachelors,Private,Yes,Yes,B
+STU-20578,12.8,86.6,51.5,15,High School,Private,Yes,Yes,C
+STU-20579,18.1,87.7,55.5,16,High School,Public,Yes,No,B
+STU-20580,5.4,89.7,70.3,18,Bachelors,Public,Yes,No,C
+STU-20581,0.9,66.5,69.9,18,Bachelors,Public,Yes,Yes,D
+STU-20582,21.6,65.9,76.0,15,Bachelors,Public,Yes,No,B
+STU-20583,21.3,82.1,84.1,18,Masters,Public,Yes,No,A
+STU-20584,8.5,55.9,75.3,17,Bachelors,Public,Yes,No,F
+STU-20585,21.2,68.0,56.7,16,Bachelors,Public,Yes,No,A
+STU-20586,5.7,96.3,100.0,17,High School,Private,Yes,Yes,B
+STU-20587,5.0,61.9,73.0,15,High School,Public,Yes,No,D
+STU-20588,17.8,84.9,70.7,18,Bachelors,Public,Yes,Yes,A
+STU-20589,3.3,94.9,71.2,18,PhD,Public,Yes,Yes,D
+STU-20590,8.9,79.0,57.1,16,Bachelors,Private,Yes,Yes,B
+STU-20591,16.2,73.6,58.5,15,High School,Private,No,No,C
+STU-20592,6.5,98.5,70.3,16,Masters,Public,Yes,No,C
+STU-20593,0.2,60.5,74.1,18,High School,Public,Yes,Yes,F
+STU-20594,22.7,100.0,78.2,16,High School,Public,No,Yes,A
+STU-20595,8.1,67.2,54.2,18,Bachelors,Public,Yes,No,D
+STU-20596,6.6,80.3,80.7,15,Masters,Public,Yes,Yes,A
+STU-20597,13.0,64.3,53.4,15,High School,Private,Yes,Yes,C
+STU-20598,20.8,64.6,86.3,18,Bachelors,Public,Yes,No,A
+STU-20599,10.4,,100.0,17,Bachelors,Public,Yes,No,A
+STU-20600,13.2,80.9,50.4,18,Bachelors,Public,Yes,Yes,A
+STU-20601,19.6,87.2,77.6,15,Bachelors,Public,No,Yes,B
+STU-20602,24.2,61.4,85.8,17,High School,Public,Yes,Yes,A
+STU-20603,15.6,74.8,62.7,16,Masters,Public,Yes,No,B
+STU-20604,20.4,62.3,92.3,15,Masters,Private,Yes,No,A
+STU-20605,5.8,79.5,46.8,16,Bachelors,Public,Yes,No,F
+STU-20606,5.7,86.4,60.3,18,Bachelors,Public,Yes,Yes,B
+STU-20607,2.6,87.0,78.8,18,Bachelors,Public,Yes,No,B
+STU-20608,6.8,87.2,93.7,15,Masters,Public,Yes,No,C
+STU-20609,5.8,70.6,62.2,17,Bachelors,Public,Yes,Yes,C
+STU-20610,20.4,88.0,47.7,16,Bachelors,Public,No,Yes,B
+STU-20611,23.9,73.7,78.1,15,Bachelors,Public,Yes,No,B
+STU-20612,2.8,99.1,95.5,18,Masters,Private,Yes,No,A
+STU-20613,16.4,77.5,78.2,17,High School,Public,Yes,No,B
+STU-20614,24.7,96.8,58.4,15,Masters,Public,Yes,No,A
+STU-20615,23.1,74.8,48.1,15,Bachelors,Private,Yes,Yes,A
+STU-20616,5.3,89.3,100.0,18,High School,Private,Yes,No,A
+STU-20617,14.8,83.1,73.4,16,PhD,Public,Yes,Yes,A
+STU-20618,17.1,59.0,43.9,17,Bachelors,Public,No,No,C
+STU-20619,0.4,89.4,41.9,15,Bachelors,Public,No,Yes,F
+STU-20620,2.0,66.9,89.6,18,Masters,Public,Yes,No,C
+STU-20621,18.1,54.5,90.5,16,High School,Public,Yes,No,B
+STU-20622,12.8,81.9,68.7,17,Masters,Public,No,Yes,C
+STU-20623,17.0,96.0,62.8,18,Bachelors,Public,Yes,No,C
+STU-20624,2.8,90.4,82.0,15,Bachelors,Public,Yes,No,D
+STU-20625,4.9,67.9,83.4,18,Masters,Public,Yes,Yes,F
+STU-20626,19.6,55.6,73.9,17,High School,Private,Yes,Yes,B
+STU-20627,9.6,41.7,50.3,18,PhD,Private,Yes,Yes,D
+STU-20628,12.2,70.7,74.9,18,Bachelors,Public,Yes,No,D
+STU-20629,19.2,72.4,100.0,16,PhD,Public,Yes,Yes,A
+STU-20630,2.1,77.5,53.3,17,Bachelors,Public,No,Yes,D
+STU-20631,2.9,97.4,58.1,18,Masters,Public,No,No,D
+STU-20632,12.5,77.0,57.5,18,Bachelors,Public,No,No,C
+STU-20633,16.3,64.4,57.3,16,Bachelors,Public,Yes,No,C
+STU-20634,8.3,63.9,94.3,18,PhD,Public,Yes,No,C
+STU-20635,12.9,66.2,81.6,17,Bachelors,Private,Yes,Yes,B
+STU-20636,18.8,70.3,53.9,18,High School,Private,Yes,No,C
+STU-20637,21.6,84.4,51.8,17,High School,Public,Yes,Yes,B
+STU-20638,6.3,75.3,68.6,18,PhD,Public,No,No,C
+STU-20639,18.3,78.7,58.7,15,Bachelors,Public,Yes,No,C
+STU-20640,5.4,81.3,75.4,17,Masters,Public,Yes,No,C
+STU-20641,11.9,82.8,73.3,15,High School,Public,Yes,Yes,A
+STU-20642,18.4,89.1,45.5,17,High School,Private,Yes,No,B
+STU-20643,8.0,96.5,99.9,17,Bachelors,Private,Yes,No,A
+STU-20644,15.4,65.7,57.3,17,Bachelors,Public,Yes,No,C
+STU-20645,6.7,75.7,92.6,16,Masters,Public,Yes,Yes,B
+STU-20646,15.6,78.2,72.5,16,High School,Public,No,Yes,C
+STU-20647,12.3,77.7,65.2,17,Masters,Public,Yes,Yes,C
+STU-20648,10.5,91.5,36.3,17,High School,Public,Yes,Yes,F
+STU-20649,3.2,90.2,59.5,18,Bachelors,Public,Yes,No,F
+STU-20650,9.7,70.9,87.5,16,Bachelors,Private,Yes,Yes,A
+STU-20651,19.7,100.0,83.1,17,High School,Public,Yes,Yes,A
+STU-20652,4.3,87.3,55.9,15,PhD,Public,Yes,No,D
+STU-20653,19.5,89.8,28.5,18,Bachelors,Public,Yes,Yes,C
+STU-20654,20.6,71.4,73.8,17,Masters,Public,Yes,No,B
+STU-20655,23.0,91.2,49.4,15,Masters,Public,Yes,No,A
+STU-20656,13.1,75.4,66.2,18,Bachelors,Public,Yes,Yes,C
+STU-20657,12.8,66.5,52.6,17,Masters,Public,Yes,Yes,C
+STU-20658,12.0,81.8,89.8,16,High School,Public,Yes,Yes,B
+STU-20659,13.8,65.5,60.5,15,High School,Private,Yes,Yes,C
+STU-20660,21.8,64.5,71.7,15,PhD,Public,Yes,Yes,A
+STU-20661,14.0,86.4,66.9,15,High School,Public,Yes,No,A
+STU-20662,14.2,91.3,59.4,17,Bachelors,Public,Yes,Yes,B
+STU-20663,19.5,70.3,81.5,16,Bachelors,Public,No,No,A
+STU-20664,7.7,93.7,75.6,18,High School,Public,Yes,No,B
+STU-20665,0.7,96.7,75.0,16,High School,Public,Yes,No,D
+STU-20666,23.2,96.4,63.6,15,Masters,Public,Yes,Yes,A
+STU-20667,9.6,84.9,77.6,16,Bachelors,Public,Yes,No,C
+STU-20668,12.2,75.8,52.4,17,Masters,Public,Yes,No,D
+STU-20669,11.8,100.0,74.2,16,High School,Private,Yes,No,C
+STU-20670,17.7,74.7,65.9,15,High School,Private,Yes,Yes,B
+STU-20671,5.4,86.9,22.2,17,Bachelors,Private,Yes,Yes,D
+STU-20672,6.4,,47.9,17,Masters,Public,Yes,Yes,C
+STU-20673,5.9,100.0,63.2,18,Masters,Private,Yes,Yes,A
+STU-20674,18.0,84.6,100.0,18,Bachelors,Public,No,Yes,B
+STU-20675,10.8,84.1,89.9,16,Bachelors,Public,Yes,No,A
+STU-20676,24.9,87.9,60.3,17,High School,Public,Yes,Yes,B
+STU-20677,22.1,83.6,87.8,15,High School,Private,Yes,Yes,B
+STU-20678,24.2,96.4,54.6,15,Bachelors,Public,Yes,No,B
+STU-20679,5.2,95.8,88.2,18,Masters,Private,Yes,Yes,A
+STU-20680,5.2,100.0,64.0,18,High School,Private,Yes,Yes,C
+STU-20681,19.0,79.9,55.7,15,High School,Public,Yes,Yes,C
+STU-20682,16.2,91.2,44.6,18,Masters,Public,No,Yes,A
+STU-20683,7.6,70.6,66.9,15,High School,Public,No,Yes,F
+STU-20684,9.7,74.9,85.0,16,Bachelors,Public,Yes,Yes,A
+STU-20685,0.4,100.0,68.8,18,Masters,Public,Yes,No,C
+STU-20686,24.5,77.0,100.0,18,Masters,Private,No,No,A
+STU-20687,2.7,53.8,59.7,17,PhD,Public,Yes,Yes,D
+STU-20688,20.1,73.1,88.6,18,Masters,Public,Yes,Yes,A
+STU-20689,11.5,73.3,84.6,17,High School,Public,Yes,Yes,B
+STU-20690,18.1,54.8,71.8,17,High School,Public,Yes,No,C
+STU-20691,1.9,83.5,66.4,17,Masters,Public,Yes,Yes,D
+STU-20692,13.1,92.7,59.0,18,Bachelors,Public,No,Yes,B
+STU-20693,11.7,73.4,81.2,15,Masters,Public,Yes,No,A
+STU-20694,17.5,94.6,82.4,16,Bachelors,Private,Yes,No,B
+STU-20695,3.5,51.3,66.4,15,High School,Private,Yes,Yes,F
+STU-20696,23.4,91.4,58.4,17,Bachelors,Public,Yes,No,A
+STU-20697,24.8,80.5,49.3,18,High School,Public,Yes,Yes,A
+STU-20698,5.2,100.0,68.1,18,Bachelors,Private,Yes,Yes,C
+STU-20699,2.2,81.0,42.4,17,High School,Private,Yes,No,F
+STU-20700,13.4,80.3,57.5,18,Bachelors,Public,Yes,Yes,C
+STU-20701,11.0,80.4,100.0,16,High School,Public,No,No,C
+STU-20702,16.1,75.8,54.9,17,High School,Public,Yes,No,B
+STU-20703,24.6,75.3,61.8,18,Masters,Public,Yes,Yes,A
+STU-20704,18.0,90.6,83.2,16,Bachelors,Public,Yes,Yes,A
+STU-20705,18.1,84.6,76.6,18,High School,Public,Yes,Yes,B
+STU-20706,22.4,85.0,65.1,17,Bachelors,Private,No,No,A
+STU-20707,15.3,84.7,76.2,18,Bachelors,Public,Yes,Yes,A
+STU-20708,8.3,71.1,67.3,15,High School,Public,Yes,Yes,D
+STU-20709,3.5,100.0,70.0,18,Bachelors,Private,Yes,No,C
+STU-20710,6.8,66.6,55.9,18,PhD,Public,Yes,No,C
+STU-20711,15.0,94.0,77.7,16,High School,Private,Yes,Yes,A
+STU-20712,5.9,78.4,72.5,17,Bachelors,Private,Yes,Yes,B
+STU-20713,6.6,95.5,70.6,18,Bachelors,Public,Yes,Yes,B
+STU-20714,17.3,77.6,75.3,16,PhD,Public,Yes,Yes,B
+STU-20715,20.1,96.3,70.8,15,Bachelors,Private,Yes,Yes,A
+STU-20716,7.3,87.9,63.2,18,Bachelors,Private,Yes,Yes,B
+STU-20717,23.5,97.5,70.4,15,Masters,Public,Yes,Yes,A
+STU-20718,19.3,100.0,60.5,15,High School,Public,Yes,No,A
+STU-20719,8.8,84.0,32.6,16,PhD,Public,Yes,Yes,C
+STU-20720,11.7,83.2,56.2,15,High School,Public,Yes,No,C
+STU-20721,3.4,47.2,63.0,16,PhD,Private,Yes,No,D
+STU-20722,19.6,81.3,69.5,17,PhD,Private,Yes,Yes,A
+STU-20723,22.8,93.7,74.4,17,Masters,Public,Yes,Yes,A
+STU-20724,19.8,77.5,89.5,16,PhD,Public,Yes,Yes,A
+STU-20725,2.3,82.0,92.1,17,Bachelors,Private,Yes,No,C
+STU-20726,23.6,78.8,93.2,17,Bachelors,Public,Yes,No,A
+STU-20727,8.7,53.9,65.3,18,Bachelors,Public,Yes,Yes,C
+STU-20728,14.8,93.2,85.2,16,PhD,Public,Yes,Yes,B
+STU-20729,7.3,71.0,35.1,18,Bachelors,Public,Yes,No,D
+STU-20730,8.5,62.0,51.1,16,High School,Public,Yes,Yes,F
+STU-20731,7.6,94.9,94.4,17,Bachelors,Public,No,Yes,A
+STU-20732,0.3,86.7,66.6,15,High School,Private,Yes,Yes,B
+STU-20733,14.0,89.1,67.0,18,High School,Public,Yes,No,B
+STU-20734,12.3,82.9,75.2,18,PhD,Public,No,Yes,B
+STU-20735,16.3,71.9,76.9,15,High School,Public,Yes,Yes,A
+STU-20736,9.7,93.7,64.8,18,Masters,Public,Yes,No,C
+STU-20737,24.5,69.0,68.6,18,High School,Private,Yes,No,A
+STU-20738,18.0,84.8,47.1,16,Bachelors,Public,No,Yes,D
+STU-20739,18.8,67.2,74.4,15,Bachelors,Public,Yes,No,A
+STU-20740,7.4,65.7,82.8,16,High School,Private,Yes,No,C
+STU-20741,23.0,92.7,83.2,17,Masters,Public,Yes,No,A
+STU-20742,19.0,70.3,72.1,18,High School,Public,Yes,Yes,A
+STU-20743,17.7,100.0,60.7,18,Bachelors,Private,Yes,Yes,A
+STU-20744,1.2,63.0,63.9,17,Masters,Public,Yes,Yes,F
+STU-20745,13.3,96.2,56.9,17,Bachelors,Public,Yes,Yes,A
+STU-20746,0.7,77.1,47.4,18,Masters,Public,Yes,Yes,C
+STU-20747,4.2,92.1,76.4,18,Masters,Private,Yes,Yes,A
+STU-20748,17.3,91.1,58.9,15,Bachelors,Public,Yes,Yes,B
+STU-20749,9.5,55.8,100.0,15,High School,Private,Yes,Yes,B
+STU-20750,20.4,89.9,73.7,16,Masters,Private,No,No,B
+STU-20751,20.5,76.9,90.6,16,Masters,Public,No,No,A
+STU-20752,1.3,68.2,45.8,16,High School,Public,No,No,F
+STU-20753,5.7,96.0,67.0,18,Masters,Private,Yes,Yes,B
+STU-20754,17.2,86.5,82.7,15,High School,Public,Yes,Yes,A
+STU-20755,11.3,87.1,81.8,15,Bachelors,Private,No,No,B
+STU-20756,21.8,100.0,75.3,16,High School,Public,Yes,Yes,B
+STU-20757,21.7,95.6,77.8,16,PhD,Private,Yes,No,A
+STU-20758,20.2,82.7,57.6,15,Bachelors,Public,Yes,No,B
+STU-20759,17.1,70.0,56.3,17,Bachelors,Private,Yes,No,C
+STU-20760,6.2,100.0,62.0,17,High School,Private,Yes,No,C
+STU-20761,9.4,72.3,47.5,16,PhD,Public,No,No,C
+STU-20762,0.2,58.9,84.7,15,Bachelors,Public,No,No,F
+STU-20763,17.3,100.0,52.6,16,Masters,Public,Yes,Yes,B
+STU-20764,1.8,100.0,53.8,17,High School,Private,Yes,Yes,C
+STU-20765,9.0,58.6,66.2,16,High School,Public,Yes,No,F
+STU-20766,0.2,86.7,94.6,17,High School,Public,Yes,Yes,F
+STU-20767,1.3,61.6,73.5,18,High School,Public,No,Yes,F
+STU-20768,19.1,90.4,77.5,18,High School,Public,Yes,Yes,A
+STU-20769,7.0,75.1,71.2,17,High School,Public,Yes,No,D
+STU-20770,15.2,61.9,93.7,18,Masters,Private,Yes,No,A
+STU-20771,9.2,94.8,78.9,18,Masters,Public,No,Yes,B
+STU-20772,12.9,69.2,47.5,15,High School,Private,Yes,Yes,C
+STU-20773,24.1,87.1,51.1,17,Bachelors,Public,Yes,No,A
+STU-20774,8.8,72.1,72.3,15,PhD,Private,Yes,No,A
+STU-20775,9.3,100.0,73.7,17,High School,Private,Yes,No,C
+STU-20776,22.4,96.6,61.4,18,Bachelors,Public,No,No,A
+STU-20777,10.4,75.2,74.6,16,High School,Public,No,No,C
+STU-20778,19.8,51.3,89.5,18,Bachelors,Private,Yes,No,B
+STU-20779,20.6,86.6,62.1,18,Bachelors,Public,Yes,No,B
+STU-20780,5.4,68.3,90.8,17,High School,Public,No,No,C
+STU-20781,6.0,98.1,91.0,18,Bachelors,Private,Yes,No,B
+STU-20782,19.3,100.0,24.1,17,PhD,Public,Yes,No,C
+STU-20783,17.6,81.6,60.0,18,Masters,Public,Yes,Yes,B
+STU-20784,9.0,94.1,81.2,17,High School,Public,Yes,Yes,A
+STU-20785,5.8,63.0,68.1,18,High School,Public,No,Yes,D
+STU-20786,5.1,89.5,70.2,17,High School,Public,Yes,No,D
+STU-20787,19.3,100.0,83.4,15,Bachelors,Private,No,No,A
+STU-20788,17.8,62.0,81.9,17,High School,Public,Yes,Yes,B
+STU-20789,8.1,91.6,58.7,16,Bachelors,Private,Yes,No,C
+STU-20790,4.2,84.7,30.8,15,High School,Public,Yes,Yes,F
+STU-20791,17.6,93.4,78.0,18,Bachelors,Public,Yes,Yes,A
+STU-20792,11.7,82.0,85.2,17,PhD,Public,No,Yes,C
+STU-20793,14.8,,76.9,17,Bachelors,Public,Yes,No,B
+STU-20794,8.6,97.9,75.2,15,Masters,Public,Yes,No,A
+STU-20795,7.3,81.5,80.9,15,High School,Private,Yes,Yes,C
+STU-20796,8.4,87.7,77.0,17,High School,Public,Yes,No,C
+STU-20797,13.1,61.8,59.4,15,High School,Public,Yes,No,D
+STU-20798,16.1,86.5,73.3,18,Masters,Public,Yes,Yes,B
+STU-20799,0.6,90.6,78.5,16,High School,Public,Yes,No,D
+STU-20800,1.1,78.9,60.1,18,Bachelors,Public,Yes,No,D
+STU-20801,11.5,80.2,71.1,18,Bachelors,Public,Yes,Yes,B
+STU-20802,19.9,52.9,86.5,16,High School,Public,No,No,B
+STU-20803,11.8,66.2,99.6,16,Masters,Public,Yes,No,B
+STU-20804,24.0,77.1,80.6,15,PhD,Public,Yes,Yes,A
+STU-20805,4.9,76.4,100.0,15,Bachelors,Public,Yes,No,D
+STU-20806,12.0,100.0,68.8,16,High School,Public,Yes,Yes,B
+STU-20807,24.0,91.7,67.1,16,Bachelors,Public,Yes,No,B
+STU-20808,21.6,64.1,90.1,17,Bachelors,Public,Yes,Yes,B
+STU-20809,2.6,100.0,66.9,17,Masters,Public,No,No,B
+STU-20810,11.5,61.2,63.5,18,PhD,Public,Yes,Yes,B
+STU-20811,6.6,64.6,52.5,16,High School,Private,Yes,No,D
+STU-20812,8.0,68.4,69.2,18,High School,Public,Yes,No,B
+STU-20813,23.6,80.0,65.2,17,High School,Public,Yes,Yes,A
+STU-20814,14.0,100.0,49.8,18,Bachelors,Public,Yes,No,A
+STU-20815,11.5,77.1,49.7,18,High School,Public,Yes,Yes,F
+STU-20816,7.8,88.5,75.1,15,High School,Public,Yes,Yes,C
+STU-20817,21.2,60.2,81.9,18,High School,Public,Yes,No,A
+STU-20818,12.9,74.5,62.1,16,Bachelors,Public,Yes,Yes,C
+STU-20819,23.4,100.0,58.6,16,High School,Public,Yes,Yes,A
+STU-20820,20.1,99.3,66.0,18,High School,Public,No,Yes,C
+STU-20821,23.1,93.8,5.7,15,High School,Public,Yes,Yes,B
+STU-20822,1.9,100.0,60.5,16,High School,Private,Yes,Yes,D
+STU-20823,11.0,89.0,87.0,17,High School,Public,Yes,Yes,C
+STU-20824,20.4,88.5,84.3,16,Bachelors,Public,No,Yes,B
+STU-20825,11.1,65.7,61.0,18,Bachelors,Public,Yes,No,D
+STU-20826,23.0,59.7,66.6,16,Bachelors,Private,Yes,Yes,A
+STU-20827,11.1,71.5,43.8,17,Masters,Public,Yes,Yes,C
+STU-20828,19.1,76.3,50.9,17,Bachelors,Private,Yes,Yes,B
+STU-20829,1.5,69.5,70.4,18,High School,Public,Yes,Yes,D
+STU-20830,18.5,91.1,53.0,18,High School,Public,Yes,Yes,D
+STU-20831,10.9,100.0,94.3,18,High School,Public,No,Yes,C
+STU-20832,23.6,80.8,85.7,18,PhD,Public,Yes,Yes,A
+STU-20833,18.4,58.8,76.8,15,Masters,Public,Yes,No,A
+STU-20834,19.3,63.4,74.2,18,High School,Private,Yes,No,B
+STU-20835,16.9,95.9,60.6,18,Bachelors,Public,Yes,Yes,C
+STU-20836,24.9,92.3,70.6,16,High School,Private,Yes,No,A
+STU-20837,2.0,84.3,41.0,18,PhD,Public,No,No,D
+STU-20838,18.1,90.2,79.8,18,Bachelors,Public,Yes,No,B
+STU-20839,22.0,97.2,80.5,15,Bachelors,Public,Yes,Yes,A
+STU-20840,2.5,81.7,82.1,15,Masters,Public,Yes,No,D
+STU-20841,13.2,85.4,67.5,16,High School,Public,Yes,Yes,B
+STU-20842,8.1,,94.0,18,Masters,Public,Yes,No,C
+STU-20843,15.5,52.8,71.2,17,Bachelors,Public,Yes,No,C
+STU-20844,5.2,82.5,72.9,17,Bachelors,Public,Yes,Yes,D
+STU-20845,10.2,80.4,62.1,17,High School,Public,No,No,B
+STU-20846,14.9,86.6,62.9,17,PhD,Public,Yes,No,B
+STU-20847,3.4,73.0,46.1,17,Masters,Public,Yes,Yes,F
+STU-20848,18.6,86.7,61.8,15,Bachelors,Public,Yes,No,A
+STU-20849,3.5,86.3,65.0,15,PhD,Public,Yes,Yes,C
+STU-20850,0.3,74.8,66.8,17,Bachelors,Public,No,No,D
+STU-20851,14.0,66.4,53.7,17,Masters,Private,Yes,No,C
+STU-20852,12.5,,48.4,15,Bachelors,Public,No,Yes,F
+STU-20853,12.7,85.6,56.5,17,Masters,Public,Yes,Yes,B
+STU-20854,6.9,93.2,64.2,17,PhD,Public,Yes,Yes,C
+STU-20855,17.4,100.0,84.9,16,High School,Public,Yes,Yes,A
+STU-20856,22.4,79.4,54.9,15,Bachelors,Public,Yes,Yes,B
+STU-20857,20.1,87.9,75.0,16,Masters,Public,Yes,No,B
+STU-20858,18.3,98.0,64.6,15,Bachelors,Private,Yes,No,A
+STU-20859,0.0,66.4,64.4,16,Bachelors,Private,Yes,Yes,D
+STU-20860,21.3,89.8,55.2,15,Bachelors,Private,Yes,No,A
+STU-20861,2.5,74.1,100.0,17,Masters,Public,Yes,Yes,C
+STU-20862,22.2,75.3,72.6,17,Bachelors,Public,Yes,No,A
+STU-20863,10.0,91.7,68.2,18,High School,Public,No,Yes,F
+STU-20864,15.9,77.3,80.2,15,High School,Public,Yes,Yes,C
+STU-20865,3.4,85.6,54.0,17,Masters,Public,Yes,No,C
+STU-20866,1.1,64.8,56.3,16,Bachelors,Public,Yes,No,D
+STU-20867,14.6,79.8,73.0,16,Masters,Private,No,No,A
+STU-20868,11.2,68.1,52.0,17,High School,Private,Yes,No,D
+STU-20869,8.1,76.3,68.6,16,High School,Private,Yes,No,B
+STU-20870,15.4,100.0,91.1,16,Masters,Public,Yes,Yes,A
+STU-20871,18.0,,52.0,17,High School,Public,Yes,No,C
+STU-20872,6.4,77.6,69.8,18,High School,Public,Yes,No,F
+STU-20873,20.6,,81.2,16,High School,Public,Yes,No,B
+STU-20874,11.9,69.6,47.9,16,High School,Public,Yes,Yes,D
+STU-20875,24.6,100.0,74.1,18,Masters,Private,Yes,No,A
+STU-20876,16.2,70.7,70.2,16,Masters,Private,Yes,No,B
+STU-20877,22.3,100.0,46.9,15,Masters,Public,Yes,No,A
+STU-20878,4.8,77.6,69.2,18,Bachelors,Public,Yes,No,D
+STU-20879,11.4,98.8,80.2,16,Bachelors,Private,Yes,No,B
+STU-20880,0.5,82.5,84.5,15,High School,Public,Yes,Yes,C
+STU-20881,13.1,71.5,66.5,17,Bachelors,Public,Yes,Yes,B
+STU-20882,20.4,78.1,90.4,18,Bachelors,Public,Yes,Yes,B
+STU-20883,21.2,100.0,73.0,15,Bachelors,Public,Yes,Yes,A
+STU-20884,20.3,78.3,70.3,17,High School,Private,Yes,Yes,C
+STU-20885,14.8,52.6,57.4,16,Masters,Public,Yes,No,F
+STU-20886,23.2,100.0,63.2,17,High School,Public,Yes,No,B
+STU-20887,16.7,70.5,77.4,15,Bachelors,Private,Yes,Yes,A
+STU-20888,13.2,76.0,70.3,15,High School,Public,Yes,Yes,C
+STU-20889,4.7,100.0,88.3,15,High School,Private,Yes,Yes,A
+STU-20890,17.3,56.2,73.9,16,Masters,Private,Yes,Yes,B
+STU-20891,23.6,73.4,69.9,17,Bachelors,Public,No,No,A
+STU-20892,2.5,90.1,100.0,16,Bachelors,Public,Yes,Yes,F
+STU-20893,9.2,90.0,63.2,18,Bachelors,Public,Yes,No,B
+STU-20894,21.1,89.2,76.4,17,High School,Private,Yes,No,A
+STU-20895,15.1,66.7,91.5,17,High School,Public,Yes,Yes,A
+STU-20896,14.4,94.5,74.0,17,High School,Public,Yes,No,B
+STU-20897,12.3,74.2,82.4,15,Masters,Private,Yes,No,C
+STU-20898,0.3,83.5,81.6,18,Bachelors,Public,No,No,C
+STU-20899,15.6,67.2,45.1,17,Bachelors,Public,Yes,Yes,B
+STU-20448,8.6,99.8,65.8,18,High School,Private,Yes,Yes,B
+STU-20735,16.3,71.9,76.9,15,High School,Public,Yes,Yes,A
+STU-20323,23.4,86.2,60.3,18,High School,Public,No,No,C
+STU-20175,9.3,86.4,100.0,18,High School,Public,Yes,No,A
+STU-20083,20.7,96.5,66.4,17,Masters,Public,Yes,Yes,A
+STU-20475,12.3,100.0,64.5,18,Masters,Public,Yes,No,B

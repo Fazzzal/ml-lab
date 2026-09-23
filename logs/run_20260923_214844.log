@@ -1,0 +1,183 @@
+2026-09-23 21:48:47,113 [INFO] __main__: Starting ML Research Lab...
+2026-09-23 21:48:47,116 [INFO] app.agents.data_agent: --- DATA AGENT ---
+2026-09-23 21:48:47,116 [INFO] app.agents.data_agent: Profiling dataset: data/Telco-Customer-Churn.csv
+2026-09-23 21:48:47,130 [INFO] app.agents.data_agent: Dataset profiling complete.
+2026-09-23 21:48:47,131 [INFO] app.agents.feature_agent: --- FEATURE AGENT ---
+2026-09-23 21:48:47,139 [INFO] app.agents.feature_agent: Identifier columns: ['customerID']
+2026-09-23 21:48:47,139 [INFO] app.agents.feature_agent: Numeric features: ['SeniorCitizen', 'tenure', 'MonthlyCharges', 'TotalCharges']
+2026-09-23 21:48:47,139 [INFO] app.agents.feature_agent: Categorical features: ['PhoneService', 'MultipleLines', 'OnlineSecurity', 'OnlineBackup', 'DeviceProtection', 'TechSupport', 'StreamingTV', 'StreamingMovies', 'Contract', 'PaymentMethod']
+2026-09-23 21:48:47,140 [INFO] app.agents.feature_agent: Missing-value columns: ['MultipleLines', 'TotalCharges']
+2026-09-23 21:48:47,140 [INFO] app.agents.feature_agent: Feature analysis complete. Recommendations: 17
+2026-09-23 21:48:47,141 [INFO] app.agents.research_agent: --- RESEARCH AGENT ---
+2026-09-23 21:48:47,141 [INFO] app.agents.research_agent: Generating research plan...
+2026-09-23 21:48:48,535 [INFO] app.agents.research_agent: Problem type: classification
+2026-09-23 21:48:48,536 [INFO] app.agents.research_agent: Models: ['Logistic Regression', 'Random Forest', 'Gradient Boosting']
+2026-09-23 21:48:48,536 [INFO] app.agents.research_agent: Reasoning: The target column 'Churn' is a categorical string indicating whether a customer churned, making this a binary classification problem. To establish a diverse baseline we will evaluate three complementary model families supported by the execution layer: (1) Logistic Regression as a simple linear model that provides a clear baseline and benefits from standard scaling of numeric features; (2) Random Forest as a bagging ensemble of decision trees that can capture non‑linear interactions and is robust to mixed feature types; (3) Gradient Boosting as a boosting ensemble that often yields higher predictive performance on structured data. The execution layer will handle missing‑value imputation, one‑hot encoding of the listed categorical features, and standard scaling of numeric features before training each model. Performance will be assessed using accuracy and weighted F1 on a stratified validation split, providing comparable baseline metrics across the three approaches.
+2026-09-23 21:48:48,537 [INFO] app.agents.split_agent: --- SPLIT AGENT ---
+2026-09-23 21:48:48,566 [INFO] app.agents.split_agent: Split sizes -> train: 603, val: 201, test: 201 (test is held out until final_report_agent)
+2026-09-23 21:48:48,567 [INFO] app.agents.experiment_agent: --- EXPERIMENT AGENT ---
+2026-09-23 21:48:48,567 [INFO] app.agents.experiment_agent: Running proposed baseline: Logistic Regression
+2026-09-23 21:48:48,744 [INFO] app.agents.experiment_agent: New best experiment: f1=0.795492
+2026-09-23 21:48:48,744 [INFO] app.agents.experiment_agent: Experiment result: {'model': 'Logistic Regression', 'problem_type': 'classification', 'train_samples': 603, 'val_samples': 201, 'applied_params': {}, 'rejected_params': [], 'cross_validation': {'folds': 5, 'scoring': 'f1_weighted', 'mean': 0.7805356345000163, 'std': 0.027544915895429026}, 'accuracy': 0.8258706467661692, 'f1': 0.7954915687051468, 'experiment_type': 'baseline_model', 'experiment_id': 'baseline_model::Logistic Regression', 'metric_name': 'f1', 'validation_metric': 0.7954915687051468, 'improvement': None, 'is_best': True}
+2026-09-23 21:48:48,746 [INFO] app.agents.evaluation_agent: --- EVALUATION AGENT ---
+2026-09-23 21:48:48,746 [INFO] app.agents.evaluation_agent: Best model: Logistic Regression
+2026-09-23 21:48:48,746 [INFO] app.agents.evaluation_agent: Best f1 (validation): 0.7954915687051468
+2026-09-23 21:48:48,746 [INFO] app.agents.critic_agent: --- CRITIC AGENT ---
+2026-09-23 21:48:48,746 [INFO] app.agents.critic_agent: Feature engineering attempts: 0/3
+2026-09-23 21:48:48,747 [INFO] app.agents.critic_agent: Completed baseline models: ['Logistic Regression']
+2026-09-23 21:48:48,747 [INFO] app.agents.critic_agent: Pending baseline model: Random Forest
+2026-09-23 21:48:48,747 [INFO] app.agents.critic_agent: Deterministically selecting pending baseline: Random Forest
+2026-09-23 21:48:48,747 [INFO] app.supervisor: --- SUPERVISOR ---
+2026-09-23 21:48:48,748 [INFO] app.supervisor: Critic decision: continue
+2026-09-23 21:48:48,748 [INFO] app.supervisor: Experiment type: baseline_model
+2026-09-23 21:48:48,748 [INFO] app.supervisor: Supervisor iteration: 1/8
+2026-09-23 21:48:48,748 [INFO] app.supervisor: Routing to experiment agent: Random Forest
+2026-09-23 21:48:48,749 [INFO] app.agents.experiment_agent: --- EXPERIMENT AGENT ---
+2026-09-23 21:48:48,749 [INFO] app.agents.experiment_agent: Running proposed baseline: Random Forest
+2026-09-23 21:48:49,741 [INFO] app.agents.experiment_agent: Experiment did not improve best f1: 0.737879
+2026-09-23 21:48:49,741 [INFO] app.agents.experiment_agent: Experiment result: {'model': 'Random Forest', 'problem_type': 'classification', 'train_samples': 603, 'val_samples': 201, 'applied_params': {}, 'rejected_params': [], 'cross_validation': {'folds': 5, 'scoring': 'f1_weighted', 'mean': 0.7396754850025633, 'std': 0.030002637135165697}, 'accuracy': 0.7910447761194029, 'f1': 0.7378785264429298, 'experiment_type': 'baseline_model', 'experiment_id': 'baseline_model::Random Forest', 'metric_name': 'f1', 'validation_metric': 0.7378785264429298, 'improvement': -0.057613042262216974, 'is_best': False}
+2026-09-23 21:48:49,741 [INFO] app.agents.evaluation_agent: --- EVALUATION AGENT ---
+2026-09-23 21:48:49,742 [INFO] app.agents.evaluation_agent: Best model: Logistic Regression
+2026-09-23 21:48:49,742 [INFO] app.agents.evaluation_agent: Best f1 (validation): 0.7954915687051468
+2026-09-23 21:48:49,742 [INFO] app.agents.critic_agent: --- CRITIC AGENT ---
+2026-09-23 21:48:49,742 [INFO] app.agents.critic_agent: Feature engineering attempts: 0/3
+2026-09-23 21:48:49,742 [INFO] app.agents.critic_agent: Completed baseline models: ['Logistic Regression', 'Random Forest']
+2026-09-23 21:48:49,742 [INFO] app.agents.critic_agent: Pending baseline model: Gradient Boosting
+2026-09-23 21:48:49,742 [INFO] app.agents.critic_agent: Deterministically selecting pending baseline: Gradient Boosting
+2026-09-23 21:48:49,742 [INFO] app.supervisor: --- SUPERVISOR ---
+2026-09-23 21:48:49,743 [INFO] app.supervisor: Critic decision: continue
+2026-09-23 21:48:49,743 [INFO] app.supervisor: Experiment type: baseline_model
+2026-09-23 21:48:49,743 [INFO] app.supervisor: Supervisor iteration: 2/8
+2026-09-23 21:48:49,743 [INFO] app.supervisor: Routing to experiment agent: Gradient Boosting
+2026-09-23 21:48:49,743 [INFO] app.agents.experiment_agent: --- EXPERIMENT AGENT ---
+2026-09-23 21:48:49,743 [INFO] app.agents.experiment_agent: Running proposed baseline: Gradient Boosting
+2026-09-23 21:48:50,655 [INFO] app.agents.experiment_agent: Experiment did not improve best f1: 0.745344
+2026-09-23 21:48:50,656 [INFO] app.agents.experiment_agent: Experiment result: {'model': 'Gradient Boosting', 'problem_type': 'classification', 'train_samples': 603, 'val_samples': 201, 'applied_params': {}, 'rejected_params': [], 'cross_validation': {'folds': 5, 'scoring': 'f1_weighted', 'mean': 0.7556870420178046, 'std': 0.027964856326132263}, 'accuracy': 0.7711442786069652, 'f1': 0.745343848742518, 'experiment_type': 'baseline_model', 'experiment_id': 'baseline_model::Gradient Boosting', 'metric_name': 'f1', 'validation_metric': 0.745343848742518, 'improvement': -0.05014771996262879, 'is_best': False}
+2026-09-23 21:48:50,656 [INFO] app.agents.evaluation_agent: --- EVALUATION AGENT ---
+2026-09-23 21:48:50,656 [INFO] app.agents.evaluation_agent: Best model: Logistic Regression
+2026-09-23 21:48:50,656 [INFO] app.agents.evaluation_agent: Best f1 (validation): 0.7954915687051468
+2026-09-23 21:48:50,657 [INFO] app.agents.critic_agent: --- CRITIC AGENT ---
+2026-09-23 21:48:50,657 [INFO] app.agents.critic_agent: Feature engineering attempts: 0/3
+2026-09-23 21:48:50,657 [INFO] app.agents.critic_agent: Completed baseline models: ['Gradient Boosting', 'Logistic Regression', 'Random Forest']
+2026-09-23 21:48:50,657 [INFO] app.agents.critic_agent: Pending baseline model: None
+2026-09-23 21:48:50,657 [INFO] app.agents.critic_agent: All baseline models completed. Critic reviewing feature engineering opportunity...
+2026-09-23 21:48:52,918 [WARNING] app.agents.critic_agent: Critic requested another baseline after all baselines were completed.
+2026-09-23 21:48:52,918 [INFO] app.agents.critic_agent: Converting invalid baseline continuation into feature engineering.
+2026-09-23 21:48:52,918 [INFO] app.agents.critic_agent: Decision: feature_engineering
+2026-09-23 21:48:52,918 [INFO] app.agents.critic_agent: Experiment type: feature_engineering
+2026-09-23 21:48:52,918 [INFO] app.agents.critic_agent: Model: Random Forest
+2026-09-23 21:48:52,918 [INFO] app.agents.critic_agent: Feature type: numeric_interaction
+2026-09-23 21:48:52,918 [INFO] app.agents.critic_agent: Recommendation: Run numeric_interaction feature engineering with Random Forest.
+2026-09-23 21:48:52,919 [INFO] app.supervisor: --- SUPERVISOR ---
+2026-09-23 21:48:52,920 [INFO] app.supervisor: Critic decision: feature_engineering
+2026-09-23 21:48:52,920 [INFO] app.supervisor: Experiment type: feature_engineering
+2026-09-23 21:48:52,920 [INFO] app.supervisor: Supervisor iteration: 3/8
+2026-09-23 21:48:52,920 [INFO] app.supervisor: Routing to feature engineering agent.
+2026-09-23 21:48:52,921 [INFO] app.agents.feature_engineering_agent: --- FEATURE ENGINEERING AGENT ---
+2026-09-23 21:48:52,929 [INFO] app.agents.feature_engineering_agent: Numeric columns: ['SeniorCitizen', 'tenure', 'MonthlyCharges', 'TotalCharges']
+2026-09-23 21:48:52,929 [INFO] app.agents.feature_engineering_agent: Categorical columns: ['PhoneService', 'MultipleLines', 'OnlineSecurity', 'OnlineBackup', 'DeviceProtection', 'TechSupport', 'StreamingTV', 'StreamingMovies', 'Contract', 'PaymentMethod']
+2026-09-23 21:48:52,929 [INFO] app.agents.feature_engineering_agent: Unique feature transformations already tested: 0
+2026-09-23 21:48:52,929 [INFO] app.agents.feature_engineering_agent: Critic requested model: Random Forest
+2026-09-23 21:48:52,929 [INFO] app.agents.feature_engineering_agent: Critic requested feature type: numeric_interaction
+2026-09-23 21:48:52,930 [INFO] app.agents.feature_engineering_agent: Requested feature type: numeric_interaction
+2026-09-23 21:48:52,930 [INFO] app.agents.feature_engineering_agent: Valid candidates for numeric_interaction: 12
+2026-09-23 21:48:52,930 [INFO] app.agents.feature_engineering_agent: Selected model: Random Forest
+2026-09-23 21:48:52,930 [INFO] app.agents.feature_engineering_agent: Feature type: numeric_interaction
+2026-09-23 21:48:52,930 [INFO] app.agents.feature_engineering_agent: Source columns: ['SeniorCitizen', 'tenure']
+2026-09-23 21:48:52,930 [INFO] app.agents.feature_engineering_agent: Feature name: numeric_interaction__SeniorCitizen__tenure
+2026-09-23 21:48:52,930 [INFO] app.agents.feature_engineering_agent: Feature selection followed the Critic's requested transformation.
+2026-09-23 21:48:52,932 [INFO] app.agents.experiment_agent: --- EXPERIMENT AGENT ---
+2026-09-23 21:48:52,932 [INFO] app.agents.experiment_agent: Applying feature engineering: numeric_interaction
+2026-09-23 21:48:52,940 [INFO] app.agents.experiment_agent: Running model: Random Forest
+2026-09-23 21:48:53,902 [INFO] app.agents.experiment_agent: Experiment did not improve best f1: 0.739535
+2026-09-23 21:48:53,902 [INFO] app.agents.experiment_agent: Feature engineering experiment result: {'model': 'Random Forest', 'problem_type': 'classification', 'train_samples': 603, 'val_samples': 201, 'applied_params': {}, 'rejected_params': [], 'cross_validation': {'folds': 5, 'scoring': 'f1_weighted', 'mean': 0.7391869485463077, 'std': 0.034585514569247015}, 'accuracy': 0.7860696517412935, 'f1': 0.7395350175052494, 'experiment_type': 'feature_engineering', 'experiment_id': 'feature_engineering::numeric_interaction::SeniorCitizen::tenure::Random Forest', 'feature_type': 'numeric_interaction', 'feature_name': 'numeric_interaction__SeniorCitizen__tenure', 'source_columns': ['SeniorCitizen', 'tenure'], 'note': 'Feature transformation was created successfully.', 'metric_name': 'f1', 'validation_metric': 0.7395350175052494, 'improvement': -0.0559565511998974, 'is_best': False}
+2026-09-23 21:48:53,902 [INFO] app.agents.evaluation_agent: --- EVALUATION AGENT ---
+2026-09-23 21:48:53,903 [INFO] app.agents.evaluation_agent: Best model: Logistic Regression
+2026-09-23 21:48:53,903 [INFO] app.agents.evaluation_agent: Best f1 (validation): 0.7954915687051468
+2026-09-23 21:48:53,903 [INFO] app.agents.critic_agent: --- CRITIC AGENT ---
+2026-09-23 21:48:53,903 [INFO] app.agents.critic_agent: Feature engineering attempts: 1/3
+2026-09-23 21:48:53,903 [INFO] app.agents.critic_agent: Completed baseline models: ['Gradient Boosting', 'Logistic Regression', 'Random Forest']
+2026-09-23 21:48:53,903 [INFO] app.agents.critic_agent: Pending baseline model: None
+2026-09-23 21:48:53,903 [INFO] app.agents.critic_agent: All baseline models completed. Critic reviewing feature engineering opportunity...
+2026-09-23 21:48:56,003 [INFO] app.agents.critic_agent: Decision: feature_engineering
+2026-09-23 21:48:56,003 [INFO] app.agents.critic_agent: Experiment type: feature_engineering
+2026-09-23 21:48:56,003 [INFO] app.agents.critic_agent: Model: Gradient Boosting
+2026-09-23 21:48:56,003 [INFO] app.agents.critic_agent: Feature type: numeric_interaction
+2026-09-23 21:48:56,003 [INFO] app.agents.critic_agent: Recommendation: Run a feature engineering experiment using Gradient Boosting with the numeric_interaction transformation.
+2026-09-23 21:48:56,004 [INFO] app.supervisor: --- SUPERVISOR ---
+2026-09-23 21:48:56,004 [INFO] app.supervisor: Critic decision: feature_engineering
+2026-09-23 21:48:56,005 [INFO] app.supervisor: Experiment type: feature_engineering
+2026-09-23 21:48:56,005 [INFO] app.supervisor: Supervisor iteration: 4/8
+2026-09-23 21:48:56,005 [INFO] app.supervisor: Routing to feature engineering agent.
+2026-09-23 21:48:56,006 [INFO] app.agents.feature_engineering_agent: --- FEATURE ENGINEERING AGENT ---
+2026-09-23 21:48:56,015 [INFO] app.agents.feature_engineering_agent: Numeric columns: ['SeniorCitizen', 'tenure', 'MonthlyCharges', 'TotalCharges']
+2026-09-23 21:48:56,016 [INFO] app.agents.feature_engineering_agent: Categorical columns: ['PhoneService', 'MultipleLines', 'OnlineSecurity', 'OnlineBackup', 'DeviceProtection', 'TechSupport', 'StreamingTV', 'StreamingMovies', 'Contract', 'PaymentMethod']
+2026-09-23 21:48:56,016 [INFO] app.agents.feature_engineering_agent: Unique feature transformations already tested: 1
+2026-09-23 21:48:56,016 [INFO] app.agents.feature_engineering_agent: Critic requested model: Gradient Boosting
+2026-09-23 21:48:56,016 [INFO] app.agents.feature_engineering_agent: Critic requested feature type: numeric_interaction
+2026-09-23 21:48:56,017 [INFO] app.agents.feature_engineering_agent: Requested feature type: numeric_interaction
+2026-09-23 21:48:56,017 [INFO] app.agents.feature_engineering_agent: Valid candidates for numeric_interaction: 12
+2026-09-23 21:48:56,017 [INFO] app.agents.feature_engineering_agent: Selected model: Gradient Boosting
+2026-09-23 21:48:56,017 [INFO] app.agents.feature_engineering_agent: Feature type: numeric_interaction
+2026-09-23 21:48:56,017 [INFO] app.agents.feature_engineering_agent: Source columns: ['SeniorCitizen', 'MonthlyCharges']
+2026-09-23 21:48:56,017 [INFO] app.agents.feature_engineering_agent: Feature name: numeric_interaction__SeniorCitizen__MonthlyCharges
+2026-09-23 21:48:56,017 [INFO] app.agents.feature_engineering_agent: Feature selection followed the Critic's requested transformation.
+2026-09-23 21:48:56,020 [INFO] app.agents.experiment_agent: --- EXPERIMENT AGENT ---
+2026-09-23 21:48:56,021 [INFO] app.agents.experiment_agent: Applying feature engineering: numeric_interaction
+2026-09-23 21:48:56,031 [INFO] app.agents.experiment_agent: Running model: Gradient Boosting
+2026-09-23 21:48:57,043 [INFO] app.agents.experiment_agent: Experiment did not improve best f1: 0.752893
+2026-09-23 21:48:57,044 [INFO] app.agents.experiment_agent: Feature engineering experiment result: {'model': 'Gradient Boosting', 'problem_type': 'classification', 'train_samples': 603, 'val_samples': 201, 'applied_params': {}, 'rejected_params': [], 'cross_validation': {'folds': 5, 'scoring': 'f1_weighted', 'mean': 0.7430625158748373, 'std': 0.029928221468896864}, 'accuracy': 0.7810945273631841, 'f1': 0.7528928096397196, 'experiment_type': 'feature_engineering', 'experiment_id': 'feature_engineering::numeric_interaction::SeniorCitizen::MonthlyCharges::Gradient Boosting', 'feature_type': 'numeric_interaction', 'feature_name': 'numeric_interaction__SeniorCitizen__MonthlyCharges', 'source_columns': ['SeniorCitizen', 'MonthlyCharges'], 'note': 'Feature transformation was created successfully.', 'metric_name': 'f1', 'validation_metric': 0.7528928096397196, 'improvement': -0.042598759065427205, 'is_best': False}
+2026-09-23 21:48:57,044 [INFO] app.agents.evaluation_agent: --- EVALUATION AGENT ---
+2026-09-23 21:48:57,045 [INFO] app.agents.evaluation_agent: Best model: Logistic Regression
+2026-09-23 21:48:57,045 [INFO] app.agents.evaluation_agent: Best f1 (validation): 0.7954915687051468
+2026-09-23 21:48:57,045 [INFO] app.agents.critic_agent: --- CRITIC AGENT ---
+2026-09-23 21:48:57,045 [INFO] app.agents.critic_agent: Feature engineering attempts: 2/3
+2026-09-23 21:48:57,045 [INFO] app.agents.critic_agent: Completed baseline models: ['Gradient Boosting', 'Logistic Regression', 'Random Forest']
+2026-09-23 21:48:57,045 [INFO] app.agents.critic_agent: Pending baseline model: None
+2026-09-23 21:48:57,045 [INFO] app.agents.critic_agent: All baseline models completed. Critic reviewing feature engineering opportunity...
+2026-09-23 21:48:59,468 [INFO] app.agents.critic_agent: Decision: feature_engineering
+2026-09-23 21:48:59,469 [INFO] app.agents.critic_agent: Experiment type: feature_engineering
+2026-09-23 21:48:59,469 [INFO] app.agents.critic_agent: Model: Logistic Regression
+2026-09-23 21:48:59,469 [INFO] app.agents.critic_agent: Feature type: numeric_ratio
+2026-09-23 21:48:59,469 [INFO] app.agents.critic_agent: Recommendation: Run a feature engineering experiment using Logistic Regression with the numeric_ratio transformation.
+2026-09-23 21:48:59,470 [INFO] app.supervisor: --- SUPERVISOR ---
+2026-09-23 21:48:59,470 [INFO] app.supervisor: Critic decision: feature_engineering
+2026-09-23 21:48:59,470 [INFO] app.supervisor: Experiment type: feature_engineering
+2026-09-23 21:48:59,470 [INFO] app.supervisor: Supervisor iteration: 5/8
+2026-09-23 21:48:59,470 [INFO] app.supervisor: Routing to feature engineering agent.
+2026-09-23 21:48:59,472 [INFO] app.agents.feature_engineering_agent: --- FEATURE ENGINEERING AGENT ---
+2026-09-23 21:48:59,479 [INFO] app.agents.feature_engineering_agent: Numeric columns: ['SeniorCitizen', 'tenure', 'MonthlyCharges', 'TotalCharges']
+2026-09-23 21:48:59,480 [INFO] app.agents.feature_engineering_agent: Categorical columns: ['PhoneService', 'MultipleLines', 'OnlineSecurity', 'OnlineBackup', 'DeviceProtection', 'TechSupport', 'StreamingTV', 'StreamingMovies', 'Contract', 'PaymentMethod']
+2026-09-23 21:48:59,480 [INFO] app.agents.feature_engineering_agent: Unique feature transformations already tested: 2
+2026-09-23 21:48:59,480 [INFO] app.agents.feature_engineering_agent: Critic requested model: Logistic Regression
+2026-09-23 21:48:59,480 [INFO] app.agents.feature_engineering_agent: Critic requested feature type: numeric_ratio
+2026-09-23 21:48:59,481 [INFO] app.agents.feature_engineering_agent: Requested feature type: numeric_ratio
+2026-09-23 21:48:59,481 [INFO] app.agents.feature_engineering_agent: Valid candidates for numeric_ratio: 12
+2026-09-23 21:48:59,481 [INFO] app.agents.feature_engineering_agent: Selected model: Logistic Regression
+2026-09-23 21:48:59,481 [INFO] app.agents.feature_engineering_agent: Feature type: numeric_ratio
+2026-09-23 21:48:59,481 [INFO] app.agents.feature_engineering_agent: Source columns: ['SeniorCitizen', 'tenure']
+2026-09-23 21:48:59,481 [INFO] app.agents.feature_engineering_agent: Feature name: numeric_ratio__SeniorCitizen__tenure
+2026-09-23 21:48:59,481 [INFO] app.agents.feature_engineering_agent: Feature selection followed the Critic's requested transformation.
+2026-09-23 21:48:59,483 [INFO] app.agents.experiment_agent: --- EXPERIMENT AGENT ---
+2026-09-23 21:48:59,483 [INFO] app.agents.experiment_agent: Applying feature engineering: numeric_ratio
+2026-09-23 21:48:59,492 [INFO] app.agents.experiment_agent: Running model: Logistic Regression
+2026-09-23 21:48:59,674 [INFO] app.agents.experiment_agent: Experiment did not improve best f1: 0.795492
+2026-09-23 21:48:59,675 [INFO] app.agents.experiment_agent: Feature engineering experiment result: {'model': 'Logistic Regression', 'problem_type': 'classification', 'train_samples': 603, 'val_samples': 201, 'applied_params': {}, 'rejected_params': [], 'cross_validation': {'folds': 5, 'scoring': 'f1_weighted', 'mean': 0.7778879153171834, 'std': 0.02762786834149155}, 'accuracy': 0.8258706467661692, 'f1': 0.7954915687051468, 'experiment_type': 'feature_engineering', 'experiment_id': 'feature_engineering::numeric_ratio::SeniorCitizen::tenure::Logistic Regression', 'feature_type': 'numeric_ratio', 'feature_name': 'numeric_ratio__SeniorCitizen__tenure', 'source_columns': ['SeniorCitizen', 'tenure'], 'note': 'Feature transformation was created successfully.', 'metric_name': 'f1', 'validation_metric': 0.7954915687051468, 'improvement': 0.0, 'is_best': False}
+2026-09-23 21:48:59,676 [INFO] app.agents.evaluation_agent: --- EVALUATION AGENT ---
+2026-09-23 21:48:59,676 [INFO] app.agents.evaluation_agent: Best model: Logistic Regression
+2026-09-23 21:48:59,676 [INFO] app.agents.evaluation_agent: Best f1 (validation): 0.7954915687051468
+2026-09-23 21:48:59,676 [INFO] app.agents.critic_agent: --- CRITIC AGENT ---
+2026-09-23 21:48:59,676 [INFO] app.agents.critic_agent: Feature engineering attempts: 3/3
+2026-09-23 21:48:59,677 [INFO] app.agents.critic_agent: Completed baseline models: ['Gradient Boosting', 'Logistic Regression', 'Random Forest']
+2026-09-23 21:48:59,677 [INFO] app.agents.critic_agent: Pending baseline model: None
+2026-09-23 21:48:59,677 [INFO] app.agents.critic_agent: All baselines completed and feature engineering budget exhausted. Forcing finish.
+2026-09-23 21:48:59,677 [INFO] app.supervisor: --- SUPERVISOR ---
+2026-09-23 21:48:59,677 [INFO] app.supervisor: Critic decision: finish
+2026-09-23 21:48:59,677 [INFO] app.supervisor: Experiment type: none
+2026-09-23 21:48:59,677 [INFO] app.supervisor: Supervisor iteration: 6/8
+2026-09-23 21:48:59,677 [INFO] app.supervisor: Research finished.
+2026-09-23 21:48:59,678 [INFO] app.agents.final_report_agent: --- FINAL REPORT AGENT ---
+2026-09-23 21:48:59,678 [INFO] app.agents.final_report_agent: Final model: Logistic Regression
+2026-09-23 21:48:59,678 [INFO] app.agents.final_report_agent: Running final held-out evaluation on train + validation versus test.
+2026-09-23 21:48:59,729 [INFO] app.agents.final_report_agent: Final report generated.
+2026-09-23 21:48:59,734 [INFO] __main__: Run snapshot saved to: runs\run_20260923_214859_731308.json

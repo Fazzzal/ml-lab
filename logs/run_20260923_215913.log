@@ -1,0 +1,181 @@
+2026-09-23 21:59:15,773 [INFO] __main__: Starting ML Research Lab...
+2026-09-23 21:59:15,775 [INFO] app.agents.data_agent: --- DATA AGENT ---
+2026-09-23 21:59:15,776 [INFO] app.agents.data_agent: Profiling dataset: data/student_performance_regression.csv
+2026-09-23 21:59:15,790 [INFO] app.agents.data_agent: Dataset profiling complete.
+2026-09-23 21:59:15,791 [INFO] app.agents.feature_agent: --- FEATURE AGENT ---
+2026-09-23 21:59:15,799 [INFO] app.agents.feature_agent: Identifier columns: []
+2026-09-23 21:59:15,799 [INFO] app.agents.feature_agent: Numeric features: ['study_hours', 'attendance', 'assignment_score', 'midterm_score', 'project_score', 'sleep_hours', 'previous_gpa', 'participation']
+2026-09-23 21:59:15,799 [INFO] app.agents.feature_agent: Categorical features: []
+2026-09-23 21:59:15,801 [INFO] app.agents.feature_agent: Missing-value columns: []
+2026-09-23 21:59:15,801 [INFO] app.agents.feature_agent: Feature analysis complete. Recommendations: 8
+2026-09-23 21:59:15,801 [INFO] app.agents.research_agent: --- RESEARCH AGENT ---
+2026-09-23 21:59:15,801 [INFO] app.agents.research_agent: Generating research plan...
+2026-09-23 21:59:17,172 [INFO] app.agents.research_agent: Problem type: regression
+2026-09-23 21:59:17,172 [INFO] app.agents.research_agent: Models: ['Linear Regression', 'Random Forest Regressor', 'Gradient Boosting Regressor']
+2026-09-23 21:59:17,172 [INFO] app.agents.research_agent: Reasoning: The target column 'final_score' is a continuous numeric variable, indicating a regression problem. To establish a robust baseline we will evaluate three modeling approaches: a simple linear model (Linear Regression) to capture linear relationships, a bagging tree ensemble (Random Forest Regressor) to model non-linear interactions and reduce variance, and a boosting tree ensemble (Gradient Boosting Regressor) to iteratively improve performance on residual errors. The execution layer will handle train/validation/test splitting, scaling of numeric features, and compute RMSE and R2 for each model, providing comparable baseline metrics without hyperparameter tuning.
+2026-09-23 21:59:17,173 [INFO] app.agents.split_agent: --- SPLIT AGENT ---
+2026-09-23 21:59:17,192 [INFO] app.agents.split_agent: Split sizes -> train: 1200, val: 400, test: 400 (test is held out until final_report_agent)
+2026-09-23 21:59:17,192 [INFO] app.agents.experiment_agent: --- EXPERIMENT AGENT ---
+2026-09-23 21:59:17,193 [INFO] app.agents.experiment_agent: Running proposed baseline: Linear Regression
+2026-09-23 21:59:17,276 [INFO] app.agents.experiment_agent: New best experiment: rmse=2.180097
+2026-09-23 21:59:17,276 [INFO] app.agents.experiment_agent: Experiment result: {'model': 'Linear Regression', 'problem_type': 'regression', 'train_samples': 1200, 'val_samples': 400, 'applied_params': {}, 'rejected_params': [], 'cross_validation': {'folds': 5, 'scoring': 'neg_root_mean_squared_error', 'mean': -2.3170033050911414, 'std': 0.04685201195327751}, 'rmse': 2.1800966231149403, 'r2': 0.7438422548938883, 'experiment_type': 'baseline_model', 'experiment_id': 'baseline_model::Linear Regression', 'metric_name': 'rmse', 'validation_metric': 2.1800966231149403, 'improvement': None, 'is_best': True}
+2026-09-23 21:59:17,277 [INFO] app.agents.evaluation_agent: --- EVALUATION AGENT ---
+2026-09-23 21:59:17,277 [INFO] app.agents.evaluation_agent: Best model: Linear Regression
+2026-09-23 21:59:17,277 [INFO] app.agents.evaluation_agent: Best rmse (validation): 2.1800966231149403
+2026-09-23 21:59:17,278 [INFO] app.agents.critic_agent: --- CRITIC AGENT ---
+2026-09-23 21:59:17,278 [INFO] app.agents.critic_agent: Feature engineering attempts: 0/3
+2026-09-23 21:59:17,278 [INFO] app.agents.critic_agent: Completed baseline models: ['Linear Regression']
+2026-09-23 21:59:17,278 [INFO] app.agents.critic_agent: Pending baseline model: Random Forest Regressor
+2026-09-23 21:59:17,278 [INFO] app.agents.critic_agent: Deterministically selecting pending baseline: Random Forest Regressor
+2026-09-23 21:59:17,279 [INFO] app.supervisor: --- SUPERVISOR ---
+2026-09-23 21:59:17,279 [INFO] app.supervisor: Critic decision: continue
+2026-09-23 21:59:17,279 [INFO] app.supervisor: Experiment type: baseline_model
+2026-09-23 21:59:17,279 [INFO] app.supervisor: Supervisor iteration: 1/8
+2026-09-23 21:59:17,279 [INFO] app.supervisor: Routing to experiment agent: Random Forest Regressor
+2026-09-23 21:59:17,280 [INFO] app.agents.experiment_agent: --- EXPERIMENT AGENT ---
+2026-09-23 21:59:17,280 [INFO] app.agents.experiment_agent: Running proposed baseline: Random Forest Regressor
+2026-09-23 21:59:19,710 [INFO] app.agents.experiment_agent: Experiment did not improve best rmse: 2.624118
+2026-09-23 21:59:19,710 [INFO] app.agents.experiment_agent: Experiment result: {'model': 'Random Forest Regressor', 'problem_type': 'regression', 'train_samples': 1200, 'val_samples': 400, 'applied_params': {}, 'rejected_params': [], 'cross_validation': {'folds': 5, 'scoring': 'neg_root_mean_squared_error', 'mean': -2.750820778229152, 'std': 0.09515939615316193}, 'rmse': 2.6241178968800263, 'r2': 0.6288728781524786, 'experiment_type': 'baseline_model', 'experiment_id': 'baseline_model::Random Forest Regressor', 'metric_name': 'rmse', 'validation_metric': 2.6241178968800263, 'improvement': -0.44402127376508593, 'is_best': False}
+2026-09-23 21:59:19,711 [INFO] app.agents.evaluation_agent: --- EVALUATION AGENT ---
+2026-09-23 21:59:19,711 [INFO] app.agents.evaluation_agent: Best model: Linear Regression
+2026-09-23 21:59:19,711 [INFO] app.agents.evaluation_agent: Best rmse (validation): 2.1800966231149403
+2026-09-23 21:59:19,712 [INFO] app.agents.critic_agent: --- CRITIC AGENT ---
+2026-09-23 21:59:19,712 [INFO] app.agents.critic_agent: Feature engineering attempts: 0/3
+2026-09-23 21:59:19,712 [INFO] app.agents.critic_agent: Completed baseline models: ['Linear Regression', 'Random Forest Regressor']
+2026-09-23 21:59:19,712 [INFO] app.agents.critic_agent: Pending baseline model: Gradient Boosting Regressor
+2026-09-23 21:59:19,712 [INFO] app.agents.critic_agent: Deterministically selecting pending baseline: Gradient Boosting Regressor
+2026-09-23 21:59:19,712 [INFO] app.supervisor: --- SUPERVISOR ---
+2026-09-23 21:59:19,712 [INFO] app.supervisor: Critic decision: continue
+2026-09-23 21:59:19,712 [INFO] app.supervisor: Experiment type: baseline_model
+2026-09-23 21:59:19,712 [INFO] app.supervisor: Supervisor iteration: 2/8
+2026-09-23 21:59:19,712 [INFO] app.supervisor: Routing to experiment agent: Gradient Boosting Regressor
+2026-09-23 21:59:19,713 [INFO] app.agents.experiment_agent: --- EXPERIMENT AGENT ---
+2026-09-23 21:59:19,713 [INFO] app.agents.experiment_agent: Running proposed baseline: Gradient Boosting Regressor
+2026-09-23 21:59:21,057 [INFO] app.agents.experiment_agent: Experiment did not improve best rmse: 2.457644
+2026-09-23 21:59:21,057 [INFO] app.agents.experiment_agent: Experiment result: {'model': 'Gradient Boosting Regressor', 'problem_type': 'regression', 'train_samples': 1200, 'val_samples': 400, 'applied_params': {}, 'rejected_params': [], 'cross_validation': {'folds': 5, 'scoring': 'neg_root_mean_squared_error', 'mean': -2.5704499248969794, 'std': 0.0877320313274491}, 'rmse': 2.457644255009927, 'r2': 0.6744677313825886, 'experiment_type': 'baseline_model', 'experiment_id': 'baseline_model::Gradient Boosting Regressor', 'metric_name': 'rmse', 'validation_metric': 2.457644255009927, 'improvement': -0.27754763189498677, 'is_best': False}
+2026-09-23 21:59:21,058 [INFO] app.agents.evaluation_agent: --- EVALUATION AGENT ---
+2026-09-23 21:59:21,058 [INFO] app.agents.evaluation_agent: Best model: Linear Regression
+2026-09-23 21:59:21,058 [INFO] app.agents.evaluation_agent: Best rmse (validation): 2.1800966231149403
+2026-09-23 21:59:21,058 [INFO] app.agents.critic_agent: --- CRITIC AGENT ---
+2026-09-23 21:59:21,059 [INFO] app.agents.critic_agent: Feature engineering attempts: 0/3
+2026-09-23 21:59:21,059 [INFO] app.agents.critic_agent: Completed baseline models: ['Gradient Boosting Regressor', 'Linear Regression', 'Random Forest Regressor']
+2026-09-23 21:59:21,059 [INFO] app.agents.critic_agent: Pending baseline model: None
+2026-09-23 21:59:21,059 [INFO] app.agents.critic_agent: All baseline models completed. Critic reviewing feature engineering opportunity...
+2026-09-23 21:59:22,582 [INFO] app.agents.critic_agent: Decision: feature_engineering
+2026-09-23 21:59:22,583 [INFO] app.agents.critic_agent: Experiment type: feature_engineering
+2026-09-23 21:59:22,583 [INFO] app.agents.critic_agent: Model: Random Forest Regressor
+2026-09-23 21:59:22,583 [INFO] app.agents.critic_agent: Feature type: numeric_interaction
+2026-09-23 21:59:22,583 [INFO] app.agents.critic_agent: Recommendation: 
+2026-09-23 21:59:22,584 [INFO] app.supervisor: --- SUPERVISOR ---
+2026-09-23 21:59:22,584 [INFO] app.supervisor: Critic decision: feature_engineering
+2026-09-23 21:59:22,584 [INFO] app.supervisor: Experiment type: feature_engineering
+2026-09-23 21:59:22,584 [INFO] app.supervisor: Supervisor iteration: 3/8
+2026-09-23 21:59:22,584 [INFO] app.supervisor: Routing to feature engineering agent.
+2026-09-23 21:59:22,585 [INFO] app.agents.feature_engineering_agent: --- FEATURE ENGINEERING AGENT ---
+2026-09-23 21:59:22,596 [INFO] app.agents.feature_engineering_agent: Numeric columns: ['study_hours', 'attendance', 'assignment_score', 'midterm_score', 'project_score', 'sleep_hours', 'previous_gpa', 'participation']
+2026-09-23 21:59:22,597 [INFO] app.agents.feature_engineering_agent: Categorical columns: []
+2026-09-23 21:59:22,597 [INFO] app.agents.feature_engineering_agent: Unique feature transformations already tested: 0
+2026-09-23 21:59:22,597 [INFO] app.agents.feature_engineering_agent: Critic requested model: Random Forest Regressor
+2026-09-23 21:59:22,597 [INFO] app.agents.feature_engineering_agent: Critic requested feature type: numeric_interaction
+2026-09-23 21:59:22,598 [INFO] app.agents.feature_engineering_agent: Requested feature type: numeric_interaction
+2026-09-23 21:59:22,598 [INFO] app.agents.feature_engineering_agent: Valid candidates for numeric_interaction: 56
+2026-09-23 21:59:22,598 [INFO] app.agents.feature_engineering_agent: Selected model: Random Forest Regressor
+2026-09-23 21:59:22,598 [INFO] app.agents.feature_engineering_agent: Feature type: numeric_interaction
+2026-09-23 21:59:22,598 [INFO] app.agents.feature_engineering_agent: Source columns: ['study_hours', 'attendance']
+2026-09-23 21:59:22,598 [INFO] app.agents.feature_engineering_agent: Feature name: numeric_interaction__study_hours__attendance
+2026-09-23 21:59:22,598 [INFO] app.agents.feature_engineering_agent: Feature selection followed the Critic's requested transformation.
+2026-09-23 21:59:22,599 [INFO] app.agents.experiment_agent: --- EXPERIMENT AGENT ---
+2026-09-23 21:59:22,599 [INFO] app.agents.experiment_agent: Applying feature engineering: numeric_interaction
+2026-09-23 21:59:22,612 [INFO] app.agents.experiment_agent: Running model: Random Forest Regressor
+2026-09-23 21:59:25,201 [INFO] app.agents.experiment_agent: Experiment did not improve best rmse: 2.557037
+2026-09-23 21:59:25,201 [INFO] app.agents.experiment_agent: Feature engineering experiment result: {'model': 'Random Forest Regressor', 'problem_type': 'regression', 'train_samples': 1200, 'val_samples': 400, 'applied_params': {}, 'rejected_params': [], 'cross_validation': {'folds': 5, 'scoring': 'neg_root_mean_squared_error', 'mean': -2.698797939103533, 'std': 0.09050195042816993}, 'rmse': 2.5570369190126714, 'r2': 0.6476047837971005, 'experiment_type': 'feature_engineering', 'experiment_id': 'feature_engineering::numeric_interaction::study_hours::attendance::Random Forest Regressor', 'feature_type': 'numeric_interaction', 'feature_name': 'numeric_interaction__study_hours__attendance', 'source_columns': ['study_hours', 'attendance'], 'note': 'Feature transformation was created successfully.', 'metric_name': 'rmse', 'validation_metric': 2.5570369190126714, 'improvement': -0.37694029589773104, 'is_best': False}
+2026-09-23 21:59:25,202 [INFO] app.agents.evaluation_agent: --- EVALUATION AGENT ---
+2026-09-23 21:59:25,202 [INFO] app.agents.evaluation_agent: Best model: Linear Regression
+2026-09-23 21:59:25,202 [INFO] app.agents.evaluation_agent: Best rmse (validation): 2.1800966231149403
+2026-09-23 21:59:25,203 [INFO] app.agents.critic_agent: --- CRITIC AGENT ---
+2026-09-23 21:59:25,203 [INFO] app.agents.critic_agent: Feature engineering attempts: 1/3
+2026-09-23 21:59:25,203 [INFO] app.agents.critic_agent: Completed baseline models: ['Gradient Boosting Regressor', 'Linear Regression', 'Random Forest Regressor']
+2026-09-23 21:59:25,203 [INFO] app.agents.critic_agent: Pending baseline model: None
+2026-09-23 21:59:25,204 [INFO] app.agents.critic_agent: All baseline models completed. Critic reviewing feature engineering opportunity...
+2026-09-23 21:59:26,922 [INFO] app.agents.critic_agent: Decision: feature_engineering
+2026-09-23 21:59:26,922 [INFO] app.agents.critic_agent: Experiment type: feature_engineering
+2026-09-23 21:59:26,922 [INFO] app.agents.critic_agent: Model: Gradient Boosting Regressor
+2026-09-23 21:59:26,922 [INFO] app.agents.critic_agent: Feature type: numeric_interaction
+2026-09-23 21:59:26,922 [INFO] app.agents.critic_agent: Recommendation: Proceed with the proposed feature engineering experiment.
+2026-09-23 21:59:26,923 [INFO] app.supervisor: --- SUPERVISOR ---
+2026-09-23 21:59:26,923 [INFO] app.supervisor: Critic decision: feature_engineering
+2026-09-23 21:59:26,923 [INFO] app.supervisor: Experiment type: feature_engineering
+2026-09-23 21:59:26,923 [INFO] app.supervisor: Supervisor iteration: 4/8
+2026-09-23 21:59:26,923 [INFO] app.supervisor: Routing to feature engineering agent.
+2026-09-23 21:59:26,924 [INFO] app.agents.feature_engineering_agent: --- FEATURE ENGINEERING AGENT ---
+2026-09-23 21:59:26,935 [INFO] app.agents.feature_engineering_agent: Numeric columns: ['study_hours', 'attendance', 'assignment_score', 'midterm_score', 'project_score', 'sleep_hours', 'previous_gpa', 'participation']
+2026-09-23 21:59:26,936 [INFO] app.agents.feature_engineering_agent: Categorical columns: []
+2026-09-23 21:59:26,936 [INFO] app.agents.feature_engineering_agent: Unique feature transformations already tested: 1
+2026-09-23 21:59:26,936 [INFO] app.agents.feature_engineering_agent: Critic requested model: Gradient Boosting Regressor
+2026-09-23 21:59:26,936 [INFO] app.agents.feature_engineering_agent: Critic requested feature type: numeric_interaction
+2026-09-23 21:59:26,936 [INFO] app.agents.feature_engineering_agent: Requested feature type: numeric_interaction
+2026-09-23 21:59:26,936 [INFO] app.agents.feature_engineering_agent: Valid candidates for numeric_interaction: 56
+2026-09-23 21:59:26,936 [INFO] app.agents.feature_engineering_agent: Selected model: Gradient Boosting Regressor
+2026-09-23 21:59:26,936 [INFO] app.agents.feature_engineering_agent: Feature type: numeric_interaction
+2026-09-23 21:59:26,936 [INFO] app.agents.feature_engineering_agent: Source columns: ['study_hours', 'assignment_score']
+2026-09-23 21:59:26,937 [INFO] app.agents.feature_engineering_agent: Feature name: numeric_interaction__study_hours__assignment_score
+2026-09-23 21:59:26,937 [INFO] app.agents.feature_engineering_agent: Feature selection followed the Critic's requested transformation.
+2026-09-23 21:59:26,938 [INFO] app.agents.experiment_agent: --- EXPERIMENT AGENT ---
+2026-09-23 21:59:26,938 [INFO] app.agents.experiment_agent: Applying feature engineering: numeric_interaction
+2026-09-23 21:59:26,946 [INFO] app.agents.experiment_agent: Running model: Gradient Boosting Regressor
+2026-09-23 21:59:28,392 [INFO] app.agents.experiment_agent: Experiment did not improve best rmse: 2.400108
+2026-09-23 21:59:28,392 [INFO] app.agents.experiment_agent: Feature engineering experiment result: {'model': 'Gradient Boosting Regressor', 'problem_type': 'regression', 'train_samples': 1200, 'val_samples': 400, 'applied_params': {}, 'rejected_params': [], 'cross_validation': {'folds': 5, 'scoring': 'neg_root_mean_squared_error', 'mean': -2.5249320245402673, 'std': 0.10178657119564079}, 'rmse': 2.4001075264720853, 'r2': 0.689531599046553, 'experiment_type': 'feature_engineering', 'experiment_id': 'feature_engineering::numeric_interaction::study_hours::assignment_score::Gradient Boosting Regressor', 'feature_type': 'numeric_interaction', 'feature_name': 'numeric_interaction__study_hours__assignment_score', 'source_columns': ['study_hours', 'assignment_score'], 'note': 'Feature transformation was created successfully.', 'metric_name': 'rmse', 'validation_metric': 2.4001075264720853, 'improvement': -0.2200109033571449, 'is_best': False}
+2026-09-23 21:59:28,393 [INFO] app.agents.evaluation_agent: --- EVALUATION AGENT ---
+2026-09-23 21:59:28,393 [INFO] app.agents.evaluation_agent: Best model: Linear Regression
+2026-09-23 21:59:28,393 [INFO] app.agents.evaluation_agent: Best rmse (validation): 2.1800966231149403
+2026-09-23 21:59:28,393 [INFO] app.agents.critic_agent: --- CRITIC AGENT ---
+2026-09-23 21:59:28,393 [INFO] app.agents.critic_agent: Feature engineering attempts: 2/3
+2026-09-23 21:59:28,393 [INFO] app.agents.critic_agent: Completed baseline models: ['Gradient Boosting Regressor', 'Linear Regression', 'Random Forest Regressor']
+2026-09-23 21:59:28,393 [INFO] app.agents.critic_agent: Pending baseline model: None
+2026-09-23 21:59:28,394 [INFO] app.agents.critic_agent: All baseline models completed. Critic reviewing feature engineering opportunity...
+2026-09-23 21:59:30,461 [INFO] app.agents.critic_agent: Decision: feature_engineering
+2026-09-23 21:59:30,461 [INFO] app.agents.critic_agent: Experiment type: feature_engineering
+2026-09-23 21:59:30,461 [INFO] app.agents.critic_agent: Model: Linear Regression
+2026-09-23 21:59:30,461 [INFO] app.agents.critic_agent: Feature type: numeric_log
+2026-09-23 21:59:30,461 [INFO] app.agents.critic_agent: Recommendation: Proceed with a Linear Regression model using the numeric_log feature transformation.
+2026-09-23 21:59:30,462 [INFO] app.supervisor: --- SUPERVISOR ---
+2026-09-23 21:59:30,463 [INFO] app.supervisor: Critic decision: feature_engineering
+2026-09-23 21:59:30,463 [INFO] app.supervisor: Experiment type: feature_engineering
+2026-09-23 21:59:30,463 [INFO] app.supervisor: Supervisor iteration: 5/8
+2026-09-23 21:59:30,463 [INFO] app.supervisor: Routing to feature engineering agent.
+2026-09-23 21:59:30,464 [INFO] app.agents.feature_engineering_agent: --- FEATURE ENGINEERING AGENT ---
+2026-09-23 21:59:30,474 [INFO] app.agents.feature_engineering_agent: Numeric columns: ['study_hours', 'attendance', 'assignment_score', 'midterm_score', 'project_score', 'sleep_hours', 'previous_gpa', 'participation']
+2026-09-23 21:59:30,475 [INFO] app.agents.feature_engineering_agent: Categorical columns: []
+2026-09-23 21:59:30,475 [INFO] app.agents.feature_engineering_agent: Unique feature transformations already tested: 2
+2026-09-23 21:59:30,476 [INFO] app.agents.feature_engineering_agent: Critic requested model: Linear Regression
+2026-09-23 21:59:30,476 [INFO] app.agents.feature_engineering_agent: Critic requested feature type: numeric_log
+2026-09-23 21:59:30,476 [INFO] app.agents.feature_engineering_agent: Requested feature type: numeric_log
+2026-09-23 21:59:30,476 [INFO] app.agents.feature_engineering_agent: Valid candidates for numeric_log: 8
+2026-09-23 21:59:30,476 [INFO] app.agents.feature_engineering_agent: Selected model: Linear Regression
+2026-09-23 21:59:30,476 [INFO] app.agents.feature_engineering_agent: Feature type: numeric_log
+2026-09-23 21:59:30,476 [INFO] app.agents.feature_engineering_agent: Source columns: ['study_hours']
+2026-09-23 21:59:30,476 [INFO] app.agents.feature_engineering_agent: Feature name: numeric_log__study_hours
+2026-09-23 21:59:30,477 [INFO] app.agents.feature_engineering_agent: Feature selection followed the Critic's requested transformation.
+2026-09-23 21:59:30,478 [INFO] app.agents.experiment_agent: --- EXPERIMENT AGENT ---
+2026-09-23 21:59:30,478 [INFO] app.agents.experiment_agent: Applying feature engineering: numeric_log
+2026-09-23 21:59:30,487 [INFO] app.agents.experiment_agent: Running model: Linear Regression
+2026-09-23 21:59:30,558 [INFO] app.agents.experiment_agent: Experiment did not improve best rmse: 2.182387
+2026-09-23 21:59:30,559 [INFO] app.agents.experiment_agent: Feature engineering experiment result: {'model': 'Linear Regression', 'problem_type': 'regression', 'train_samples': 1200, 'val_samples': 400, 'applied_params': {}, 'rejected_params': [], 'cross_validation': {'folds': 5, 'scoring': 'neg_root_mean_squared_error', 'mean': -2.3170119432606535, 'std': 0.0462144829097253}, 'rmse': 2.182387202516112, 'r2': 0.7433036935378259, 'experiment_type': 'feature_engineering', 'experiment_id': 'feature_engineering::numeric_log::study_hours::Linear Regression', 'feature_type': 'numeric_log', 'feature_name': 'numeric_log__study_hours', 'source_columns': ['study_hours'], 'note': 'Feature transformation was created successfully.', 'metric_name': 'rmse', 'validation_metric': 2.182387202516112, 'improvement': -0.002290579401171833, 'is_best': False}
+2026-09-23 21:59:30,559 [INFO] app.agents.evaluation_agent: --- EVALUATION AGENT ---
+2026-09-23 21:59:30,559 [INFO] app.agents.evaluation_agent: Best model: Linear Regression
+2026-09-23 21:59:30,559 [INFO] app.agents.evaluation_agent: Best rmse (validation): 2.1800966231149403
+2026-09-23 21:59:30,560 [INFO] app.agents.critic_agent: --- CRITIC AGENT ---
+2026-09-23 21:59:30,560 [INFO] app.agents.critic_agent: Feature engineering attempts: 3/3
+2026-09-23 21:59:30,560 [INFO] app.agents.critic_agent: Completed baseline models: ['Gradient Boosting Regressor', 'Linear Regression', 'Random Forest Regressor']
+2026-09-23 21:59:30,560 [INFO] app.agents.critic_agent: Pending baseline model: None
+2026-09-23 21:59:30,560 [INFO] app.agents.critic_agent: All baselines completed and feature engineering budget exhausted. Forcing finish.
+2026-09-23 21:59:30,560 [INFO] app.supervisor: --- SUPERVISOR ---
+2026-09-23 21:59:30,561 [INFO] app.supervisor: Critic decision: finish
+2026-09-23 21:59:30,561 [INFO] app.supervisor: Experiment type: none
+2026-09-23 21:59:30,561 [INFO] app.supervisor: Supervisor iteration: 6/8
+2026-09-23 21:59:30,561 [INFO] app.supervisor: Research finished.
+2026-09-23 21:59:30,561 [INFO] app.agents.final_report_agent: --- FINAL REPORT AGENT ---
+2026-09-23 21:59:30,561 [INFO] app.agents.final_report_agent: Final model: Linear Regression
+2026-09-23 21:59:30,561 [INFO] app.agents.final_report_agent: Running final held-out evaluation on train + validation versus test.
+2026-09-23 21:59:30,584 [INFO] app.agents.final_report_agent: Final report generated.
+2026-09-23 21:59:30,588 [INFO] __main__: Run snapshot saved to: runs\run_20260923_215930_585526.json

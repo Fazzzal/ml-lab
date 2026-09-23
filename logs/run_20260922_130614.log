@@ -1,0 +1,83 @@
+2026-09-22 13:06:16,707 [INFO] __main__: Starting ML Research Lab...
+2026-09-22 13:06:16,709 [INFO] app.agents.data_agent: --- DATA AGENT ---
+2026-09-22 13:06:16,709 [INFO] app.agents.data_agent: Profiling dataset: data/Telco-Customer-Churn.csv
+2026-09-22 13:06:16,719 [INFO] app.agents.data_agent: Dataset profiling complete.
+2026-09-22 13:06:16,719 [INFO] app.agents.feature_agent: --- FEATURE AGENT ---
+2026-09-22 13:06:16,723 [INFO] app.agents.feature_agent: Identifier columns: ['customerID']
+2026-09-22 13:06:16,723 [INFO] app.agents.feature_agent: Numeric features: ['SeniorCitizen', 'tenure', 'MonthlyCharges', 'TotalCharges']
+2026-09-22 13:06:16,723 [INFO] app.agents.feature_agent: Categorical features: ['PhoneService', 'MultipleLines', 'OnlineSecurity', 'OnlineBackup', 'DeviceProtection', 'TechSupport', 'StreamingTV', 'StreamingMovies', 'Contract', 'PaymentMethod']
+2026-09-22 13:06:16,724 [INFO] app.agents.feature_agent: Missing-value columns: ['MultipleLines', 'TotalCharges']
+2026-09-22 13:06:16,724 [INFO] app.agents.feature_agent: Feature analysis complete. Recommendations: 17
+2026-09-22 13:06:16,725 [INFO] app.agents.research_agent: --- RESEARCH AGENT ---
+2026-09-22 13:06:16,725 [INFO] app.agents.research_agent: Generating research plan...
+2026-09-22 13:06:18,471 [ERROR] app.agents.research_agent: Research agent LLM call failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m2wt7kx1esnrt85cxrfw8519` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 198852, Requested 1796. Please try again in 4m39.936s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}. Retrying once...
+2026-09-22 13:06:18,830 [ERROR] app.agents.research_agent: Research agent LLM call failed again: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m2wt7kx1esnrt85cxrfw8519` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 198851, Requested 1834. Please try again in 4m55.92s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}. Falling back to a heuristic default plan so the run can still proceed.
+2026-09-22 13:06:18,831 [INFO] app.agents.research_agent: Problem type: classification
+2026-09-22 13:06:18,831 [INFO] app.agents.research_agent: Models: ['Logistic Regression', 'Random Forest', 'Gradient Boosting']
+2026-09-22 13:06:18,831 [INFO] app.agents.research_agent: Reasoning: LLM call failed twice (Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m2wt7kx1esnrt85cxrfw8519` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 198851, Requested 1834. Please try again in 4m55.92s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}); falling back to a heuristic default plan using all supported models for the target column's inferred problem type.
+2026-09-22 13:06:18,832 [INFO] app.agents.split_agent: --- SPLIT AGENT ---
+2026-09-22 13:06:18,853 [INFO] app.agents.split_agent: Split sizes -> train: 603, val: 201, test: 201 (test is held out until final_report_agent)
+2026-09-22 13:06:18,853 [INFO] app.agents.experiment_agent: --- EXPERIMENT AGENT ---
+2026-09-22 13:06:18,853 [INFO] app.agents.experiment_agent: Running proposed baseline: Logistic Regression
+2026-09-22 13:06:18,982 [INFO] app.agents.experiment_agent: New best experiment: f1=0.795492
+2026-09-22 13:06:18,982 [INFO] app.agents.experiment_agent: Experiment result: {'model': 'Logistic Regression', 'problem_type': 'classification', 'train_samples': 603, 'val_samples': 201, 'applied_params': {}, 'rejected_params': [], 'cross_validation': {'folds': 5, 'scoring': 'f1_weighted', 'mean': 0.7805356345000163, 'std': 0.027544915895429026}, 'accuracy': 0.8258706467661692, 'f1': 0.7954915687051468, 'experiment_type': 'baseline_model', 'experiment_id': 'baseline_model::Logistic Regression', 'metric_name': 'f1', 'validation_metric': 0.7954915687051468, 'improvement': None, 'is_best': True}
+2026-09-22 13:06:18,983 [INFO] app.agents.evaluation_agent: --- EVALUATION AGENT ---
+2026-09-22 13:06:18,983 [INFO] app.agents.evaluation_agent: Best model: Logistic Regression
+2026-09-22 13:06:18,983 [INFO] app.agents.evaluation_agent: Best f1 (validation): 0.7954915687051468
+2026-09-22 13:06:18,984 [INFO] app.agents.critic_agent: --- CRITIC AGENT ---
+2026-09-22 13:06:18,984 [INFO] app.agents.critic_agent: Feature engineering attempts: 0/3
+2026-09-22 13:06:18,984 [INFO] app.agents.critic_agent: Completed baseline models: ['Logistic Regression']
+2026-09-22 13:06:18,984 [INFO] app.agents.critic_agent: Pending baseline model: Random Forest
+2026-09-22 13:06:18,984 [INFO] app.agents.critic_agent: Deterministically selecting pending baseline: Random Forest
+2026-09-22 13:06:18,984 [INFO] app.agents.critic_agent: Decision: continue
+2026-09-22 13:06:18,984 [INFO] app.agents.critic_agent: Experiment type: baseline_model
+2026-09-22 13:06:18,984 [INFO] app.agents.critic_agent: Model: Random Forest
+2026-09-22 13:06:18,984 [INFO] app.agents.critic_agent: Recommendation: Run the Random Forest baseline model before considering feature engineering.
+2026-09-22 13:06:18,984 [INFO] app.supervisor: --- SUPERVISOR ---
+2026-09-22 13:06:18,984 [INFO] app.supervisor: Critic decision: continue
+2026-09-22 13:06:18,984 [INFO] app.supervisor: Experiment type: baseline_model
+2026-09-22 13:06:18,984 [INFO] app.supervisor: Supervisor iteration: 1/8
+2026-09-22 13:06:18,984 [INFO] app.supervisor: Routing to experiment agent: Random Forest
+2026-09-22 13:06:18,985 [INFO] app.agents.experiment_agent: --- EXPERIMENT AGENT ---
+2026-09-22 13:06:18,985 [INFO] app.agents.experiment_agent: Running proposed baseline: Random Forest
+2026-09-22 13:06:19,643 [INFO] app.agents.experiment_agent: Experiment did not improve best f1: 0.737879
+2026-09-22 13:06:19,643 [INFO] app.agents.experiment_agent: Experiment result: {'model': 'Random Forest', 'problem_type': 'classification', 'train_samples': 603, 'val_samples': 201, 'applied_params': {}, 'rejected_params': [], 'cross_validation': {'folds': 5, 'scoring': 'f1_weighted', 'mean': 0.7396754850025633, 'std': 0.030002637135165697}, 'accuracy': 0.7910447761194029, 'f1': 0.7378785264429298, 'experiment_type': 'baseline_model', 'experiment_id': 'baseline_model::Random Forest', 'metric_name': 'f1', 'validation_metric': 0.7378785264429298, 'improvement': -0.057613042262216974, 'is_best': False}
+2026-09-22 13:06:19,643 [INFO] app.agents.evaluation_agent: --- EVALUATION AGENT ---
+2026-09-22 13:06:19,643 [INFO] app.agents.evaluation_agent: Best model: Logistic Regression
+2026-09-22 13:06:19,643 [INFO] app.agents.evaluation_agent: Best f1 (validation): 0.7954915687051468
+2026-09-22 13:06:19,643 [INFO] app.agents.critic_agent: --- CRITIC AGENT ---
+2026-09-22 13:06:19,644 [INFO] app.agents.critic_agent: Feature engineering attempts: 0/3
+2026-09-22 13:06:19,644 [INFO] app.agents.critic_agent: Completed baseline models: ['Logistic Regression', 'Random Forest']
+2026-09-22 13:06:19,644 [INFO] app.agents.critic_agent: Pending baseline model: Gradient Boosting
+2026-09-22 13:06:19,644 [INFO] app.agents.critic_agent: Deterministically selecting pending baseline: Gradient Boosting
+2026-09-22 13:06:19,644 [INFO] app.agents.critic_agent: Decision: continue
+2026-09-22 13:06:19,644 [INFO] app.agents.critic_agent: Experiment type: baseline_model
+2026-09-22 13:06:19,644 [INFO] app.agents.critic_agent: Model: Gradient Boosting
+2026-09-22 13:06:19,644 [INFO] app.agents.critic_agent: Recommendation: Run the Gradient Boosting baseline model before considering feature engineering.
+2026-09-22 13:06:19,644 [INFO] app.supervisor: --- SUPERVISOR ---
+2026-09-22 13:06:19,644 [INFO] app.supervisor: Critic decision: continue
+2026-09-22 13:06:19,644 [INFO] app.supervisor: Experiment type: baseline_model
+2026-09-22 13:06:19,644 [INFO] app.supervisor: Supervisor iteration: 2/8
+2026-09-22 13:06:19,644 [INFO] app.supervisor: Routing to experiment agent: Gradient Boosting
+2026-09-22 13:06:19,644 [INFO] app.agents.experiment_agent: --- EXPERIMENT AGENT ---
+2026-09-22 13:06:19,645 [INFO] app.agents.experiment_agent: Running proposed baseline: Gradient Boosting
+2026-09-22 13:06:20,252 [INFO] app.agents.experiment_agent: Experiment did not improve best f1: 0.745344
+2026-09-22 13:06:20,252 [INFO] app.agents.experiment_agent: Experiment result: {'model': 'Gradient Boosting', 'problem_type': 'classification', 'train_samples': 603, 'val_samples': 201, 'applied_params': {}, 'rejected_params': [], 'cross_validation': {'folds': 5, 'scoring': 'f1_weighted', 'mean': 0.7556870420178046, 'std': 0.027964856326132263}, 'accuracy': 0.7711442786069652, 'f1': 0.745343848742518, 'experiment_type': 'baseline_model', 'experiment_id': 'baseline_model::Gradient Boosting', 'metric_name': 'f1', 'validation_metric': 0.745343848742518, 'improvement': -0.05014771996262879, 'is_best': False}
+2026-09-22 13:06:20,253 [INFO] app.agents.evaluation_agent: --- EVALUATION AGENT ---
+2026-09-22 13:06:20,253 [INFO] app.agents.evaluation_agent: Best model: Logistic Regression
+2026-09-22 13:06:20,253 [INFO] app.agents.evaluation_agent: Best f1 (validation): 0.7954915687051468
+2026-09-22 13:06:20,253 [INFO] app.agents.critic_agent: --- CRITIC AGENT ---
+2026-09-22 13:06:20,253 [INFO] app.agents.critic_agent: Feature engineering attempts: 0/3
+2026-09-22 13:06:20,253 [INFO] app.agents.critic_agent: Completed baseline models: ['Gradient Boosting', 'Logistic Regression', 'Random Forest']
+2026-09-22 13:06:20,253 [INFO] app.agents.critic_agent: Pending baseline model: None
+2026-09-22 13:06:20,253 [INFO] app.agents.critic_agent: All baseline models completed. Critic reviewing feature engineering opportunity...
+2026-09-22 13:06:21,460 [ERROR] app.agents.critic_agent: Critic LLM call failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m2wt7kx1esnrt85cxrfw8519` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 198845, Requested 1990. Please try again in 6m0.72s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-09-22 13:06:21,462 [INFO] app.supervisor: --- SUPERVISOR ---
+2026-09-22 13:06:21,462 [INFO] app.supervisor: Critic decision: finish
+2026-09-22 13:06:21,462 [INFO] app.supervisor: Experiment type: none
+2026-09-22 13:06:21,462 [INFO] app.supervisor: Supervisor iteration: 3/8
+2026-09-22 13:06:21,462 [INFO] app.supervisor: Research finished.
+2026-09-22 13:06:21,463 [INFO] app.agents.final_report_agent: --- FINAL REPORT AGENT ---
+2026-09-22 13:06:21,493 [INFO] app.agents.final_report_agent: Held-out test f1: 0.7822095145573905 (retrained on train+val, evaluated once on a test split the critic loop never saw).
+2026-09-22 13:06:21,493 [INFO] app.agents.final_report_agent: Final report generated.
+2026-09-22 13:06:21,496 [INFO] __main__: Run snapshot saved to: runs\run_20260922_130621_494430.json

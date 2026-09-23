@@ -4,7 +4,91 @@ from app.tools.ml_tools import run_experiment, get_supported_models
 from app.tools.feature_tools import apply_feature_engineering
 from app.logging_config import get_logger
 
+
 logger = get_logger(__name__)
+
+
+def _get_validation_metric(
+    result: dict,
+    problem_type: str,
+) -> tuple[str, float | None]:
+    if problem_type == "classification":
+        metric_name = "f1"
+        value = result.get("f1")
+    else:
+        metric_name = "rmse"
+        value = result.get("rmse")
+
+    if value is None:
+        return metric_name, None
+
+    return metric_name, float(value)
+
+
+def _evaluate_experiment(
+    result: dict,
+    problem_type: str,
+    state: ResearchState,
+) -> tuple[dict, dict, float | None]:
+    metric_name, metric_value = _get_validation_metric(
+        result,
+        problem_type,
+    )
+
+    previous_best = state.get("best_validation_metric")
+    previous_best_experiment = state.get("best_experiment", {})
+
+    if metric_value is None:
+        result["improvement"] = None
+        result["is_best"] = False
+        result["metric_name"] = metric_name
+
+        return (
+            result,
+            previous_best_experiment,
+            previous_best,
+        )
+
+    if previous_best is None:
+        improvement = None
+        is_best = True
+    elif problem_type == "classification":
+        improvement = metric_value - float(previous_best)
+        is_best = improvement > 0
+    else:
+        improvement = float(previous_best) - metric_value
+        is_best = improvement > 0
+
+    result["metric_name"] = metric_name
+    result["validation_metric"] = metric_value
+    result["improvement"] = improvement
+    result["is_best"] = is_best
+
+    if is_best:
+        best_experiment = dict(result)
+        best_validation_metric = metric_value
+
+        logger.info(
+            f"New best experiment: "
+            f"{metric_name}={metric_value:.6f}"
+        )
+
+        return (
+            result,
+            best_experiment,
+            best_validation_metric,
+        )
+
+    logger.info(
+        f"Experiment did not improve best {metric_name}: "
+        f"{metric_value:.6f}"
+    )
+
+    return (
+        result,
+        previous_best_experiment,
+        previous_best,
+    )
 
 
 def experiment_agent(state: ResearchState) -> dict:
@@ -12,7 +96,7 @@ def experiment_agent(state: ResearchState) -> dict:
 
     proposed_experiment = state.get(
         "proposed_experiment",
-        {}
+        {},
     )
 
     experiment_type = proposed_experiment.get(
@@ -22,14 +106,14 @@ def experiment_agent(state: ResearchState) -> dict:
     experiments = list(
         state.get(
             "experiments",
-            []
+            [],
         )
     )
 
     experiment_history = list(
         state.get(
             "experiment_history",
-            []
+            [],
         )
     )
 
@@ -47,6 +131,12 @@ def experiment_agent(state: ResearchState) -> dict:
                 "Cannot run experiment: dataset has not been split"
             )
         }
+
+    problem_type = state[
+        "research_plan"
+    ][
+        "problem_type"
+    ]
 
     if experiment_type == "baseline_model":
         model = proposed_experiment.get(
@@ -79,17 +169,6 @@ def experiment_agent(state: ResearchState) -> dict:
                 )
             }
 
-        problem_type = state[
-            "research_plan"
-        ][
-            "problem_type"
-        ]
-
-        # Last line of defense before this reaches sklearn: even
-        # though critic_agent and research_agent validate model
-        # names against the execution layer, don't trust it blind
-        # here too. get_model() would otherwise raise ValueError
-        # and crash the whole graph run.
         supported_models = get_supported_models(
             problem_type
         )
@@ -112,7 +191,9 @@ def experiment_agent(state: ResearchState) -> dict:
                 ),
             }
 
-        logger.info(f"Running proposed baseline: {model}")
+        logger.info(
+            f"Running proposed baseline: {model}"
+        )
 
         try:
             result = run_experiment(
@@ -122,18 +203,27 @@ def experiment_agent(state: ResearchState) -> dict:
                 problem_type=problem_type,
                 train_indices=train_indices,
                 val_indices=val_indices,
-                parameters=proposed_experiment.get("parameters"),
+                parameters=proposed_experiment.get(
+                    "parameters"
+                ),
                 cv_folds=settings.CV_FOLDS,
             )
         except Exception as error:
-            logger.error(f"Experiment failed: {error}")
+            logger.error(
+                f"Experiment failed: {error}"
+            )
 
-            experiment_history.append(experiment_id)
+            experiment_history.append(
+                experiment_id
+            )
 
             return {
                 "experiment_history": experiment_history,
                 "agent_results": {
-                    **state.get("agent_results", {}),
+                    **state.get(
+                        "agent_results",
+                        {},
+                    ),
                     "last_experiment_error": str(error),
                 },
                 "current_task": (
@@ -142,17 +232,39 @@ def experiment_agent(state: ResearchState) -> dict:
             }
 
         result["experiment_type"] = "baseline_model"
+        result["experiment_id"] = experiment_id
+        result["model"] = model
+
+        (
+            result,
+            best_experiment,
+            best_validation_metric,
+        ) = _evaluate_experiment(
+            result=result,
+            problem_type=problem_type,
+            state=state,
+        )
 
         experiments.append(result)
         experiment_history.append(experiment_id)
 
-        logger.info(f"Experiment result: {result}")
+        logger.info(
+            f"Experiment result: {result}"
+        )
 
         return {
             "experiments": experiments,
             "experiment_history": experiment_history,
+            "best_experiment": best_experiment,
+            "best_validation_metric": best_validation_metric,
+            "best_metric_name": result.get(
+                "metric_name"
+            ),
             "agent_results": {
-                **state.get("agent_results", {}),
+                **state.get(
+                    "agent_results",
+                    {},
+                ),
                 "last_experiment": result,
             },
             "current_task": (
@@ -175,12 +287,13 @@ def experiment_agent(state: ResearchState) -> dict:
 
         source_columns = proposed_experiment.get(
             "source_columns",
-            []
+            [],
         )
 
         if not feature_type:
             logger.warning(
-                "Feature engineering experiment has no feature type."
+                "Feature engineering experiment has no "
+                "feature type."
             )
 
             return {
@@ -234,12 +347,6 @@ def experiment_agent(state: ResearchState) -> dict:
                 )
             }
 
-        problem_type = state[
-            "research_plan"
-        ][
-            "problem_type"
-        ]
-
         supported_models = get_supported_models(
             problem_type
         )
@@ -249,23 +356,24 @@ def experiment_agent(state: ResearchState) -> dict:
                 f"Unsupported model requested: {model}"
             )
 
-            experiment_history.append(experiment_id)
+            experiment_history.append(
+                experiment_id
+            )
 
             return {
-                "experiment_history": experiment_history,
+                "experiment_history": (
+                    experiment_history
+                ),
                 "current_task": (
                     f"Rejected unsupported model: {model}"
                 ),
             }
 
-        logger.info(f"Applying feature engineering: {feature_type}")
+        logger.info(
+            f"Applying feature engineering: {feature_type}"
+        )
 
         try:
-            source_columns = proposed_experiment.get(
-                "source_columns",
-                []
-            )
-
             engineered_df = apply_feature_engineering(
                 dataset_path=state["dataset_path"],
                 target_column=state["target_column"],
@@ -274,7 +382,9 @@ def experiment_agent(state: ResearchState) -> dict:
                 source_columns=source_columns,
             )
 
-            logger.info(f"Running model: {model}")
+            logger.info(
+                f"Running model: {model}"
+            )
 
             result = run_experiment(
                 dataset_path=state["dataset_path"],
@@ -283,21 +393,33 @@ def experiment_agent(state: ResearchState) -> dict:
                 problem_type=problem_type,
                 train_indices=train_indices,
                 val_indices=val_indices,
-                parameters=proposed_experiment.get("parameters"),
+                parameters=proposed_experiment.get(
+                    "parameters"
+                ),
                 cv_folds=settings.CV_FOLDS,
                 dataframe=engineered_df,
             )
+
         except Exception as error:
             logger.error(
-                f"Feature engineering experiment failed: {error}"
+                f"Feature engineering experiment failed: "
+                f"{error}"
             )
 
-            experiment_history.append(experiment_id)
+            experiment_history.append(
+                experiment_id
+            )
 
             feature_engineering_history = list(
-                state.get("feature_engineering_history", [])
+                state.get(
+                    "feature_engineering_history",
+                    [],
+                )
             )
-            feature_engineering_history.append(experiment_id)
+
+            feature_engineering_history.append(
+                experiment_id
+            )
 
             return {
                 "experiment_history": experiment_history,
@@ -305,30 +427,56 @@ def experiment_agent(state: ResearchState) -> dict:
                     feature_engineering_history
                 ),
                 "agent_results": {
-                    **state.get("agent_results", {}),
+                    **state.get(
+                        "agent_results",
+                        {},
+                    ),
                     "last_experiment_error": str(error),
                 },
                 "current_task": (
-                    f"Feature experiment failed: {experiment_id}"
+                    f"Feature experiment failed: "
+                    f"{experiment_id}"
                 ),
             }
 
         result["experiment_type"] = "feature_engineering"
+        result["experiment_id"] = experiment_id
+        result["model"] = model
         result["feature_type"] = feature_type
         result["feature_name"] = feature_name
+        result["source_columns"] = source_columns
         result["note"] = (
             "Feature transformation was created successfully."
+        )
+
+        (
+            result,
+            best_experiment,
+            best_validation_metric,
+        ) = _evaluate_experiment(
+            result=result,
+            problem_type=problem_type,
+            state=state,
         )
 
         experiments.append(result)
         experiment_history.append(experiment_id)
 
         feature_engineering_history = list(
-            state.get("feature_engineering_history", [])
+            state.get(
+                "feature_engineering_history",
+                [],
+            )
         )
-        feature_engineering_history.append(experiment_id)
 
-        logger.info(f"Feature engineering experiment result: {result}")
+        feature_engineering_history.append(
+            experiment_id
+        )
+
+        logger.info(
+            f"Feature engineering experiment result: "
+            f"{result}"
+        )
 
         return {
             "experiments": experiments,
@@ -336,16 +484,27 @@ def experiment_agent(state: ResearchState) -> dict:
             "feature_engineering_history": (
                 feature_engineering_history
             ),
+            "best_experiment": best_experiment,
+            "best_validation_metric": best_validation_metric,
+            "best_metric_name": result.get(
+                "metric_name"
+            ),
             "agent_results": {
-                **state.get("agent_results", {}),
+                **state.get(
+                    "agent_results",
+                    {},
+                ),
                 "last_experiment": result,
             },
             "current_task": (
-                f"Completed feature experiment: {experiment_id}"
+                f"Completed feature experiment: "
+                f"{experiment_id}"
             ),
         }
 
-    logger.warning(f"Unsupported experiment type: {experiment_type}")
+    logger.warning(
+        f"Unsupported experiment type: {experiment_type}"
+    )
 
     return {
         "current_task": (

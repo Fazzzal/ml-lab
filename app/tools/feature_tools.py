@@ -1,7 +1,10 @@
 import numpy as np
 import pandas as pd
 
-from app.tools.data_tools import load_dataset
+from app.tools.data_tools import (
+    load_dataset,
+    identify_identifier_columns,
+)
 
 
 TRANSFORMATIONS = {
@@ -79,10 +82,13 @@ def get_column_types(
     df: pd.DataFrame,
     target_column: str | None = None,
 ) -> dict[str, list[str]]:
+    identifier_columns = identify_identifier_columns(df)
+
     columns = [
         column
         for column in df.columns
         if column != target_column
+        and column not in identifier_columns
     ]
 
     numeric_columns = [
@@ -166,7 +172,10 @@ def get_feature_candidates(
 
         for first_column in column_types[first_type]:
             for second_column in column_types[second_type]:
-                if first_type == second_type and first_column == second_column:
+                if (
+                    first_type == second_type
+                    and first_column == second_column
+                ):
                     continue
 
                 candidates.append([
@@ -196,6 +205,7 @@ def create_feature(
 
     if feature_type == "numeric_interaction":
         first, second = source_columns
+
         result[feature_name] = (
             pd.to_numeric(result[first], errors="coerce")
             * pd.to_numeric(result[second], errors="coerce")
@@ -358,6 +368,15 @@ def apply_feature_engineering(
     if specification is None:
         raise ValueError(
             f"Unsupported feature type: {feature_type}"
+        )
+
+    if len(source_columns) != len(
+        specification["input_types"]
+    ):
+        raise ValueError(
+            f"Feature type '{feature_type}' expects "
+            f"{len(specification['input_types'])} source "
+            f"columns, received {len(source_columns)}."
         )
 
     for column, expected_type in zip(

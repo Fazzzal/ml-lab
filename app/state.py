@@ -12,7 +12,6 @@ class ResearchState(TypedDict, total=False):
     critic_analysis: dict[str, Any]
 
     proposed_experiment: dict[str, Any]
-
     feature_proposal: dict[str, Any]
 
     agent_results: dict[str, Any]
@@ -21,21 +20,20 @@ class ResearchState(TypedDict, total=False):
     next_agent: str
     supervisor_reason: str
 
+    train_indices: list[int]
+    val_indices: list[int]
+    test_indices: list[int]
+
     experiments: list[dict[str, Any]]
     experiment_history: list[str]
     feature_engineering_history: list[str]
     critic_feedback: list[str]
 
-    # Fixed 3-way split, computed once (split_agent) right after
-    # the problem type is known. experiment_agent always trains
-    # on train_indices and reports metrics on val_indices, so the
-    # critic loop never sees test_indices until final_report_agent
-    # touches it exactly once at the end.
-    train_indices: list[int]
-    val_indices: list[int]
-    test_indices: list[int]
-
-    held_out_evaluation: dict[str, Any]
-
     retry_count: int
+    feature_attempts: int
+
+    best_experiment: dict[str, Any]
+    best_validation_metric: float
+    best_metric_name: str
+
     final_report: str

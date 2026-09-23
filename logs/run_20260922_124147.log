@@ -1,0 +1,164 @@
+2026-09-22 12:41:49,974 [INFO] __main__: Starting ML Research Lab...
+2026-09-22 12:41:49,976 [INFO] app.agents.data_agent: --- DATA AGENT ---
+2026-09-22 12:41:49,976 [INFO] app.agents.data_agent: Profiling dataset: data/Telco-Customer-Churn.csv
+2026-09-22 12:41:49,984 [INFO] app.agents.data_agent: Dataset profiling complete.
+2026-09-22 12:41:49,985 [INFO] app.agents.feature_agent: --- FEATURE AGENT ---
+2026-09-22 12:41:49,989 [INFO] app.agents.feature_agent: Identifier columns: ['customerID']
+2026-09-22 12:41:49,989 [INFO] app.agents.feature_agent: Numeric features: ['SeniorCitizen', 'tenure', 'MonthlyCharges', 'TotalCharges']
+2026-09-22 12:41:49,989 [INFO] app.agents.feature_agent: Categorical features: ['PhoneService', 'MultipleLines', 'OnlineSecurity', 'OnlineBackup', 'DeviceProtection', 'TechSupport', 'StreamingTV', 'StreamingMovies', 'Contract', 'PaymentMethod']
+2026-09-22 12:41:49,991 [INFO] app.agents.feature_agent: Missing-value columns: ['MultipleLines', 'TotalCharges']
+2026-09-22 12:41:49,991 [INFO] app.agents.feature_agent: Feature analysis complete. Recommendations: 17
+2026-09-22 12:41:49,991 [INFO] app.agents.research_agent: --- RESEARCH AGENT ---
+2026-09-22 12:41:49,991 [INFO] app.agents.research_agent: Generating research plan...
+2026-09-22 12:41:51,443 [INFO] app.agents.research_agent: Problem type: classification
+2026-09-22 12:41:51,443 [INFO] app.agents.research_agent: Models: ['Logistic Regression', 'Random Forest', 'Gradient Boosting']
+2026-09-22 12:41:51,443 [INFO] app.agents.research_agent: Reasoning: The target column 'Churn' is a categorical string indicating whether a customer has churned (yes/no), so the task is a binary classification problem. To establish a solid baseline we will evaluate three complementary model families supported by the execution layer: (1) Logistic Regression as a simple linear model that provides a quick, interpretable baseline; (2) Random Forest as a bagging ensemble of decision trees that captures non‑linear interactions and is robust to feature scaling; (3) Gradient Boosting as a boosting ensemble that often yields higher predictive performance on tabular data. The execution layer will handle required preprocessing steps (imputing missing values in 'MultipleLines' and 'TotalCharges', one‑hot encoding of all categorical features, and standard scaling of numeric features) before training each model. Cross‑validation on the training split will give an initial estimate of accuracy and weighted F1, allowing us to compare the baseline performance of these three approaches.
+2026-09-22 12:41:51,444 [INFO] app.agents.split_agent: --- SPLIT AGENT ---
+2026-09-22 12:41:51,467 [INFO] app.agents.split_agent: Split sizes -> train: 603, val: 201, test: 201 (test is held out until final_report_agent)
+2026-09-22 12:41:51,468 [INFO] app.agents.experiment_agent: --- EXPERIMENT AGENT ---
+2026-09-22 12:41:51,468 [ERROR] app.agents.experiment_agent: No train/val split available. split_agent must run before any experiment.
+2026-09-22 12:41:51,469 [INFO] app.agents.evaluation_agent: --- EVALUATION AGENT ---
+2026-09-22 12:41:51,469 [INFO] app.agents.evaluation_agent: No experiments available.
+2026-09-22 12:41:51,469 [INFO] app.agents.critic_agent: --- CRITIC AGENT ---
+2026-09-22 12:41:51,469 [INFO] app.agents.critic_agent: Feature engineering attempts: 0/3
+2026-09-22 12:41:51,469 [INFO] app.agents.critic_agent: Critic reviewing experiments...
+2026-09-22 12:41:53,177 [INFO] app.agents.critic_agent: Decision: continue
+2026-09-22 12:41:53,177 [INFO] app.agents.critic_agent: Experiment type: baseline_model
+2026-09-22 12:41:53,177 [INFO] app.agents.critic_agent: Model: Logistic Regression
+2026-09-22 12:41:53,177 [INFO] app.agents.critic_agent: Recommendation: Proceed with training and cross‑validation of Logistic Regression on the preprocessed data.
+2026-09-22 12:41:53,178 [INFO] app.supervisor: --- SUPERVISOR ---
+2026-09-22 12:41:53,178 [INFO] app.supervisor: Critic decision: continue
+2026-09-22 12:41:53,178 [INFO] app.supervisor: Experiment type: baseline_model
+2026-09-22 12:41:53,179 [INFO] app.supervisor: Supervisor iteration: 1/8
+2026-09-22 12:41:53,179 [INFO] app.supervisor: Routing to experiment agent: Logistic Regression
+2026-09-22 12:41:53,180 [INFO] app.agents.experiment_agent: --- EXPERIMENT AGENT ---
+2026-09-22 12:41:53,180 [ERROR] app.agents.experiment_agent: No train/val split available. split_agent must run before any experiment.
+2026-09-22 12:41:53,180 [INFO] app.agents.evaluation_agent: --- EVALUATION AGENT ---
+2026-09-22 12:41:53,181 [INFO] app.agents.evaluation_agent: No experiments available.
+2026-09-22 12:41:53,181 [INFO] app.agents.critic_agent: --- CRITIC AGENT ---
+2026-09-22 12:41:53,181 [INFO] app.agents.critic_agent: Feature engineering attempts: 0/3
+2026-09-22 12:41:53,182 [INFO] app.agents.critic_agent: Critic reviewing experiments...
+2026-09-22 12:41:54,301 [INFO] app.agents.critic_agent: Decision: continue
+2026-09-22 12:41:54,301 [INFO] app.agents.critic_agent: Experiment type: baseline_model
+2026-09-22 12:41:54,301 [INFO] app.agents.critic_agent: Model: Logistic Regression
+2026-09-22 12:41:54,301 [INFO] app.agents.critic_agent: Recommendation: Proceed with training and cross‑validation of Logistic Regression on the preprocessed data using C=1.0.
+2026-09-22 12:41:54,302 [INFO] app.supervisor: --- SUPERVISOR ---
+2026-09-22 12:41:54,302 [INFO] app.supervisor: Critic decision: continue
+2026-09-22 12:41:54,302 [INFO] app.supervisor: Experiment type: baseline_model
+2026-09-22 12:41:54,302 [INFO] app.supervisor: Supervisor iteration: 2/8
+2026-09-22 12:41:54,302 [INFO] app.supervisor: Routing to experiment agent: Logistic Regression
+2026-09-22 12:41:54,303 [INFO] app.agents.experiment_agent: --- EXPERIMENT AGENT ---
+2026-09-22 12:41:54,304 [ERROR] app.agents.experiment_agent: No train/val split available. split_agent must run before any experiment.
+2026-09-22 12:41:54,304 [INFO] app.agents.evaluation_agent: --- EVALUATION AGENT ---
+2026-09-22 12:41:54,304 [INFO] app.agents.evaluation_agent: No experiments available.
+2026-09-22 12:41:54,305 [INFO] app.agents.critic_agent: --- CRITIC AGENT ---
+2026-09-22 12:41:54,305 [INFO] app.agents.critic_agent: Feature engineering attempts: 0/3
+2026-09-22 12:41:54,306 [INFO] app.agents.critic_agent: Critic reviewing experiments...
+2026-09-22 12:41:55,734 [INFO] app.agents.critic_agent: Decision: continue
+2026-09-22 12:41:55,734 [INFO] app.agents.critic_agent: Experiment type: baseline_model
+2026-09-22 12:41:55,734 [INFO] app.agents.critic_agent: Model: Logistic Regression
+2026-09-22 12:41:55,734 [INFO] app.agents.critic_agent: Recommendation: Proceed with training and cross‑validation of Logistic Regression on the preprocessed data using C=1.0.
+2026-09-22 12:41:55,736 [INFO] app.supervisor: --- SUPERVISOR ---
+2026-09-22 12:41:55,736 [INFO] app.supervisor: Critic decision: continue
+2026-09-22 12:41:55,736 [INFO] app.supervisor: Experiment type: baseline_model
+2026-09-22 12:41:55,736 [INFO] app.supervisor: Supervisor iteration: 3/8
+2026-09-22 12:41:55,736 [INFO] app.supervisor: Routing to experiment agent: Logistic Regression
+2026-09-22 12:41:55,737 [INFO] app.agents.experiment_agent: --- EXPERIMENT AGENT ---
+2026-09-22 12:41:55,737 [ERROR] app.agents.experiment_agent: No train/val split available. split_agent must run before any experiment.
+2026-09-22 12:41:55,738 [INFO] app.agents.evaluation_agent: --- EVALUATION AGENT ---
+2026-09-22 12:41:55,738 [INFO] app.agents.evaluation_agent: No experiments available.
+2026-09-22 12:41:55,738 [INFO] app.agents.critic_agent: --- CRITIC AGENT ---
+2026-09-22 12:41:55,738 [INFO] app.agents.critic_agent: Feature engineering attempts: 0/3
+2026-09-22 12:41:55,738 [INFO] app.agents.critic_agent: Critic reviewing experiments...
+2026-09-22 12:41:56,861 [INFO] app.agents.critic_agent: Decision: continue
+2026-09-22 12:41:56,862 [INFO] app.agents.critic_agent: Experiment type: baseline_model
+2026-09-22 12:41:56,862 [INFO] app.agents.critic_agent: Model: Logistic Regression
+2026-09-22 12:41:56,862 [INFO] app.agents.critic_agent: Recommendation: Proceed with training and cross‑validation of Logistic Regression on the preprocessed data using C=1.0.
+2026-09-22 12:41:56,863 [INFO] app.supervisor: --- SUPERVISOR ---
+2026-09-22 12:41:56,863 [INFO] app.supervisor: Critic decision: continue
+2026-09-22 12:41:56,863 [INFO] app.supervisor: Experiment type: baseline_model
+2026-09-22 12:41:56,864 [INFO] app.supervisor: Supervisor iteration: 4/8
+2026-09-22 12:41:56,864 [INFO] app.supervisor: Routing to experiment agent: Logistic Regression
+2026-09-22 12:41:56,865 [INFO] app.agents.experiment_agent: --- EXPERIMENT AGENT ---
+2026-09-22 12:41:56,865 [ERROR] app.agents.experiment_agent: No train/val split available. split_agent must run before any experiment.
+2026-09-22 12:41:56,865 [INFO] app.agents.evaluation_agent: --- EVALUATION AGENT ---
+2026-09-22 12:41:56,865 [INFO] app.agents.evaluation_agent: No experiments available.
+2026-09-22 12:41:56,866 [INFO] app.agents.critic_agent: --- CRITIC AGENT ---
+2026-09-22 12:41:56,866 [INFO] app.agents.critic_agent: Feature engineering attempts: 0/3
+2026-09-22 12:41:56,866 [INFO] app.agents.critic_agent: Critic reviewing experiments...
+2026-09-22 12:41:57,987 [INFO] app.agents.critic_agent: Decision: continue
+2026-09-22 12:41:57,987 [INFO] app.agents.critic_agent: Experiment type: baseline_model
+2026-09-22 12:41:57,987 [INFO] app.agents.critic_agent: Model: Logistic Regression
+2026-09-22 12:41:57,987 [INFO] app.agents.critic_agent: Recommendation: Proceed with training and cross‑validation of Logistic Regression on the preprocessed data using C=1.0.
+2026-09-22 12:41:57,988 [INFO] app.supervisor: --- SUPERVISOR ---
+2026-09-22 12:41:57,988 [INFO] app.supervisor: Critic decision: continue
+2026-09-22 12:41:57,988 [INFO] app.supervisor: Experiment type: baseline_model
+2026-09-22 12:41:57,989 [INFO] app.supervisor: Supervisor iteration: 5/8
+2026-09-22 12:41:57,989 [INFO] app.supervisor: Routing to experiment agent: Logistic Regression
+2026-09-22 12:41:57,990 [INFO] app.agents.experiment_agent: --- EXPERIMENT AGENT ---
+2026-09-22 12:41:57,990 [ERROR] app.agents.experiment_agent: No train/val split available. split_agent must run before any experiment.
+2026-09-22 12:41:57,991 [INFO] app.agents.evaluation_agent: --- EVALUATION AGENT ---
+2026-09-22 12:41:57,991 [INFO] app.agents.evaluation_agent: No experiments available.
+2026-09-22 12:41:57,991 [INFO] app.agents.critic_agent: --- CRITIC AGENT ---
+2026-09-22 12:41:57,991 [INFO] app.agents.critic_agent: Feature engineering attempts: 0/3
+2026-09-22 12:41:57,991 [INFO] app.agents.critic_agent: Critic reviewing experiments...
+2026-09-22 12:42:05,299 [INFO] app.agents.critic_agent: Decision: continue
+2026-09-22 12:42:05,300 [INFO] app.agents.critic_agent: Experiment type: baseline_model
+2026-09-22 12:42:05,300 [INFO] app.agents.critic_agent: Model: Logistic Regression
+2026-09-22 12:42:05,300 [INFO] app.agents.critic_agent: Recommendation: Proceed with training and cross‑validation of Logistic Regression using C=1.0.
+2026-09-22 12:42:05,300 [INFO] app.supervisor: --- SUPERVISOR ---
+2026-09-22 12:42:05,301 [INFO] app.supervisor: Critic decision: continue
+2026-09-22 12:42:05,301 [INFO] app.supervisor: Experiment type: baseline_model
+2026-09-22 12:42:05,301 [INFO] app.supervisor: Supervisor iteration: 6/8
+2026-09-22 12:42:05,301 [INFO] app.supervisor: Routing to experiment agent: Logistic Regression
+2026-09-22 12:42:05,301 [INFO] app.agents.experiment_agent: --- EXPERIMENT AGENT ---
+2026-09-22 12:42:05,301 [ERROR] app.agents.experiment_agent: No train/val split available. split_agent must run before any experiment.
+2026-09-22 12:42:05,302 [INFO] app.agents.evaluation_agent: --- EVALUATION AGENT ---
+2026-09-22 12:42:05,302 [INFO] app.agents.evaluation_agent: No experiments available.
+2026-09-22 12:42:05,302 [INFO] app.agents.critic_agent: --- CRITIC AGENT ---
+2026-09-22 12:42:05,302 [INFO] app.agents.critic_agent: Feature engineering attempts: 0/3
+2026-09-22 12:42:05,302 [INFO] app.agents.critic_agent: Critic reviewing experiments...
+2026-09-22 12:42:18,776 [INFO] app.agents.critic_agent: Decision: continue
+2026-09-22 12:42:18,777 [INFO] app.agents.critic_agent: Experiment type: baseline_model
+2026-09-22 12:42:18,777 [INFO] app.agents.critic_agent: Model: Logistic Regression
+2026-09-22 12:42:18,777 [INFO] app.agents.critic_agent: Recommendation: Proceed with training and cross‑validation of Logistic Regression using C=1.0 on the preprocessed data.
+2026-09-22 12:42:18,778 [INFO] app.supervisor: --- SUPERVISOR ---
+2026-09-22 12:42:18,778 [INFO] app.supervisor: Critic decision: continue
+2026-09-22 12:42:18,778 [INFO] app.supervisor: Experiment type: baseline_model
+2026-09-22 12:42:18,778 [INFO] app.supervisor: Supervisor iteration: 7/8
+2026-09-22 12:42:18,778 [INFO] app.supervisor: Routing to experiment agent: Logistic Regression
+2026-09-22 12:42:18,779 [INFO] app.agents.experiment_agent: --- EXPERIMENT AGENT ---
+2026-09-22 12:42:18,779 [ERROR] app.agents.experiment_agent: No train/val split available. split_agent must run before any experiment.
+2026-09-22 12:42:18,779 [INFO] app.agents.evaluation_agent: --- EVALUATION AGENT ---
+2026-09-22 12:42:18,779 [INFO] app.agents.evaluation_agent: No experiments available.
+2026-09-22 12:42:18,780 [INFO] app.agents.critic_agent: --- CRITIC AGENT ---
+2026-09-22 12:42:18,780 [INFO] app.agents.critic_agent: Feature engineering attempts: 0/3
+2026-09-22 12:42:18,780 [INFO] app.agents.critic_agent: Critic reviewing experiments...
+2026-09-22 12:42:28,094 [INFO] app.agents.critic_agent: Decision: continue
+2026-09-22 12:42:28,094 [INFO] app.agents.critic_agent: Experiment type: baseline_model
+2026-09-22 12:42:28,094 [INFO] app.agents.critic_agent: Model: Logistic Regression
+2026-09-22 12:42:28,094 [INFO] app.agents.critic_agent: Recommendation: Proceed with training and cross‑validation of Logistic Regression using C=1.0 on the preprocessed data.
+2026-09-22 12:42:28,095 [INFO] app.supervisor: --- SUPERVISOR ---
+2026-09-22 12:42:28,096 [INFO] app.supervisor: Critic decision: continue
+2026-09-22 12:42:28,096 [INFO] app.supervisor: Experiment type: baseline_model
+2026-09-22 12:42:28,096 [INFO] app.supervisor: Supervisor iteration: 8/8
+2026-09-22 12:42:28,096 [INFO] app.supervisor: Routing to experiment agent: Logistic Regression
+2026-09-22 12:42:28,097 [INFO] app.agents.experiment_agent: --- EXPERIMENT AGENT ---
+2026-09-22 12:42:28,097 [ERROR] app.agents.experiment_agent: No train/val split available. split_agent must run before any experiment.
+2026-09-22 12:42:28,098 [INFO] app.agents.evaluation_agent: --- EVALUATION AGENT ---
+2026-09-22 12:42:28,098 [INFO] app.agents.evaluation_agent: No experiments available.
+2026-09-22 12:42:28,098 [INFO] app.agents.critic_agent: --- CRITIC AGENT ---
+2026-09-22 12:42:28,099 [INFO] app.agents.critic_agent: Feature engineering attempts: 0/3
+2026-09-22 12:42:28,099 [INFO] app.agents.critic_agent: Critic reviewing experiments...
+2026-09-22 12:42:39,457 [INFO] app.agents.critic_agent: Decision: continue
+2026-09-22 12:42:39,457 [INFO] app.agents.critic_agent: Experiment type: baseline_model
+2026-09-22 12:42:39,458 [INFO] app.agents.critic_agent: Model: Logistic Regression
+2026-09-22 12:42:39,458 [INFO] app.agents.critic_agent: Recommendation: Proceed with training and cross‑validation of Logistic Regression on the preprocessed data using C=1.0.
+2026-09-22 12:42:39,459 [INFO] app.supervisor: --- SUPERVISOR ---
+2026-09-22 12:42:39,459 [INFO] app.supervisor: Critic decision: continue
+2026-09-22 12:42:39,459 [INFO] app.supervisor: Experiment type: baseline_model
+2026-09-22 12:42:39,459 [INFO] app.supervisor: Supervisor iteration: 9/8
+2026-09-22 12:42:39,459 [WARNING] app.supervisor: Maximum iteration limit reached. Stopping to prevent an infinite loop.
+2026-09-22 12:42:39,460 [INFO] app.agents.final_report_agent: --- FINAL REPORT AGENT ---
+2026-09-22 12:42:39,460 [INFO] app.agents.final_report_agent: No experiments were completed during this run, so no final report could be generated.
+2026-09-22 12:42:39,463 [INFO] __main__: Run snapshot saved to: runs\run_20260922_124239_462773.json

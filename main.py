@@ -1,12 +1,6 @@
 import os
 from pathlib import Path
 
-# Pin the working directory to wherever this file actually lives,
-# regardless of what launched it (PyCharm run configs, a
-# different shell cwd, etc. can otherwise leave DATASET_PATH and
-# other relative paths in config.py resolving against the wrong
-# location, producing a confusing FileNotFoundError even when the
-# file and .env are both correct).
 os.chdir(Path(__file__).resolve().parent)
 
 from app.graph import build_graph
@@ -45,9 +39,6 @@ def main():
     invoke_kwargs = {}
 
     if settings.ENABLE_CHECKPOINTING:
-        # Re-running with the same RUN_ID resumes from the last
-        # completed node instead of starting over, if a
-        # checkpointer is active (see app/graph.py).
         invoke_kwargs["config"] = {
             "configurable": {"thread_id": settings.RUN_ID}
         }
@@ -84,11 +75,13 @@ def main():
     for experiment in result.get("experiments", []):
         print(experiment)
 
+    evaluation = result.get("evaluation", {})
+
     print("\nEvaluation (validation metrics):")
-    print(result.get("evaluation"))
+    print(evaluation)
 
     print("\nHeld-out Test Evaluation:")
-    print(result.get("held_out_evaluation"))
+    print(evaluation.get("held_out_test"))
 
     print("\nCritic Analysis:")
     print(result.get("critic_analysis"))

@@ -19,16 +19,12 @@ from app.agents.feature_engineering_agent import (
 )
 from app.agents.final_report_agent import final_report_agent
 
+
 logger = get_logger(__name__)
 
 
 def _get_checkpointer():
-    """Best-effort SQLite checkpointer for crash recovery across
-    process restarts (re-invoking with the same thread_id resumes
-    from the last completed node). Off by default
-    (ENABLE_CHECKPOINTING=false) so a missing/incompatible
-    langgraph-checkpoint-sqlite install can't break a run that
-    otherwise works fine without it."""
+    """Create an optional SQLite checkpointer."""
 
     if not settings.ENABLE_CHECKPOINTING:
         return None
@@ -38,29 +34,29 @@ def _get_checkpointer():
     except ImportError:
         logger.warning(
             "ENABLE_CHECKPOINTING is true but "
-            "langgraph-checkpoint-sqlite is not installed "
-            "(pip install langgraph-checkpoint-sqlite). "
+            "langgraph-checkpoint-sqlite is not installed. "
             "Continuing without checkpointing."
         )
         return None
 
     try:
         conn = sqlite3.connect(
-            settings.CHECKPOINT_DB, check_same_thread=False
+            settings.CHECKPOINT_DB,
+            check_same_thread=False
         )
+
         return SqliteSaver(conn)
+
     except Exception as error:
         logger.warning(
-            f"Failed to initialize SQLite checkpointer "
-            f"({error}); continuing without checkpointing."
+            f"Failed to initialize SQLite checkpointer: {error}. "
+            "Continuing without checkpointing."
         )
         return None
 
 
 def build_graph():
-    graph = StateGraph(
-        ResearchState
-    )
+    graph = StateGraph(ResearchState)
 
     graph.add_node("data_agent", data_agent)
     graph.add_node("feature_agent", feature_agent)
@@ -76,25 +72,57 @@ def build_graph():
     graph.add_node("supervisor", supervisor)
     graph.add_node("final_report_agent", final_report_agent)
 
-    graph.add_edge(START, "data_agent")
-    graph.add_edge("data_agent", "feature_agent")
-    graph.add_edge("feature_agent", "research_agent")
+    graph.add_edge(
+        START,
+        "data_agent"
+    )
 
-    # Split happens once problem_type is known (research_agent
-    # sets it), before the first experiment ever trains anything.
-    graph.add_edge("research_agent", "split_agent")
-    graph.add_edge("split_agent", "experiment_agent")
+    graph.add_edge(
+        "data_agent",
+        "feature_agent"
+    )
 
-    graph.add_edge("experiment_agent", "evaluation_agent")
-    graph.add_edge("evaluation_agent", "critic_agent")
-    graph.add_edge("critic_agent", "supervisor")
+    graph.add_edge(
+        "feature_agent",
+        "research_agent"
+    )
+
+    graph.add_edge(
+        "research_agent",
+        "split_agent"
+    )
+
+    graph.add_edge(
+        "split_agent",
+        "experiment_agent"
+    )
+
+    graph.add_edge(
+        "experiment_agent",
+        "evaluation_agent"
+    )
+
+    graph.add_edge(
+        "evaluation_agent",
+        "critic_agent"
+    )
+
+    graph.add_edge(
+        "critic_agent",
+        "supervisor"
+    )
 
     graph.add_conditional_edges(
         "supervisor",
-        lambda state: state["next_agent"],
+        lambda state: state.get(
+            "next_agent",
+            "finish"
+        ),
         {
             "experiment_agent": "experiment_agent",
-            "feature_engineering_agent": "feature_engineering_agent",
+            "feature_engineering_agent": (
+                "feature_engineering_agent"
+            ),
             "finish": "final_report_agent",
         }
     )
@@ -103,8 +131,10 @@ def build_graph():
         "feature_engineering_agent",
         lambda state: (
             "experiment_agent"
-            if state.get("feature_proposal", {}).get("decision")
-            == "propose"
+            if state.get(
+                "feature_proposal",
+                {}
+            ).get("decision") == "propose"
             else "finish"
         ),
         {
@@ -113,11 +143,16 @@ def build_graph():
         }
     )
 
-    graph.add_edge("final_report_agent", END)
+    graph.add_edge(
+        "final_report_agent",
+        END
+    )
 
     checkpointer = _get_checkpointer()
 
     if checkpointer is not None:
-        return graph.compile(checkpointer=checkpointer)
+        return graph.compile(
+            checkpointer=checkpointer
+        )
 
     return graph.compile()
